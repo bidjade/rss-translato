@@ -124,7 +124,6 @@ def extract_feed_name(feed_url, feed_data=None):
 def create_rss_xml(feed_name, entries):
     rss = ET.Element('rss')
     rss.set('version', '2.0')
-    rss.set('xmlns:content', 'http://purl.org/rss/1.0/modules/content/')
     
     channel = ET.SubElement(rss, 'channel')
     
@@ -137,29 +136,17 @@ def create_rss_xml(feed_name, entries):
     for entry in entries:
         item = ET.SubElement(channel, 'item')
         
-        title = entry.get('title', 'No Title')
+        title = entry.get('translated_title', entry.get('title', 'No Title'))
         ET.SubElement(item, 'title').text = title
         
         link = entry.get('link', '')
         ET.SubElement(item, 'link').text = link
         
-        guid = entry.get('guid') or entry.get('id') or link
-        ET.SubElement(item, 'guid').text = guid
-        
         pub_date = entry.get('published', datetime.now().strftime('%a, %d %b %Y %H:%M:%S GMT'))
         ET.SubElement(item, 'pubDate').text = pub_date
         
-        description = entry.get('processed_text', entry.get('summary', ''))
+        description = entry.get('processed_text', '')
         ET.SubElement(item, 'description').text = description
-        
-        if 'original_text' in entry:
-            ET.SubElement(item, 'content:encoded').text = entry['original_text']
-        
-        if 'image_url' in entry and entry['image_url']:
-            ET.SubElement(item, 'enclosure', {
-                'url': entry['image_url'],
-                'type': 'image/jpeg'
-            })
     
     xml_str = ET.tostring(rss, encoding='unicode')
     dom = minidom.parseString(xml_str)
@@ -174,6 +161,38 @@ def create_rss_xml(feed_name, entries):
 
 def clean_html(raw_html):
     return re.sub(r'<[^>]+>', '', raw_html).strip()
+
+def translate_title(title):
+    if not OLLAMA_API_KEY or LANGUAGE == 'english':
+        return title
+    
+    prompt = f"""Translate the following title to {LANGUAGE}. Return ONLY the translated title without any additional text or comments.
+
+Title:
+{title}"""
+    
+    url = "https://ollama.com/api/generate"
+    headers = {
+        "Authorization": f"Bearer {OLLAMA_API_KEY}"
+    }
+    
+    payload = {
+        "model": OLLAMA_MODEL,
+        "prompt": prompt,
+        "stream": False
+    }
+    
+    try:
+        r = requests.post(url, headers=headers, json=payload, timeout=30)
+        if r.status_code == 200:
+            data = r.json()
+            translated = data.get("response", "").strip()
+            if translated:
+                return translated
+    except Exception as e:
+        logging.error(f"Title translation failed: {e}")
+    
+    return title
 
 def process_with_ollama(text):
     if not OLLAMA_API_KEY:
@@ -325,16 +344,14 @@ def process_feed(feed_url):
                     desc_text = clean_html(desc)
                     
                     processed_text = process_with_ollama(desc_text)
+                    translated_title = translate_title(entry.get('title', 'No Title'))
                     
                     processed_entry = {
                         'title': entry.get('title', 'No Title'),
+                        'translated_title': translated_title,
                         'link': post_url,
-                        'guid': post_id,
                         'published': entry.get('published', ''),
-                        'summary': processed_text,
-                        'original_text': desc_text,
-                        'processed_text': processed_text,
-                        'image_url': entry.get('media_content', [{}])[0].get('url', '') if 'media_content' in entry else None
+                        'processed_text': processed_text
                     }
                     
                     processed_entries.append(processed_entry)
