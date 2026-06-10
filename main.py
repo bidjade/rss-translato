@@ -27,25 +27,14 @@ TRACKER_FILE = os.path.join(CONFIG_DIR, "last_post.json")
 config = configparser.ConfigParser()
 config.read(CONFIG_FILE, encoding='utf-8')
 
-GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
+OLLAMA_API_KEY = os.environ.get('OLLAMA_API_KEY')
+OLLAMA_MODEL = config.get('models', 'ollama_model', fallback='gpt-oss:120b-cloud')
 
-if not GEMINI_API_KEY:
-    logging.error("GEMINI_API_KEY not found in environment variables")
+if not OLLAMA_API_KEY:
+    logging.error("OLLAMA_API_KEY not found in environment variables")
     exit(1)
 
-models_raw = config.get('models', 'gemini_models', fallback='')
-if ',' in models_raw:
-    GEMINI_MODELS = [model.strip() for model in models_raw.split(',') if model.strip()]
-elif '\n' in models_raw:
-    GEMINI_MODELS = [model.strip() for model in models_raw.split('\n') if model.strip() and not model.strip().startswith('[')]
-else:
-    GEMINI_MODELS = [models_raw.strip()] if models_raw.strip() else []
-
-if not GEMINI_MODELS:
-    logging.error("No models found in config.ini under [models] section")
-    exit(1)
-
-logging.info(f"Loaded {len(GEMINI_MODELS)} models from config: {GEMINI_MODELS}")
+logging.info(f"Using Ollama model: {OLLAMA_MODEL}")
 
 LANGUAGE = config.get('settings', 'language', fallback='arabic')
 CONTENT_TYPE = config.get('settings', 'type', fallback='summary')
@@ -183,32 +172,12 @@ def create_rss_xml(feed_name, entries):
     logging.info(f"Created RSS XML file: {xml_file}")
     return xml_file
 
-class GeminiModelSwitcher:
-    def __init__(self, models):
-        self.models = models
-        self.current_index = 0
-        self.all_models_failed = False
-    
-    def get_current_model(self):
-        return self.models[self.current_index]
-    
-    def get_next_model(self):
-        if self.current_index < len(self.models) - 1:
-            self.current_index += 1
-            return self.models[self.current_index]
-        self.all_models_failed = True
-        return None
-    
-    def reset(self):
-        self.current_index = 0
-        self.all_models_failed = False
-
 def clean_html(raw_html):
     return re.sub(r'<[^>]+>', '', raw_html).strip()
 
-def process_with_gemini(text, model_switcher):
-    if not GEMINI_API_KEY:
-        logging.error("GEMINI_API_KEY is not set.")
+def process_with_ollama(text):
+    if not OLLAMA_API_KEY:
+        logging.error("OLLAMA_API_KEY is not set.")
         return text[:500]
     
     if CONTENT_TYPE == 'translate':
@@ -224,7 +193,7 @@ IMPORTANT RULES:
 Original text:
 {text}"""
     else:
-        prompt = f"""Summarize the following text in one paragraph in {LANGUAGE}. Keep it around 70 words (between 65-75 words).
+        prompt = f"""Summarize the following text in one paragraph in {LANGUAGE}. Keep it between 50-70 words. Include key details and do not be too brief.
 
 IMPORTANT RULES:
 1. Write the summary in {LANGUAGE} language
@@ -234,56 +203,57 @@ IMPORTANT RULES:
 5. If summarizing in Arabic, start with an Arabic word, not an English word or company name
 
 Example for Arabic summary:
-Correct: "أعلنت شركة جوجل اليوم عن تحديث جديد..."
+Correct: "أعلنت شركة جوجل اليوم عن تحديث جديد لمتصفح كروم يضيف ميزات أمان متطورة..."
 Wrong: "Google أعلنت اليوم عن تحديث..."
 
 Original text:
 {text}"""
     
-    start_index = model_switcher.current_index
-    attempted_models = 0
+    url = "https://ollama.com/api/generate"
+    headers = {
+        "Authorization": f"Bearer {OLLAMA_API_KEY}"
+    }
     
-    while attempted_models < len(model_switcher.models):
-        current_model = model_switcher.get_current_model()
-        attempted_models += 1
-        
-        logging.info(f"Attempt {attempted_models}/{len(model_switcher.models)}: Using model: {current_model}")
-        
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{current_model}:generateContent"
-        
-        max_tokens = 500 if CONTENT_TYPE == 'translate' else 200
-        
-        payload = {
-            "contents": [{"parts": [{"text": prompt}]}],
-            "generationConfig": {
-                "temperature": 0.7,
-                "topP": 0.8,
-                "maxOutputTokens": max_tokens
-            }
-        }
-        headers = {
-            "Content-Type": "application/json",
-            "X-goog-api-key": GEMINI_API_KEY
-        }
-        
+    payload = {
+        "model": OLLAMA_MODEL,
+        "prompt": prompt,
+        "stream": False
+    }
+    
+    max_retries = 3
+    
+    for attempt in range(max_retries):
         try:
-            r = requests.post(url, json=payload, headers=headers, timeout=30)
-            r.raise_for_status()
+            logging.info(f"Ollama API attempt {attempt + 1}/{max_retries}")
             
-            result = r.json()['candidates'][0]['content']['parts'][0]['text'].strip()
+            r = requests.post(url, headers=headers, json=payload, timeout=90)
+            
+            if r.status_code != 200:
+                logging.error(f"Ollama API error: {r.status_code} - {r.text[:200]}")
+                if attempt < max_retries - 1:
+                    time.sleep(5)
+                    continue
+                return text[:500]
+            
+            data = r.json()
+            result = data.get("response", "").strip()
+            
+            if not result:
+                logging.error("Empty response from Ollama")
+                if attempt < max_retries - 1:
+                    time.sleep(5)
+                    continue
+                return text[:500]
             
             result = re.sub(r'#\w+\s*', '', result).strip()
             
             if CONTENT_TYPE == 'summary' and LANGUAGE == 'arabic':
                 first_word = result.split()[0] if result.split() else ""
                 if first_word and not re.match(r'^[\u0600-\u06FF]', first_word):
-                    logging.warning(f"Text starts with non-Arabic word. Trying next model...")
-                    next_model = model_switcher.get_next_model()
-                    if next_model:
-                        continue
+                    logging.warning(f"Text starts with non-Arabic word: '{first_word}'")
             
             char_count = len(result)
-            logging.info(f"Processing successful with model: {current_model}")
+            logging.info(f"Processing successful with Ollama")
             logging.info(f"Characters: {char_count}")
             
             if char_count > 500:
@@ -293,18 +263,15 @@ Original text:
             return result
         
         except Exception as e:
-            logging.error(f"Gemini API failed with model {current_model}: {e}")
-            next_model = model_switcher.get_next_model()
-            if next_model:
+            logging.error(f"Ollama API failed: {e}")
+            if attempt < max_retries - 1:
+                time.sleep(5)
                 continue
-            else:
-                break
+            return text[:500]
     
-    model_switcher.current_index = start_index
-    logging.error("Failed to process with all Gemini models")
     return text[:500]
 
-def process_feed(feed_url, model_switcher):
+def process_feed(feed_url):
     try:
         logging.info(f"{'='*60}")
         logging.info(f"Processing feed: {feed_url}")
@@ -357,7 +324,7 @@ def process_feed(feed_url, model_switcher):
                     desc = entry.get('summary', '') or entry.get('description', '')
                     desc_text = clean_html(desc)
                     
-                    processed_text = process_with_gemini(desc_text, model_switcher)
+                    processed_text = process_with_ollama(desc_text)
                     
                     processed_entry = {
                         'title': entry.get('title', 'No Title'),
@@ -390,16 +357,14 @@ def process_feed(feed_url, model_switcher):
         logging.error(f"Failed to process feed {feed_url}: {e}")
 
 def main():
-    logging.info("Starting Apps Bot...")
-    logging.info(f"Loaded {len(GEMINI_MODELS)} Gemini models")
+    logging.info("Starting Apps Bot with Ollama...")
+    logging.info(f"Using model: {OLLAMA_MODEL}")
     logging.info(f"Processing {len(RSS_FEEDS)} RSS feeds")
     logging.info(f"Language: {LANGUAGE}")
     logging.info(f"Content type: {CONTENT_TYPE}")
     
-    model_switcher = GeminiModelSwitcher(GEMINI_MODELS)
-    
     for feed_url in RSS_FEEDS:
-        process_feed(feed_url, model_switcher)
+        process_feed(feed_url)
         time.sleep(2)
     
     logging.info(f"{'='*60}")
