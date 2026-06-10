@@ -147,6 +147,12 @@ def create_rss_xml(feed_name, entries):
         
         description = entry.get('processed_text', '')
         ET.SubElement(item, 'description').text = description
+        
+        if entry.get('image_url'):
+            ET.SubElement(item, 'enclosure', {
+                'url': entry['image_url'],
+                'type': 'image/jpeg'
+            })
     
     xml_str = ET.tostring(rss, encoding='unicode')
     dom = minidom.parseString(xml_str)
@@ -161,6 +167,36 @@ def create_rss_xml(feed_name, entries):
 
 def clean_html(raw_html):
     return re.sub(r'<[^>]+>', '', raw_html).strip()
+
+def extract_image_from_url(url):
+    try:
+        logging.info(f"Fetching image from: {url}")
+        response = requests.get(url, headers=USER_AGENT_HEADER, timeout=15)
+        response.raise_for_status()
+        
+        html = response.text
+        
+        patterns = [
+            r'<meta[^>]*property=["\']og:image["\'][^>]*content=["\']([^"\']+)["\']',
+            r'<meta[^>]*content=["\']([^"\']+)["\'][^>]*property=["\']og:image["\']',
+            r'<meta[^>]*name=["\']twitter:image["\'][^>]*content=["\']([^"\']+)["\']',
+            r'<meta[^>]*content=["\']([^"\']+)["\'][^>]*name=["\']twitter:image["\']',
+        ]
+        
+        for pattern in patterns:
+            match = re.search(pattern, html, re.IGNORECASE)
+            if match:
+                image_url = match.group(1)
+                if image_url.startswith('http'):
+                    logging.info(f"Found image: {image_url}")
+                    return image_url
+        
+        logging.warning(f"No image found for: {url}")
+        return None
+        
+    except Exception as e:
+        logging.error(f"Failed to extract image from {url}: {e}")
+        return None
 
 def translate_title(title):
     if not OLLAMA_API_KEY or LANGUAGE == 'english':
@@ -346,12 +382,20 @@ def process_feed(feed_url):
                     processed_text = process_with_ollama(desc_text)
                     translated_title = translate_title(entry.get('title', 'No Title'))
                     
+                    image_url = None
+                    if 'media_content' in entry and entry['media_content']:
+                        image_url = entry['media_content'][0].get('url', '')
+                    
+                    if not image_url and post_url:
+                        image_url = extract_image_from_url(post_url)
+                    
                     processed_entry = {
                         'title': entry.get('title', 'No Title'),
                         'translated_title': translated_title,
                         'link': post_url,
                         'published': entry.get('published', ''),
-                        'processed_text': processed_text
+                        'processed_text': processed_text,
+                        'image_url': image_url
                     }
                     
                     processed_entries.append(processed_entry)
