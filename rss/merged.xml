@@ -5,7 +5,15 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Wed, 10 Jun 2026 15:27:12 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2026 16:29:42 GMT</lastBuildDate>
+    <item>
+      <title>أنثروبي تُطلق كلود فابل 5، نموذج “آمن” من فئة Mythos مع تدابير أمان مرفقة</title>
+      <link>https://alternativeto.net/news/2026/6/anthropic-launches-claude-fable-5-a-safe-mythos-class-model-with-safeguards-attached/</link>
+      <pubDate>Wed, 10 Jun 2026 15:00:00 GMT</pubDate>
+      <description>أطلقت أنثروبيك نموذج الذكاء الاصطناعي كلوذ فابل 5 من فئة ميثوس، متاح الآن للاستخدام العام عالميًا مع تحسينات في القدرات وحماية أقوى؛ عند سؤال مواضيع معينة يُستبدل الرد بنموذج كلوذ أوبس 4.8. بالإضافة إلى كلوذ ميثوس 5 الذي يستخدم نفس البنية لكن بحدود أمان أقل، يُقدم أولًا لكبار الشركاء ثم لبح科研ين مختارين. السعر 10 دولارات لكل مليون توكن إدخال و50 دولارًا لكل مليون توكن إخراج، مع قدرة تشغيل ذاتية أطول.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781098695361.png" type="image/jpeg"/>
+    </item>
     <item>
       <title>يضيف tvOS 27 تطبيق البودكاست المعاد تصميمه، وAirPlay الأسرع، وخيار إمكانية الوصول</title>
       <link>https://alternativeto.net/news/2026/6/tvos-27-adds-redesigned-podcasts-app-faster-airplay-accessibility-option/</link>
