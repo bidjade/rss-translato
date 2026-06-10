@@ -27,7 +27,11 @@ TRACKER_FILE = os.path.join(CONFIG_DIR, "last_post.json")
 config = configparser.ConfigParser()
 config.read(CONFIG_FILE, encoding='utf-8')
 
-GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY') or config.get('credentials', 'gemini_api_key', fallback=None)
+GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
+
+if not GEMINI_API_KEY:
+    logging.error("GEMINI_API_KEY not found in environment variables")
+    exit(1)
 
 models_raw = config.get('models', 'gemini_models', fallback='')
 if ',' in models_raw:
@@ -388,10 +392,6 @@ def main():
     logging.info(f"Processing {len(RSS_FEEDS)} RSS feeds")
     logging.info(f"Language: {LANGUAGE}")
     logging.info(f"Content type: {CONTENT_TYPE}")
-    
-    if not GEMINI_API_KEY:
-        logging.error("GEMINI_API_KEY is not configured. Please add it to config/config.ini or set as environment variable")
-        return
     
     model_switcher = GeminiModelSwitcher(GEMINI_MODELS)
     
