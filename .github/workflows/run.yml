@@ -31,8 +31,6 @@ jobs:
 
       - name: Run Apps Bot
         run: python main.py
-        env:
-          OLLAMA_API_KEY: ${{ secrets.OLLAMA_API_KEY }}
 
       - name: Configure git user
         run: |
