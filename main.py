@@ -27,37 +27,25 @@ TRACKER_FILE = os.path.join(CONFIG_DIR, "last_post.json")
 config = configparser.ConfigParser()
 config.read(CONFIG_FILE, encoding='utf-8')
 
-AI_PROVIDER = config.get('settings', 'ai_provider', fallback='ollama')
-
 OLLAMA_API_KEY = config.get('credentials', 'ollama_api_key', fallback=None)
-GEMINI_API_KEY = config.get('credentials', 'gemini_api_key', fallback=None)
 
-models_raw = config.get('models', f'{AI_PROVIDER}_models', fallback='')
+models_raw = config.get('models', 'ollama_models', fallback='gpt-oss:120b-cloud')
 if ',' in models_raw:
-    AI_MODELS = [model.strip() for model in models_raw.split(',') if model.strip()]
+    OLLAMA_MODELS = [model.strip() for model in models_raw.split(',') if model.strip()]
 elif '\n' in models_raw:
-    AI_MODELS = [model.strip() for model in models_raw.split('\n') if model.strip() and not model.strip().startswith('[')]
+    OLLAMA_MODELS = [model.strip() for model in models_raw.split('\n') if model.strip() and not model.strip().startswith('[')]
 else:
-    AI_MODELS = [models_raw.strip()] if models_raw.strip() else []
+    OLLAMA_MODELS = [models_raw.strip()] if models_raw.strip() else []
 
-if AI_PROVIDER == 'gemini':
-    if not GEMINI_API_KEY:
-        logging.error("GEMINI_API_KEY not found in config.ini")
-        exit(1)
-    if not AI_MODELS:
-        AI_MODELS = ['gemini-2.5-flash']
-elif AI_PROVIDER == 'ollama':
-    if not OLLAMA_API_KEY:
-        logging.error("OLLAMA_API_KEY not found in config.ini")
-        exit(1)
-    if not AI_MODELS:
-        AI_MODELS = ['gpt-oss:120b-cloud']
-else:
-    logging.error(f"Invalid AI_PROVIDER: {AI_PROVIDER}. Choose 'ollama' or 'gemini'")
+if not OLLAMA_API_KEY:
+    logging.error("OLLAMA_API_KEY not found in config.ini")
     exit(1)
 
-logging.info(f"AI Provider: {AI_PROVIDER.upper()}")
-logging.info(f"Loaded {len(AI_MODELS)} models: {AI_MODELS}")
+if not OLLAMA_MODELS:
+    logging.error("No Ollama models found in config.ini")
+    exit(1)
+
+logging.info(f"Loaded {len(OLLAMA_MODELS)} Ollama models: {OLLAMA_MODELS}")
 
 LANGUAGE = config.get('settings', 'language', fallback='arabic')
 CONTENT_TYPE = config.get('settings', 'type', fallback='summary')
@@ -92,7 +80,7 @@ logging.info(f"Loaded {len(RSS_FEEDS)} RSS feeds")
 
 USER_AGENT_HEADER = {'User-Agent': 'Mozilla/5.0'}
 
-class AIModelSwitcher:
+class OllamaModelSwitcher:
     def __init__(self, models):
         self.models = models
         self.current_index = 0
@@ -268,6 +256,7 @@ def clean_html(raw_html):
 
 def extract_image_from_url(url):
     try:
+        logging.info(f"Fetching image from: {url}")
         response = requests.get(url, headers=USER_AGENT_HEADER, timeout=15)
         response.raise_for_status()
         
@@ -285,26 +274,68 @@ def extract_image_from_url(url):
             if match:
                 image_url = match.group(1)
                 if image_url.startswith('http'):
+                    logging.info(f"Found image: {image_url}")
                     return image_url
         
+        logging.warning(f"No image found for: {url}")
         return None
         
     except Exception as e:
         logging.error(f"Failed to extract image from {url}: {e}")
         return None
 
-def get_title_prompt(title):
+def translate_title(title, model_switcher):
     if LANGUAGE == 'english':
-        return None
+        return title
     
-    return f"""Translate the following title to {LANGUAGE}. Return ONLY the translated title without any additional text or comments.
+    prompt = f"""Translate the following title to {LANGUAGE}. Return ONLY the translated title without any additional text or comments.
 
 Title:
 {title}"""
+    
+    url = "https://ollama.com/api/generate"
+    headers = {"Authorization": f"Bearer {OLLAMA_API_KEY}"}
+    
+    attempted_models = 0
+    
+    while attempted_models < len(OLLAMA_MODELS):
+        current_model = model_switcher.get_current_model()
+        attempted_models += 1
+        
+        payload = {
+            "model": current_model,
+            "prompt": prompt,
+            "stream": False
+        }
+        
+        try:
+            r = requests.post(url, headers=headers, json=payload, timeout=30)
+            if r.status_code == 200:
+                data = r.json()
+                translated = data.get("response", "").strip()
+                if translated:
+                    return translated
+            
+            logging.warning(f"Title translation failed with model {current_model}")
+            next_model = model_switcher.get_next_model()
+            if not next_model:
+                break
+                
+        except Exception as e:
+            logging.error(f"Title translation error with model {current_model}: {e}")
+            next_model = model_switcher.get_next_model()
+            if not next_model:
+                break
+    
+    return title
 
-def get_content_prompt(text):
+def process_with_ollama(text, model_switcher):
+    if not OLLAMA_API_KEY:
+        logging.error("OLLAMA_API_KEY is not set.")
+        return None
+    
     if CONTENT_TYPE == 'translate':
-        return f"""Translate the following text to {LANGUAGE}. Translate it completely and accurately.
+        prompt = f"""Translate the following text to {LANGUAGE}. Translate it completely and accurately.
 
 IMPORTANT RULES:
 1. Translate the FULL text without summarizing or shortening
@@ -316,7 +347,7 @@ IMPORTANT RULES:
 Original text:
 {text}"""
     else:
-        return f"""Summarize the following text in one paragraph in {LANGUAGE}. Keep it between 50-70 words. Include key details and do not be too brief.
+        prompt = f"""Summarize the following text in one paragraph in {LANGUAGE}. Keep it between 50-70 words. Include key details and do not be too brief.
 
 IMPORTANT RULES:
 1. Write the summary in {LANGUAGE} language
@@ -331,74 +362,17 @@ Wrong: "Google أعلنت اليوم عن تحديث..."
 
 Original text:
 {text}"""
-
-def call_gemini_api(prompt, model_switcher, max_tokens=200):
-    attempted_models = 0
     
-    while attempted_models < len(AI_MODELS):
-        current_model = model_switcher.get_current_model()
-        attempted_models += 1
-        
-        logging.info(f"Gemini attempt {attempted_models}/{len(AI_MODELS)}: {current_model}")
-        
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{current_model}:generateContent"
-        headers = {
-            'Content-Type': 'application/json',
-            'X-goog-api-key': GEMINI_API_KEY
-        }
-        
-        payload = {
-            "contents": [{"parts": [{"text": prompt}]}],
-            "generationConfig": {
-                "temperature": 0.7,
-                "topP": 0.8,
-                "maxOutputTokens": max_tokens
-            }
-        }
-        
-        try:
-            r = requests.post(url, headers=headers, json=payload, timeout=30)
-            
-            if r.status_code in [429, 503]:
-                logging.warning(f"Error {r.status_code} for {current_model}. Switching...")
-                time.sleep(2)
-                next_model = model_switcher.get_next_model()
-                if next_model:
-                    continue
-                return None
-            
-            if r.status_code != 200:
-                logging.error(f"Error {r.status_code} for {current_model}")
-                next_model = model_switcher.get_next_model()
-                if next_model:
-                    continue
-                return None
-            
-            result = r.json()['candidates'][0]['content']['parts'][0]['text'].strip()
-            result = re.sub(r'#\w+\s*', '', result).strip()
-            
-            return result
-        
-        except Exception as e:
-            logging.error(f"Failed with {current_model}: {e}")
-            time.sleep(2)
-            next_model = model_switcher.get_next_model()
-            if next_model:
-                continue
-            return None
-    
-    return None
-
-def call_ollama_api(prompt, model_switcher):
-    attempted_models = 0
     url = "https://ollama.com/api/generate"
     headers = {"Authorization": f"Bearer {OLLAMA_API_KEY}"}
     
-    while attempted_models < len(AI_MODELS):
+    attempted_models = 0
+    
+    while attempted_models < len(OLLAMA_MODELS):
         current_model = model_switcher.get_current_model()
         attempted_models += 1
         
-        logging.info(f"Ollama attempt {attempted_models}/{len(AI_MODELS)}: {current_model}")
+        logging.info(f"Ollama attempt {attempted_models}/{len(OLLAMA_MODELS)}: Using model: {current_model}")
         
         payload = {
             "model": current_model,
@@ -410,8 +384,7 @@ def call_ollama_api(prompt, model_switcher):
             r = requests.post(url, headers=headers, json=payload, timeout=90)
             
             if r.status_code != 200:
-                logging.error(f"Error {r.status_code} for {current_model}")
-                time.sleep(2)
+                logging.error(f"Ollama API error with model {current_model}: {r.status_code}")
                 next_model = model_switcher.get_next_model()
                 if next_model:
                     continue
@@ -421,7 +394,7 @@ def call_ollama_api(prompt, model_switcher):
             result = data.get("response", "").strip()
             
             if not result:
-                logging.error(f"Empty response from {current_model}")
+                logging.error(f"Empty response from model {current_model}")
                 next_model = model_switcher.get_next_model()
                 if next_model:
                     continue
@@ -429,60 +402,29 @@ def call_ollama_api(prompt, model_switcher):
             
             result = re.sub(r'#\w+\s*', '', result).strip()
             
+            if CONTENT_TYPE == 'summary' and LANGUAGE == 'arabic':
+                first_word = result.split()[0] if result.split() else ""
+                if first_word and not re.match(r'^[\u0600-\u06FF]', first_word):
+                    logging.warning(f"Text starts with non-Arabic word: '{first_word}'")
+            
+            char_count = len(result)
+            logging.info(f"Processing successful with model: {current_model}")
+            logging.info(f"Characters: {char_count}")
+            
+            if char_count > 500:
+                logging.warning(f"Text exceeds 500 chars ({char_count}). Truncating...")
+                result = result[:497] + "..."
+            
             return result
         
         except Exception as e:
-            logging.error(f"Failed with {current_model}: {e}")
-            time.sleep(2)
+            logging.error(f"Ollama API failed with model {current_model}: {e}")
             next_model = model_switcher.get_next_model()
             if next_model:
                 continue
             return None
     
     return None
-
-def translate_title(title, model_switcher):
-    if LANGUAGE == 'english':
-        return title
-    
-    prompt = get_title_prompt(title)
-    if not prompt:
-        return title
-    
-    if AI_PROVIDER == 'gemini':
-        result = call_gemini_api(prompt, model_switcher, max_tokens=100)
-    else:
-        result = call_ollama_api(prompt, model_switcher)
-    
-    if result and len(result) > 1:
-        return result
-    
-    return title
-
-def process_text(text, model_switcher):
-    prompt = get_content_prompt(text)
-    
-    if AI_PROVIDER == 'gemini':
-        max_tokens = 500 if CONTENT_TYPE == 'translate' else 250
-        result = call_gemini_api(prompt, model_switcher, max_tokens=max_tokens)
-    else:
-        result = call_ollama_api(prompt, model_switcher)
-    
-    if not result:
-        return None
-    
-    if CONTENT_TYPE == 'summary' and LANGUAGE == 'arabic':
-        first_word = result.split()[0] if result.split() else ""
-        if first_word and not re.match(r'^[\u0600-\u06FF]', first_word):
-            logging.warning(f"Text starts with non-Arabic word: '{first_word}'")
-    
-    char_count = len(result)
-    logging.info(f"Characters: {char_count}")
-    
-    if char_count > 500:
-        result = result[:497] + "..."
-    
-    return result
 
 def process_feed(feed_url):
     try:
@@ -511,8 +453,8 @@ def process_feed(feed_url):
         skipped_count = 0
         
         if not last_id:
-            logging.info(f"First time processing '{feed_name}'. Processing latest 5 posts.")
-            latest_entries = entries_sorted[-5:]
+            logging.info(f"First time processing '{feed_name}'. Processing latest {MAX_POSTS} posts.")
+            latest_entries = entries_sorted[-MAX_POSTS:]
             new_entries_to_process = latest_entries
         else:
             last_index = -1
@@ -526,8 +468,8 @@ def process_feed(feed_url):
                 new_entries_to_process = entries_sorted[last_index + 1:]
                 logging.info(f"Found {len(new_entries_to_process)} new posts in {feed_name}")
             else:
-                logging.warning(f"Last ID not found. Processing latest 5 posts.")
-                latest_entries = entries_sorted[-5:]
+                logging.warning(f"Last ID not found. Processing latest {MAX_POSTS} posts.")
+                latest_entries = entries_sorted[-MAX_POSTS:]
                 new_entries_to_process = latest_entries
         
         if new_entries_to_process:
@@ -541,15 +483,15 @@ def process_feed(feed_url):
                     desc = entry.get('summary', '') or entry.get('description', '')
                     desc_text = clean_html(desc)
                     
-                    text_switcher = AIModelSwitcher(AI_MODELS)
-                    processed_text = process_text(desc_text, text_switcher)
+                    model_switcher = OllamaModelSwitcher(OLLAMA_MODELS)
+                    processed_text = process_with_ollama(desc_text, model_switcher)
                     
                     if not processed_text:
-                        logging.warning(f"AI processing failed for post: {post_id}. Skipping.")
+                        logging.warning(f"AI processing failed for post: {post_id}. Skipping this post.")
                         skipped_count += 1
                         continue
                     
-                    title_switcher = AIModelSwitcher(AI_MODELS)
+                    title_switcher = OllamaModelSwitcher(OLLAMA_MODELS)
                     translated_title = translate_title(entry.get('title', 'No Title'), title_switcher)
                     
                     image_url = None
@@ -573,10 +515,10 @@ def process_feed(feed_url):
                     tracker_data[feed_name] = post_id
                     processed_count += 1
                     
-                    logging.info(f"Successfully processed: {entry.get('title', 'No Title')[:50]}...")
+                    logging.info(f"Successfully processed post: {entry.get('title', 'No Title')[:50]}...")
                     
                 except Exception as e:
-                    logging.error(f"Failed to process post: {e}")
+                    logging.error(f"Failed to process individual post: {e}")
                     skipped_count += 1
                     continue
         
@@ -584,7 +526,7 @@ def process_feed(feed_url):
             existing_entries.sort(key=lambda e: e.get('published', ''), reverse=True)
             create_rss_xml(feed_name, existing_entries)
             save_tracker(tracker_data)
-            logging.info(f"Processed: {processed_count} | Skipped: {skipped_count} | Total: {min(len(existing_entries), MAX_POSTS)}")
+            logging.info(f"Processed: {processed_count} | Skipped: {skipped_count} | Total in XML: {min(len(existing_entries), MAX_POSTS)}")
         else:
             logging.info(f"No entries to save for {feed_name}")
         
@@ -592,10 +534,13 @@ def process_feed(feed_url):
         logging.error(f"Failed to process feed {feed_url}: {e}")
 
 def main():
-    logging.info(f"Starting Apps Bot with {AI_PROVIDER.upper()}...")
-    logging.info(f"Models: {AI_MODELS}")
-    logging.info(f"Feeds: {len(RSS_FEEDS)} | Language: {LANGUAGE} | Type: {CONTENT_TYPE}")
-    logging.info(f"Max posts: {MAX_POSTS} | Merge: {MERGE_FEEDS}")
+    logging.info("Starting Apps Bot with Ollama...")
+    logging.info(f"Loaded {len(OLLAMA_MODELS)} models: {OLLAMA_MODELS}")
+    logging.info(f"Processing {len(RSS_FEEDS)} RSS feeds")
+    logging.info(f"Language: {LANGUAGE}")
+    logging.info(f"Content type: {CONTENT_TYPE}")
+    logging.info(f"Max posts per feed: {MAX_POSTS}")
+    logging.info(f"Merge feeds: {MERGE_FEEDS}")
     
     for feed_url in RSS_FEEDS:
         process_feed(feed_url)
@@ -603,8 +548,8 @@ def main():
     
     logging.info(f"{'='*60}")
     logging.info("All feeds processed successfully!")
-    logging.info(f"RSS files: {RSS_DIR}")
-    logging.info(f"Tracker: {TRACKER_FILE}")
+    logging.info(f"RSS files saved in: {RSS_DIR}")
+    logging.info(f"Tracker file: {TRACKER_FILE}")
 
 if __name__ == "__main__":
     main()
