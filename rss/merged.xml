@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Merged RSS Feeds</title>
+    <description>Merged feeds from 1 sources</description>
+    <link>https://github.com/your-repo/apps-bot</link>
+    <language>arabic</language>
+    <lastBuildDate>Wed, 10 Jun 2026 20:28:38 GMT</lastBuildDate>
+    <item>
+      <title>تُتيح خدمة الترجمة الحية Gemini 3.5 من جوجل الكلام متعدد اللغات في الوقت الفعلي بأكثر من 70 لغة</title>
+      <link>https://alternativeto.net/news/2026/6/google-s-gemini-3-5-live-translate-enables-real-time-multilingual-speech-in-70-languages/</link>
+      <pubDate>Wed, 10 Jun 2026 16:30:00 GMT</pubDate>
+      <description>أطلقت جوجل نموذج Gemini 3.5 Live Translate للترجمة الصوتية الفورية، يدعم أكثر من سبعين لغة ويولد كلامًا مترجمًا بطلاقة يحافظ على نبرة وسرعة المتحدث الأصلي. يعمل مستمرًا مع تأخير بضع ثوانٍ فقط، ويتعامل مع الضوضاء دون إعداد يدوي، ما يتيح الترجمة في المكالمات والاجتماعات والصفوف والبث المباشر. يتوفر عبر Gemini Live API وGoogle AI Studio، ومعاينة خاصة للمؤسسات عبر Google Meet، وكذلك في تطبيق Google Translate على أندرويد وiOS، وتُضيف تقنية SynthID علامة مائية غير مرئية لكل صوت.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781099689102.png" type="image/jpeg"/>
+    </item>
+  </channel>
+</rss>
