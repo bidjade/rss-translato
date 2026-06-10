@@ -38,11 +38,13 @@ logging.info(f"Using Ollama model: {OLLAMA_MODEL}")
 
 LANGUAGE = config.get('settings', 'language', fallback='arabic')
 CONTENT_TYPE = config.get('settings', 'type', fallback='summary')
-MAX_POSTS = 20
+MAX_POSTS = config.getint('settings', 'max_posts', fallback=20)
+MERGE_FEEDS = config.get('settings', 'merge_feeds', fallback='yes').lower() == 'yes'
 
 logging.info(f"Language: {LANGUAGE}")
 logging.info(f"Content type: {CONTENT_TYPE}")
 logging.info(f"Max posts per feed: {MAX_POSTS}")
+logging.info(f"Merge feeds: {MERGE_FEEDS}")
 
 RSS_FEEDS = []
 if os.path.exists(FEEDS_FILE):
@@ -124,7 +126,11 @@ def extract_feed_name(feed_url, feed_data=None):
         return f"feed_{abs(hash(feed_url)) % 10000}"
 
 def load_existing_entries(feed_name):
-    xml_file = os.path.join(RSS_DIR, f"{feed_name}.xml")
+    if MERGE_FEEDS:
+        xml_file = os.path.join(RSS_DIR, "merged.xml")
+    else:
+        xml_file = os.path.join(RSS_DIR, f"{feed_name}.xml")
+    
     existing_entries = []
     
     if os.path.exists(xml_file):
@@ -141,6 +147,7 @@ def load_existing_entries(feed_name):
                         'link': item.findtext('link', ''),
                         'published': item.findtext('pubDate', ''),
                         'processed_text': item.findtext('description', ''),
+                        'feed_source': item.findtext('source', feed_name) if MERGE_FEEDS else feed_name
                     }
                     
                     enclosure = item.find('enclosure')
@@ -156,6 +163,11 @@ def load_existing_entries(feed_name):
     return existing_entries
 
 def create_rss_xml(feed_name, entries):
+    if MERGE_FEEDS:
+        xml_file = os.path.join(RSS_DIR, "merged.xml")
+    else:
+        xml_file = os.path.join(RSS_DIR, f"{feed_name}.xml")
+    
     entries = entries[-MAX_POSTS:]
     
     rss = ET.Element('rss')
@@ -163,9 +175,14 @@ def create_rss_xml(feed_name, entries):
     
     channel = ET.SubElement(rss, 'channel')
     
-    ET.SubElement(channel, 'title').text = f"{feed_name} - Processed Feed"
+    if MERGE_FEEDS:
+        ET.SubElement(channel, 'title').text = "Merged RSS Feeds"
+        ET.SubElement(channel, 'description').text = f"Merged feeds from {len(RSS_FEEDS)} sources"
+    else:
+        ET.SubElement(channel, 'title').text = f"{feed_name} - Processed Feed"
+        ET.SubElement(channel, 'description').text = f"Processed RSS feed from {feed_name}"
+    
     ET.SubElement(channel, 'link').text = f"https://github.com/your-repo/apps-bot"
-    ET.SubElement(channel, 'description').text = f"Processed RSS feed from {feed_name}"
     ET.SubElement(channel, 'language').text = LANGUAGE
     ET.SubElement(channel, 'lastBuildDate').text = datetime.now().strftime('%a, %d %b %Y %H:%M:%S GMT')
     
@@ -184,6 +201,9 @@ def create_rss_xml(feed_name, entries):
         description = entry.get('processed_text', '')
         ET.SubElement(item, 'description').text = description
         
+        if MERGE_FEEDS and entry.get('feed_source'):
+            ET.SubElement(item, 'source').text = entry['feed_source']
+        
         if entry.get('image_url'):
             ET.SubElement(item, 'enclosure', {
                 'url': entry['image_url'],
@@ -194,7 +214,6 @@ def create_rss_xml(feed_name, entries):
     dom = minidom.parseString(xml_str)
     pretty_xml = dom.toprettyxml(indent='  ', encoding='utf-8')
     
-    xml_file = os.path.join(RSS_DIR, f"{feed_name}.xml")
     with open(xml_file, 'wb') as f:
         f.write(pretty_xml)
     
@@ -429,7 +448,8 @@ def process_feed(feed_url):
                         'link': post_url,
                         'published': entry.get('published', ''),
                         'processed_text': processed_text,
-                        'image_url': image_url
+                        'image_url': image_url,
+                        'feed_source': feed_name
                     }
                     
                     existing_entries.append(processed_entry)
@@ -446,7 +466,7 @@ def process_feed(feed_url):
             existing_entries.sort(key=lambda e: e.get('published', ''), reverse=True)
             create_rss_xml(feed_name, existing_entries)
             save_tracker(tracker_data)
-            logging.info(f"Total entries in {feed_name}.xml: {min(len(existing_entries), MAX_POSTS)}")
+            logging.info(f"Total entries in XML: {min(len(existing_entries), MAX_POSTS)}")
         else:
             logging.info(f"No entries to save for {feed_name}")
         
@@ -460,6 +480,7 @@ def main():
     logging.info(f"Language: {LANGUAGE}")
     logging.info(f"Content type: {CONTENT_TYPE}")
     logging.info(f"Max posts per feed: {MAX_POSTS}")
+    logging.info(f"Merge feeds: {MERGE_FEEDS}")
     
     for feed_url in RSS_FEEDS:
         process_feed(feed_url)
