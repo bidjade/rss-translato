@@ -268,7 +268,6 @@ def clean_html(raw_html):
 
 def extract_image_from_url(url):
     try:
-        logging.info(f"Fetching image from: {url}")
         response = requests.get(url, headers=USER_AGENT_HEADER, timeout=15)
         response.raise_for_status()
         
@@ -286,17 +285,24 @@ def extract_image_from_url(url):
             if match:
                 image_url = match.group(1)
                 if image_url.startswith('http'):
-                    logging.info(f"Found image: {image_url}")
                     return image_url
         
-        logging.warning(f"No image found for: {url}")
         return None
         
     except Exception as e:
         logging.error(f"Failed to extract image from {url}: {e}")
         return None
 
-def get_prompt():
+def get_title_prompt(title):
+    if LANGUAGE == 'english':
+        return None
+    
+    return f"""Translate the following title to {LANGUAGE}. Return ONLY the translated title without any additional text or comments.
+
+Title:
+{title}"""
+
+def get_content_prompt(text):
     if CONTENT_TYPE == 'translate':
         return f"""Translate the following text to {LANGUAGE}. Translate it completely and accurately.
 
@@ -308,7 +314,7 @@ IMPORTANT RULES:
 5. If translating to Arabic, make sure the translation is natural and fluent
 
 Original text:
-{{text}}"""
+{text}"""
     else:
         return f"""Summarize the following text in one paragraph in {LANGUAGE}. Keep it between 50-70 words. Include key details and do not be too brief.
 
@@ -324,131 +330,22 @@ Correct: "أعلنت شركة جوجل اليوم عن تحديث جديد لم�
 Wrong: "Google أعلنت اليوم عن تحديث..."
 
 Original text:
-{{text}}"""
+{text}"""
 
-def translate_title_with_gemini(title, model_switcher):
-    if LANGUAGE == 'english':
-        return title
-    
-    prompt = f"""Translate the following title to {LANGUAGE}. Return ONLY the translated title without any additional text or comments.
-
-Title:
-{title}"""
-    
+def call_gemini_api(prompt, model_switcher, max_tokens=200):
     attempted_models = 0
     
     while attempted_models < len(AI_MODELS):
         current_model = model_switcher.get_current_model()
         attempted_models += 1
+        
+        logging.info(f"Gemini attempt {attempted_models}/{len(AI_MODELS)}: {current_model}")
         
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{current_model}:generateContent"
         headers = {
             'Content-Type': 'application/json',
             'X-goog-api-key': GEMINI_API_KEY
         }
-        
-        payload = {
-            "contents": [{"parts": [{"text": prompt}]}],
-            "generationConfig": {
-                "temperature": 0.3,
-                "maxOutputTokens": 100
-            }
-        }
-        
-        try:
-            r = requests.post(url, headers=headers, json=payload, timeout=30)
-            if r.status_code == 200:
-                result = r.json()['candidates'][0]['content']['parts'][0]['text'].strip()
-                if result:
-                    return result
-            
-            logging.warning(f"Title translation failed with model {current_model}")
-            next_model = model_switcher.get_next_model()
-            if not next_model:
-                break
-                
-        except Exception as e:
-            logging.error(f"Title translation error with model {current_model}: {e}")
-            next_model = model_switcher.get_next_model()
-            if not next_model:
-                break
-    
-    return title
-
-def translate_title_with_ollama(title, model_switcher):
-    if LANGUAGE == 'english':
-        return title
-    
-    prompt = f"""Translate the following title to {LANGUAGE}. Return ONLY the translated title without any additional text or comments.
-
-Title:
-{title}"""
-    
-    url = "https://ollama.com/api/generate"
-    headers = {"Authorization": f"Bearer {OLLAMA_API_KEY}"}
-    
-    attempted_models = 0
-    
-    while attempted_models < len(AI_MODELS):
-        current_model = model_switcher.get_current_model()
-        attempted_models += 1
-        
-        payload = {
-            "model": current_model,
-            "prompt": prompt,
-            "stream": False
-        }
-        
-        try:
-            r = requests.post(url, headers=headers, json=payload, timeout=30)
-            if r.status_code == 200:
-                data = r.json()
-                translated = data.get("response", "").strip()
-                if translated:
-                    return translated
-            
-            logging.warning(f"Title translation failed with model {current_model}")
-            next_model = model_switcher.get_next_model()
-            if not next_model:
-                break
-                
-        except Exception as e:
-            logging.error(f"Title translation error with model {current_model}: {e}")
-            next_model = model_switcher.get_next_model()
-            if not next_model:
-                break
-    
-    return title
-
-def translate_title(title, model_switcher):
-    if AI_PROVIDER == 'gemini':
-        return translate_title_with_gemini(title, model_switcher)
-    else:
-        return translate_title_with_ollama(title, model_switcher)
-
-def process_with_gemini(text, model_switcher):
-    if not GEMINI_API_KEY:
-        logging.error("GEMINI_API_KEY is not set.")
-        return None
-    
-    prompt_template = get_prompt()
-    prompt = prompt_template.replace("{text}", text)
-    
-    attempted_models = 0
-    
-    while attempted_models < len(AI_MODELS):
-        current_model = model_switcher.get_current_model()
-        attempted_models += 1
-        
-        logging.info(f"Gemini attempt {attempted_models}/{len(AI_MODELS)}: Using model: {current_model}")
-        
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{current_model}:generateContent"
-        headers = {
-            'Content-Type': 'application/json',
-            'X-goog-api-key': GEMINI_API_KEY
-        }
-        
-        max_tokens = 500 if CONTENT_TYPE == 'translate' else 200
         
         payload = {
             "contents": [{"parts": [{"text": prompt}]}],
@@ -462,8 +359,16 @@ def process_with_gemini(text, model_switcher):
         try:
             r = requests.post(url, headers=headers, json=payload, timeout=30)
             
+            if r.status_code in [429, 503]:
+                logging.warning(f"Error {r.status_code} for {current_model}. Switching...")
+                time.sleep(2)
+                next_model = model_switcher.get_next_model()
+                if next_model:
+                    continue
+                return None
+            
             if r.status_code != 200:
-                logging.error(f"Gemini API error with model {current_model}: {r.status_code}")
+                logging.error(f"Error {r.status_code} for {current_model}")
                 next_model = model_switcher.get_next_model()
                 if next_model:
                     continue
@@ -472,26 +377,11 @@ def process_with_gemini(text, model_switcher):
             result = r.json()['candidates'][0]['content']['parts'][0]['text'].strip()
             result = re.sub(r'#\w+\s*', '', result).strip()
             
-            if CONTENT_TYPE == 'summary' and LANGUAGE == 'arabic':
-                first_word = result.split()[0] if result.split() else ""
-                if first_word and not re.match(r'^[\u0600-\u06FF]', first_word):
-                    logging.warning(f"Text starts with non-Arabic word. Trying next model...")
-                    next_model = model_switcher.get_next_model()
-                    if next_model:
-                        continue
-            
-            char_count = len(result)
-            logging.info(f"Processing successful with model: {current_model}")
-            logging.info(f"Characters: {char_count}")
-            
-            if char_count > 500:
-                logging.warning(f"Text exceeds 500 chars ({char_count}). Truncating...")
-                result = result[:497] + "..."
-            
             return result
         
         except Exception as e:
-            logging.error(f"Gemini API failed with model {current_model}: {e}")
+            logging.error(f"Failed with {current_model}: {e}")
+            time.sleep(2)
             next_model = model_switcher.get_next_model()
             if next_model:
                 continue
@@ -499,24 +389,16 @@ def process_with_gemini(text, model_switcher):
     
     return None
 
-def process_with_ollama(text, model_switcher):
-    if not OLLAMA_API_KEY:
-        logging.error("OLLAMA_API_KEY is not set.")
-        return None
-    
-    prompt_template = get_prompt()
-    prompt = prompt_template.replace("{text}", text)
-    
+def call_ollama_api(prompt, model_switcher):
+    attempted_models = 0
     url = "https://ollama.com/api/generate"
     headers = {"Authorization": f"Bearer {OLLAMA_API_KEY}"}
-    
-    attempted_models = 0
     
     while attempted_models < len(AI_MODELS):
         current_model = model_switcher.get_current_model()
         attempted_models += 1
         
-        logging.info(f"Ollama attempt {attempted_models}/{len(AI_MODELS)}: Using model: {current_model}")
+        logging.info(f"Ollama attempt {attempted_models}/{len(AI_MODELS)}: {current_model}")
         
         payload = {
             "model": current_model,
@@ -528,7 +410,8 @@ def process_with_ollama(text, model_switcher):
             r = requests.post(url, headers=headers, json=payload, timeout=90)
             
             if r.status_code != 200:
-                logging.error(f"Ollama API error with model {current_model}: {r.status_code}")
+                logging.error(f"Error {r.status_code} for {current_model}")
+                time.sleep(2)
                 next_model = model_switcher.get_next_model()
                 if next_model:
                     continue
@@ -538,7 +421,7 @@ def process_with_ollama(text, model_switcher):
             result = data.get("response", "").strip()
             
             if not result:
-                logging.error(f"Empty response from model {current_model}")
+                logging.error(f"Empty response from {current_model}")
                 next_model = model_switcher.get_next_model()
                 if next_model:
                     continue
@@ -546,23 +429,11 @@ def process_with_ollama(text, model_switcher):
             
             result = re.sub(r'#\w+\s*', '', result).strip()
             
-            if CONTENT_TYPE == 'summary' and LANGUAGE == 'arabic':
-                first_word = result.split()[0] if result.split() else ""
-                if first_word and not re.match(r'^[\u0600-\u06FF]', first_word):
-                    logging.warning(f"Text starts with non-Arabic word: '{first_word}'")
-            
-            char_count = len(result)
-            logging.info(f"Processing successful with model: {current_model}")
-            logging.info(f"Characters: {char_count}")
-            
-            if char_count > 500:
-                logging.warning(f"Text exceeds 500 chars ({char_count}). Truncating...")
-                result = result[:497] + "..."
-            
             return result
         
         except Exception as e:
-            logging.error(f"Ollama API failed with model {current_model}: {e}")
+            logging.error(f"Failed with {current_model}: {e}")
+            time.sleep(2)
             next_model = model_switcher.get_next_model()
             if next_model:
                 continue
@@ -570,11 +441,48 @@ def process_with_ollama(text, model_switcher):
     
     return None
 
-def process_text(text, model_switcher):
+def translate_title(title, model_switcher):
+    if LANGUAGE == 'english':
+        return title
+    
+    prompt = get_title_prompt(title)
+    if not prompt:
+        return title
+    
     if AI_PROVIDER == 'gemini':
-        return process_with_gemini(text, model_switcher)
+        result = call_gemini_api(prompt, model_switcher, max_tokens=100)
     else:
-        return process_with_ollama(text, model_switcher)
+        result = call_ollama_api(prompt, model_switcher)
+    
+    if result and len(result) > 1:
+        return result
+    
+    return title
+
+def process_text(text, model_switcher):
+    prompt = get_content_prompt(text)
+    
+    if AI_PROVIDER == 'gemini':
+        max_tokens = 500 if CONTENT_TYPE == 'translate' else 250
+        result = call_gemini_api(prompt, model_switcher, max_tokens=max_tokens)
+    else:
+        result = call_ollama_api(prompt, model_switcher)
+    
+    if not result:
+        return None
+    
+    if CONTENT_TYPE == 'summary' and LANGUAGE == 'arabic':
+        first_word = result.split()[0] if result.split() else ""
+        if first_word and not re.match(r'^[\u0600-\u06FF]', first_word):
+            logging.warning(f"Text starts with non-Arabic word: '{first_word}'")
+    
+    char_count = len(result)
+    logging.info(f"Characters: {char_count}")
+    
+    if char_count > 500:
+        result = result[:497] + "..."
+    
+    return result
 
 def process_feed(feed_url):
     try:
@@ -603,8 +511,8 @@ def process_feed(feed_url):
         skipped_count = 0
         
         if not last_id:
-            logging.info(f"First time processing '{feed_name}'. Processing latest {MAX_POSTS} posts.")
-            latest_entries = entries_sorted[-MAX_POSTS:]
+            logging.info(f"First time processing '{feed_name}'. Processing latest 5 posts.")
+            latest_entries = entries_sorted[-5:]
             new_entries_to_process = latest_entries
         else:
             last_index = -1
@@ -618,8 +526,8 @@ def process_feed(feed_url):
                 new_entries_to_process = entries_sorted[last_index + 1:]
                 logging.info(f"Found {len(new_entries_to_process)} new posts in {feed_name}")
             else:
-                logging.warning(f"Last ID not found. Processing latest {MAX_POSTS} posts.")
-                latest_entries = entries_sorted[-MAX_POSTS:]
+                logging.warning(f"Last ID not found. Processing latest 5 posts.")
+                latest_entries = entries_sorted[-5:]
                 new_entries_to_process = latest_entries
         
         if new_entries_to_process:
@@ -637,7 +545,7 @@ def process_feed(feed_url):
                     processed_text = process_text(desc_text, text_switcher)
                     
                     if not processed_text:
-                        logging.warning(f"AI processing failed for post: {post_id}. Skipping this post.")
+                        logging.warning(f"AI processing failed for post: {post_id}. Skipping.")
                         skipped_count += 1
                         continue
                     
@@ -665,10 +573,10 @@ def process_feed(feed_url):
                     tracker_data[feed_name] = post_id
                     processed_count += 1
                     
-                    logging.info(f"Successfully processed post: {entry.get('title', 'No Title')[:50]}...")
+                    logging.info(f"Successfully processed: {entry.get('title', 'No Title')[:50]}...")
                     
                 except Exception as e:
-                    logging.error(f"Failed to process individual post: {e}")
+                    logging.error(f"Failed to process post: {e}")
                     skipped_count += 1
                     continue
         
@@ -676,7 +584,7 @@ def process_feed(feed_url):
             existing_entries.sort(key=lambda e: e.get('published', ''), reverse=True)
             create_rss_xml(feed_name, existing_entries)
             save_tracker(tracker_data)
-            logging.info(f"Processed: {processed_count} | Skipped: {skipped_count} | Total in XML: {min(len(existing_entries), MAX_POSTS)}")
+            logging.info(f"Processed: {processed_count} | Skipped: {skipped_count} | Total: {min(len(existing_entries), MAX_POSTS)}")
         else:
             logging.info(f"No entries to save for {feed_name}")
         
@@ -685,12 +593,9 @@ def process_feed(feed_url):
 
 def main():
     logging.info(f"Starting Apps Bot with {AI_PROVIDER.upper()}...")
-    logging.info(f"Loaded {len(AI_MODELS)} models: {AI_MODELS}")
-    logging.info(f"Processing {len(RSS_FEEDS)} RSS feeds")
-    logging.info(f"Language: {LANGUAGE}")
-    logging.info(f"Content type: {CONTENT_TYPE}")
-    logging.info(f"Max posts per feed: {MAX_POSTS}")
-    logging.info(f"Merge feeds: {MERGE_FEEDS}")
+    logging.info(f"Models: {AI_MODELS}")
+    logging.info(f"Feeds: {len(RSS_FEEDS)} | Language: {LANGUAGE} | Type: {CONTENT_TYPE}")
+    logging.info(f"Max posts: {MAX_POSTS} | Merge: {MERGE_FEEDS}")
     
     for feed_url in RSS_FEEDS:
         process_feed(feed_url)
@@ -698,8 +603,8 @@ def main():
     
     logging.info(f"{'='*60}")
     logging.info("All feeds processed successfully!")
-    logging.info(f"RSS files saved in: {RSS_DIR}")
-    logging.info(f"Tracker file: {TRACKER_FILE}")
+    logging.info(f"RSS files: {RSS_DIR}")
+    logging.info(f"Tracker: {TRACKER_FILE}")
 
 if __name__ == "__main__":
     main()
