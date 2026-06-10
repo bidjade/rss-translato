@@ -27,14 +27,38 @@ TRACKER_FILE = os.path.join(CONFIG_DIR, "last_post.json")
 config = configparser.ConfigParser()
 config.read(CONFIG_FILE, encoding='utf-8')
 
-OLLAMA_API_KEY = os.environ.get('OLLAMA_API_KEY')
+AI_PROVIDER = config.get('settings', 'ai_provider', fallback='ollama')
+
+GEMINI_API_KEY = config.get('credentials', 'gemini_api_key', fallback=None)
+OLLAMA_API_KEY = config.get('credentials', 'ollama_api_key', fallback=None)
 OLLAMA_MODEL = config.get('models', 'ollama_model', fallback='gpt-oss:120b-cloud')
 
-if not OLLAMA_API_KEY:
-    logging.error("OLLAMA_API_KEY not found in environment variables")
-    exit(1)
+models_raw = config.get('models', 'gemini_models', fallback='')
+if ',' in models_raw:
+    GEMINI_MODELS = [model.strip() for model in models_raw.split(',') if model.strip()]
+elif '\n' in models_raw:
+    GEMINI_MODELS = [model.strip() for model in models_raw.split('\n') if model.strip() and not model.strip().startswith('[')]
+else:
+    GEMINI_MODELS = [models_raw.strip()] if models_raw.strip() else []
 
-logging.info(f"Using Ollama model: {OLLAMA_MODEL}")
+if AI_PROVIDER == 'gemini':
+    if not GEMINI_API_KEY:
+        logging.error("GEMINI_API_KEY not found in config.ini")
+        exit(1)
+    if not GEMINI_MODELS:
+        logging.error("No Gemini models found in config.ini")
+        exit(1)
+    logging.info(f"Using AI Provider: Gemini")
+    logging.info(f"Loaded {len(GEMINI_MODELS)} Gemini models: {GEMINI_MODELS}")
+elif AI_PROVIDER == 'ollama':
+    if not OLLAMA_API_KEY:
+        logging.error("OLLAMA_API_KEY not found in config.ini")
+        exit(1)
+    logging.info(f"Using AI Provider: Ollama")
+    logging.info(f"Ollama model: {OLLAMA_MODEL}")
+else:
+    logging.error(f"Invalid AI_PROVIDER: {AI_PROVIDER}. Choose 'gemini' or 'ollama'")
+    exit(1)
 
 LANGUAGE = config.get('settings', 'language', fallback='arabic')
 CONTENT_TYPE = config.get('settings', 'type', fallback='summary')
@@ -165,6 +189,26 @@ def create_rss_xml(feed_name, entries):
     logging.info(f"Created RSS XML file: {xml_file}")
     return xml_file
 
+class GeminiModelSwitcher:
+    def __init__(self, models):
+        self.models = models
+        self.current_index = 0
+        self.all_models_failed = False
+    
+    def get_current_model(self):
+        return self.models[self.current_index]
+    
+    def get_next_model(self):
+        if self.current_index < len(self.models) - 1:
+            self.current_index += 1
+            return self.models[self.current_index]
+        self.all_models_failed = True
+        return None
+    
+    def reset(self):
+        self.current_index = 0
+        self.all_models_failed = False
+
 def clean_html(raw_html):
     return re.sub(r'<[^>]+>', '', raw_html).strip()
 
@@ -199,7 +243,7 @@ def extract_image_from_url(url):
         return None
 
 def translate_title(title):
-    if not OLLAMA_API_KEY or LANGUAGE == 'english':
+    if LANGUAGE == 'english':
         return title
     
     prompt = f"""Translate the following title to {LANGUAGE}. Return ONLY the translated title without any additional text or comments.
@@ -207,10 +251,36 @@ def translate_title(title):
 Title:
 {title}"""
     
-    url = "https://ollama.com/api/generate"
-    headers = {
-        "Authorization": f"Bearer {OLLAMA_API_KEY}"
+    if AI_PROVIDER == 'gemini':
+        return translate_title_with_gemini(title, prompt)
+    else:
+        return translate_title_with_ollama(title, prompt)
+
+def translate_title_with_gemini(title, prompt):
+    model = GEMINI_MODELS[0]
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={GEMINI_API_KEY}"
+    
+    payload = {
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {
+            "temperature": 0.3,
+            "maxOutputTokens": 100
+        }
     }
+    headers = {"Content-Type": "application/json"}
+    
+    try:
+        r = requests.post(url, json=payload, headers=headers, timeout=30)
+        r.raise_for_status()
+        result = r.json()['candidates'][0]['content']['parts'][0]['text'].strip()
+        return result if result else title
+    except Exception as e:
+        logging.error(f"Title translation with Gemini failed: {e}")
+        return title
+
+def translate_title_with_ollama(title, prompt):
+    url = "https://ollama.com/api/generate"
+    headers = {"Authorization": f"Bearer {OLLAMA_API_KEY}"}
     
     payload = {
         "model": OLLAMA_MODEL,
@@ -226,9 +296,108 @@ Title:
             if translated:
                 return translated
     except Exception as e:
-        logging.error(f"Title translation failed: {e}")
+        logging.error(f"Title translation with Ollama failed: {e}")
     
     return title
+
+def process_text(text):
+    if AI_PROVIDER == 'gemini':
+        return process_with_gemini(text)
+    else:
+        return process_with_ollama(text)
+
+def process_with_gemini(text):
+    if not GEMINI_API_KEY:
+        logging.error("GEMINI_API_KEY is not set.")
+        return text[:500]
+    
+    if CONTENT_TYPE == 'translate':
+        prompt = f"""Translate the following text to {LANGUAGE}. Translate it completely and accurately.
+
+IMPORTANT RULES:
+1. Translate the FULL text without summarizing or shortening
+2. Do NOT add any hashtags
+3. Return ONLY the translation without any additional comments or notes
+4. Preserve the original meaning accurately
+5. If translating to Arabic, make sure the translation is natural and fluent
+
+Original text:
+{text}"""
+    else:
+        prompt = f"""Summarize the following text in one paragraph in {LANGUAGE}. Keep it around 70 words (between 65-75 words).
+
+IMPORTANT RULES:
+1. Write the summary in {LANGUAGE} language
+2. Do NOT add any hashtags
+3. Return ONLY the summary text without any additional comments or notes
+4. Keep the total text under 500 characters
+5. If summarizing in Arabic, start with an Arabic word, not an English word or company name
+
+Example for Arabic summary:
+Correct: "أعلنت شركة جوجل اليوم عن تحديث جديد..."
+Wrong: "Google أعلنت اليوم عن تحديث..."
+
+Original text:
+{text}"""
+    
+    model_switcher = GeminiModelSwitcher(GEMINI_MODELS)
+    attempted_models = 0
+    
+    while attempted_models < len(GEMINI_MODELS):
+        current_model = model_switcher.get_current_model()
+        attempted_models += 1
+        
+        logging.info(f"Gemini attempt {attempted_models}/{len(GEMINI_MODELS)}: Using model: {current_model}")
+        
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{current_model}:generateContent?key={GEMINI_API_KEY}"
+        
+        max_tokens = 500 if CONTENT_TYPE == 'translate' else 200
+        
+        payload = {
+            "contents": [{"parts": [{"text": prompt}]}],
+            "generationConfig": {
+                "temperature": 0.7,
+                "topP": 0.8,
+                "maxOutputTokens": max_tokens
+            }
+        }
+        headers = {"Content-Type": "application/json"}
+        
+        try:
+            r = requests.post(url, json=payload, headers=headers, timeout=30)
+            r.raise_for_status()
+            
+            result = r.json()['candidates'][0]['content']['parts'][0]['text'].strip()
+            result = re.sub(r'#\w+\s*', '', result).strip()
+            
+            if CONTENT_TYPE == 'summary' and LANGUAGE == 'arabic':
+                first_word = result.split()[0] if result.split() else ""
+                if first_word and not re.match(r'^[\u0600-\u06FF]', first_word):
+                    logging.warning(f"Text starts with non-Arabic word. Trying next model...")
+                    next_model = model_switcher.get_next_model()
+                    if next_model:
+                        continue
+            
+            char_count = len(result)
+            logging.info(f"Processing successful with model: {current_model}")
+            logging.info(f"Characters: {char_count}")
+            
+            if char_count > 500:
+                logging.warning(f"Text exceeds 500 chars ({char_count}). Truncating...")
+                result = result[:497] + "..."
+            
+            return result
+        
+        except Exception as e:
+            logging.error(f"Gemini API failed with model {current_model}: {e}")
+            next_model = model_switcher.get_next_model()
+            if next_model:
+                continue
+            else:
+                break
+    
+    logging.error("Failed to process with all Gemini models")
+    return text[:500]
 
 def process_with_ollama(text):
     if not OLLAMA_API_KEY:
@@ -265,9 +434,7 @@ Original text:
 {text}"""
     
     url = "https://ollama.com/api/generate"
-    headers = {
-        "Authorization": f"Bearer {OLLAMA_API_KEY}"
-    }
+    headers = {"Authorization": f"Bearer {OLLAMA_API_KEY}"}
     
     payload = {
         "model": OLLAMA_MODEL,
@@ -379,7 +546,7 @@ def process_feed(feed_url):
                     desc = entry.get('summary', '') or entry.get('description', '')
                     desc_text = clean_html(desc)
                     
-                    processed_text = process_with_ollama(desc_text)
+                    processed_text = process_text(desc_text)
                     translated_title = translate_title(entry.get('title', 'No Title'))
                     
                     image_url = None
@@ -418,8 +585,7 @@ def process_feed(feed_url):
         logging.error(f"Failed to process feed {feed_url}: {e}")
 
 def main():
-    logging.info("Starting Apps Bot with Ollama...")
-    logging.info(f"Using model: {OLLAMA_MODEL}")
+    logging.info(f"Starting Apps Bot with {AI_PROVIDER.upper()}...")
     logging.info(f"Processing {len(RSS_FEEDS)} RSS feeds")
     logging.info(f"Language: {LANGUAGE}")
     logging.info(f"Content type: {CONTENT_TYPE}")
