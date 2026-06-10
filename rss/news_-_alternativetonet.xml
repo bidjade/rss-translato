@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>news_-_alternativetonet - Processed Feed</title>
+    <link>https://github.com/your-repo/apps-bot</link>
+    <description>Processed RSS feed from news_-_alternativetonet</description>
+    <language>arabic</language>
+    <lastBuildDate>Wed, 10 Jun 2026 14:35:33 GMT</lastBuildDate>
+    <item>
+      <title>إطلاق Proton Drive CLI لنظامي Windows و macOS و Linux لتسهيل أتمتة سير العمل</title>
+      <link>https://alternativeto.net/news/2026/6/proton-drive-cli-launches-for-windows-macos-and-linux-for-easier-workflow-automation/</link>
+      <pubDate>Wed, 10 Jun 2026 09:00:00 GMT</pubDate>
+      <description>أطلقت شركة Proton أداة سطر الأوامر Proton Drive CLI لتوفير وصول مباشر إلى ميزات التخزين السحابي المشفر على أنظمة Windows وmacOS وLinux. تدعم الأداة عمليات شائعة مثل عرض المجلدات، رفع وتنزيل الملفات، إدارة المهملات، المشاركة والدعوات، وتتيح دمجها مع سكريبتات الأتمتة والنسخ الاحتياطي مع تشفير من الطرف إلى الطرف، دون إلغاء الحاجة للتطبيق الرسومي.</description>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781009695847.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>آبل تُطلق أطر ذكاء اصطناعي جديدة، الترميز الوكالي في Xcode 27، وأدوات ألعاب متعددة المنصات</title>
+      <link>https://alternativeto.net/news/2026/6/apple-launches-new-ai-frameworks-xcode-27-agentic-coding-and-cross-platform-game-tools/</link>
+      <pubDate>Wed, 10 Jun 2026 09:00:02 GMT</pubDate>
+      <description>قامت شركة آبل بإطلاق أطر ذكية جديدة وتوسيع دمج الذكاء الاصطناعي، مما يتيح للمطورين إضافة ميزات AI مخصصة لتطبيقاتهم عبر واجهة Swift موحدة ودعم نماذج شائعة. يقدم Xcode 27 ترميزًا عاملًا محسّنًا مع وكلاء حيّة، ودعم الإضافات، وسرعة أعلى، ويعمل حصريًا على شريحة آبل. كما أُضيفت أدوات لتطوير الألعاب مثل Managed Background Assets، ومحول أصول Steam، وإضافات Unity الرسمية لتكامل أصلي مع نظام آبل.</description>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781082002256.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>يضيف tvOS 27 تطبيق البودكاست المعاد تصميمه، وAirPlay أسرع، وخيار إمكانية الوصول.</title>
+      <link>https://alternativeto.net/news/2026/6/tvos-27-adds-redesigned-podcasts-app-faster-airplay-accessibility-option/</link>
+      <pubDate>Wed, 10 Jun 2026 09:16:00 GMT</pubDate>
+      <description>أطلقت أبل تحديث tvOS 27 الذي يتضمن redesign لتطبيق البودكاستات وتحسين إطلاق التطبيقات، ويعزز سرعة الاتصال عبر AirPlay مع الأجهزة الأخرى. كما أضيف خيار النص الأكبر لتسهيل الوصول، وتم تضمين إعدادات التحميل الذكي وتفاصيل تغطية AppleCare داخل تطبيق الإعدادات. كما يوفر تحسينات في استقرار النظام. النسخة التجريبية للمطورين متاحة الآن، وستتوفر نسخة تجريبية عامة في يوليو.</description>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781082960326.png" type="image/jpeg"/>
+    </item>
+  </channel>
+</rss>
