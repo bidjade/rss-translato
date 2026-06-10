@@ -249,7 +249,7 @@ Original text:
         
         logging.info(f"Attempt {attempted_models}/{len(model_switcher.models)}: Using model: {current_model}")
         
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{current_model}:generateContent?key={GEMINI_API_KEY}"
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{current_model}:generateContent"
         
         max_tokens = 500 if CONTENT_TYPE == 'translate' else 200
         
@@ -261,7 +261,10 @@ Original text:
                 "maxOutputTokens": max_tokens
             }
         }
-        headers = {"Content-Type": "application/json"}
+        headers = {
+            "Content-Type": "application/json",
+            "X-goog-api-key": GEMINI_API_KEY
+        }
         
         try:
             r = requests.post(url, json=payload, headers=headers, timeout=30)
