@@ -1,4 +1,4 @@
-name: translat rss feed
+name: Apps Bot
 
 on:
   schedule:
@@ -41,4 +41,4 @@ jobs:
           git add config/last_post.json
           git add rss/*.xml
           git diff --cached --quiet || git commit -m "Auto-update: Bot execution - $(date +%Y-%m-%d_%H:%M:%S)"
-          git Bot
+          git push
