@@ -286,7 +286,7 @@ Title:
 def process_with_ollama(text):
     if not OLLAMA_API_KEY:
         logging.error("OLLAMA_API_KEY is not set.")
-        return text[:500]
+        return None
     
     if CONTENT_TYPE == 'translate':
         prompt = f"""Translate the following text to {LANGUAGE}. Translate it completely and accurately.
@@ -339,7 +339,7 @@ Original text:
                 if attempt < max_retries - 1:
                     time.sleep(5)
                     continue
-                return text[:500]
+                return None
             
             data = r.json()
             result = data.get("response", "").strip()
@@ -349,7 +349,7 @@ Original text:
                 if attempt < max_retries - 1:
                     time.sleep(5)
                     continue
-                return text[:500]
+                return None
             
             result = re.sub(r'#\w+\s*', '', result).strip()
             
@@ -373,9 +373,9 @@ Original text:
             if attempt < max_retries - 1:
                 time.sleep(5)
                 continue
-            return text[:500]
+            return None
     
-    return text[:500]
+    return None
 
 def process_feed(feed_url):
     try:
@@ -400,6 +400,8 @@ def process_feed(feed_url):
         
         existing_entries = load_existing_entries(feed_name)
         new_entries_to_process = []
+        processed_count = 0
+        skipped_count = 0
         
         if not last_id:
             logging.info(f"First time processing '{feed_name}'. Processing latest {MAX_POSTS} posts.")
@@ -433,6 +435,12 @@ def process_feed(feed_url):
                     desc_text = clean_html(desc)
                     
                     processed_text = process_with_ollama(desc_text)
+                    
+                    if not processed_text:
+                        logging.warning(f"AI processing failed for post: {post_id}. Skipping this post.")
+                        skipped_count += 1
+                        continue
+                    
                     translated_title = translate_title(entry.get('title', 'No Title'))
                     
                     image_url = None
@@ -453,20 +461,21 @@ def process_feed(feed_url):
                     }
                     
                     existing_entries.append(processed_entry)
-                    
                     tracker_data[feed_name] = post_id
+                    processed_count += 1
                     
                     logging.info(f"Successfully processed post: {entry.get('title', 'No Title')[:50]}...")
                     
                 except Exception as e:
                     logging.error(f"Failed to process individual post: {e}")
+                    skipped_count += 1
                     continue
         
         if existing_entries:
             existing_entries.sort(key=lambda e: e.get('published', ''), reverse=True)
             create_rss_xml(feed_name, existing_entries)
             save_tracker(tracker_data)
-            logging.info(f"Total entries in XML: {min(len(existing_entries), MAX_POSTS)}")
+            logging.info(f"Processed: {processed_count} | Skipped: {skipped_count} | Total in XML: {min(len(existing_entries), MAX_POSTS)}")
         else:
             logging.info(f"No entries to save for {feed_name}")
         
