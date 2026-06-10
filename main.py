@@ -28,13 +28,24 @@ config = configparser.ConfigParser()
 config.read(CONFIG_FILE, encoding='utf-8')
 
 OLLAMA_API_KEY = config.get('credentials', 'ollama_api_key', fallback=None)
-OLLAMA_MODEL = config.get('models', 'ollama_model', fallback='gpt-oss:120b-cloud')
+
+models_raw = config.get('models', 'ollama_models', fallback='gpt-oss:120b-cloud')
+if ',' in models_raw:
+    OLLAMA_MODELS = [model.strip() for model in models_raw.split(',') if model.strip()]
+elif '\n' in models_raw:
+    OLLAMA_MODELS = [model.strip() for model in models_raw.split('\n') if model.strip() and not model.strip().startswith('[')]
+else:
+    OLLAMA_MODELS = [models_raw.strip()] if models_raw.strip() else []
 
 if not OLLAMA_API_KEY:
     logging.error("OLLAMA_API_KEY not found in config.ini")
     exit(1)
 
-logging.info(f"Using Ollama model: {OLLAMA_MODEL}")
+if not OLLAMA_MODELS:
+    logging.error("No Ollama models found in config.ini")
+    exit(1)
+
+logging.info(f"Loaded {len(OLLAMA_MODELS)} Ollama models: {OLLAMA_MODELS}")
 
 LANGUAGE = config.get('settings', 'language', fallback='arabic')
 CONTENT_TYPE = config.get('settings', 'type', fallback='summary')
@@ -68,6 +79,26 @@ if not RSS_FEEDS:
 logging.info(f"Loaded {len(RSS_FEEDS)} RSS feeds")
 
 USER_AGENT_HEADER = {'User-Agent': 'Mozilla/5.0'}
+
+class OllamaModelSwitcher:
+    def __init__(self, models):
+        self.models = models
+        self.current_index = 0
+        self.all_models_failed = False
+    
+    def get_current_model(self):
+        return self.models[self.current_index]
+    
+    def get_next_model(self):
+        if self.current_index < len(self.models) - 1:
+            self.current_index += 1
+            return self.models[self.current_index]
+        self.all_models_failed = True
+        return None
+    
+    def reset(self):
+        self.current_index = 0
+        self.all_models_failed = False
 
 def load_tracker():
     if os.path.exists(TRACKER_FILE):
@@ -253,7 +284,7 @@ def extract_image_from_url(url):
         logging.error(f"Failed to extract image from {url}: {e}")
         return None
 
-def translate_title(title):
+def translate_title(title, model_switcher):
     if LANGUAGE == 'english':
         return title
     
@@ -265,25 +296,40 @@ Title:
     url = "https://ollama.com/api/generate"
     headers = {"Authorization": f"Bearer {OLLAMA_API_KEY}"}
     
-    payload = {
-        "model": OLLAMA_MODEL,
-        "prompt": prompt,
-        "stream": False
-    }
+    attempted_models = 0
     
-    try:
-        r = requests.post(url, headers=headers, json=payload, timeout=30)
-        if r.status_code == 200:
-            data = r.json()
-            translated = data.get("response", "").strip()
-            if translated:
-                return translated
-    except Exception as e:
-        logging.error(f"Title translation failed: {e}")
+    while attempted_models < len(OLLAMA_MODELS):
+        current_model = model_switcher.get_current_model()
+        attempted_models += 1
+        
+        payload = {
+            "model": current_model,
+            "prompt": prompt,
+            "stream": False
+        }
+        
+        try:
+            r = requests.post(url, headers=headers, json=payload, timeout=30)
+            if r.status_code == 200:
+                data = r.json()
+                translated = data.get("response", "").strip()
+                if translated:
+                    return translated
+            
+            logging.warning(f"Title translation failed with model {current_model}")
+            next_model = model_switcher.get_next_model()
+            if not next_model:
+                break
+                
+        except Exception as e:
+            logging.error(f"Title translation error with model {current_model}: {e}")
+            next_model = model_switcher.get_next_model()
+            if not next_model:
+                break
     
     return title
 
-def process_with_ollama(text):
+def process_with_ollama(text, model_switcher):
     if not OLLAMA_API_KEY:
         logging.error("OLLAMA_API_KEY is not set.")
         return None
@@ -320,24 +366,27 @@ Original text:
     url = "https://ollama.com/api/generate"
     headers = {"Authorization": f"Bearer {OLLAMA_API_KEY}"}
     
-    payload = {
-        "model": OLLAMA_MODEL,
-        "prompt": prompt,
-        "stream": False
-    }
+    attempted_models = 0
     
-    max_retries = 3
-    
-    for attempt in range(max_retries):
+    while attempted_models < len(OLLAMA_MODELS):
+        current_model = model_switcher.get_current_model()
+        attempted_models += 1
+        
+        logging.info(f"Ollama attempt {attempted_models}/{len(OLLAMA_MODELS)}: Using model: {current_model}")
+        
+        payload = {
+            "model": current_model,
+            "prompt": prompt,
+            "stream": False
+        }
+        
         try:
-            logging.info(f"Ollama API attempt {attempt + 1}/{max_retries}")
-            
             r = requests.post(url, headers=headers, json=payload, timeout=90)
             
             if r.status_code != 200:
-                logging.error(f"Ollama API error: {r.status_code} - {r.text[:200]}")
-                if attempt < max_retries - 1:
-                    time.sleep(5)
+                logging.error(f"Ollama API error with model {current_model}: {r.status_code}")
+                next_model = model_switcher.get_next_model()
+                if next_model:
                     continue
                 return None
             
@@ -345,9 +394,9 @@ Original text:
             result = data.get("response", "").strip()
             
             if not result:
-                logging.error("Empty response from Ollama")
-                if attempt < max_retries - 1:
-                    time.sleep(5)
+                logging.error(f"Empty response from model {current_model}")
+                next_model = model_switcher.get_next_model()
+                if next_model:
                     continue
                 return None
             
@@ -359,7 +408,7 @@ Original text:
                     logging.warning(f"Text starts with non-Arabic word: '{first_word}'")
             
             char_count = len(result)
-            logging.info(f"Processing successful with Ollama")
+            logging.info(f"Processing successful with model: {current_model}")
             logging.info(f"Characters: {char_count}")
             
             if char_count > 500:
@@ -369,9 +418,9 @@ Original text:
             return result
         
         except Exception as e:
-            logging.error(f"Ollama API failed: {e}")
-            if attempt < max_retries - 1:
-                time.sleep(5)
+            logging.error(f"Ollama API failed with model {current_model}: {e}")
+            next_model = model_switcher.get_next_model()
+            if next_model:
                 continue
             return None
     
@@ -434,14 +483,16 @@ def process_feed(feed_url):
                     desc = entry.get('summary', '') or entry.get('description', '')
                     desc_text = clean_html(desc)
                     
-                    processed_text = process_with_ollama(desc_text)
+                    model_switcher = OllamaModelSwitcher(OLLAMA_MODELS)
+                    processed_text = process_with_ollama(desc_text, model_switcher)
                     
                     if not processed_text:
                         logging.warning(f"AI processing failed for post: {post_id}. Skipping this post.")
                         skipped_count += 1
                         continue
                     
-                    translated_title = translate_title(entry.get('title', 'No Title'))
+                    title_switcher = OllamaModelSwitcher(OLLAMA_MODELS)
+                    translated_title = translate_title(entry.get('title', 'No Title'), title_switcher)
                     
                     image_url = None
                     if 'media_content' in entry and entry['media_content']:
@@ -484,7 +535,7 @@ def process_feed(feed_url):
 
 def main():
     logging.info("Starting Apps Bot with Ollama...")
-    logging.info(f"Using model: {OLLAMA_MODEL}")
+    logging.info(f"Loaded {len(OLLAMA_MODELS)} models: {OLLAMA_MODELS}")
     logging.info(f"Processing {len(RSS_FEEDS)} RSS feeds")
     logging.info(f"Language: {LANGUAGE}")
     logging.info(f"Content type: {CONTENT_TYPE}")
