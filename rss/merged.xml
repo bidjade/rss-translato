@@ -5,7 +5,7 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Thu, 11 Jun 2026 10:20:49 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2026 14:35:05 GMT</lastBuildDate>
     <item>
       <title>يقدم OpenCV 5 محرك شبكة عصبونية عميقة جديد، ودعم أقوى لـ ONNX، ونواة أسرع</title>
       <link>https://alternativeto.net/news/2026/6/opencv-5-brings-new-deep-neural-network-engine-stronger-onnx-support-and-faster-core/</link>
@@ -21,6 +21,22 @@
       <description>أطلقت جوجل نموذج Gemini 3.5 Live Translate للترجمة الصوتية الفورية، يدعم أكثر من سبعين لغة ويولد كلامًا مترجمًا بطلاقة يحافظ على نبرة وسرعة المتحدث الأصلي. يعمل مستمرًا مع تأخير بضع ثوانٍ فقط، ويتعامل مع الضوضاء دون إعداد يدوي، ما يتيح الترجمة في المكالمات والاجتماعات والصفوف والبث المباشر. يتوفر عبر Gemini Live API وGoogle AI Studio، ومعاينة خاصة للمؤسسات عبر Google Meet، وكذلك في تطبيق Google Translate على أندرويد وiOS، وتُضيف تقنية SynthID علامة مائية غير مرئية لكل صوت.</description>
       <source>news_-_alternativetonet</source>
       <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781099689102.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>جوجل تُعلن عن DiffusionGemma، وتوفر استنتاجًا أسرع حتى 4 أضعاف على وحدات معالجة رسومية مخصصة</title>
+      <link>https://alternativeto.net/news/2026/6/google-unveils-diffusiongemma-delivering-up-to-4x-faster-inference-on-dedicated-gpus/</link>
+      <pubDate>Thu, 11 Jun 2026 12:00:00 GMT</pubDate>
+      <description>أطلقت جوجل نموذج DiffusionGemma التجريبي الذي يستخدم النشر النصي لتسريع توليد النصوص، مع توليد كتل كاملة بدلاً من الرموز المتتابعة، فيصبح أسرع بأربع مرات على وحدات GPU المتخصصة (1 000 رمز/ثانية على NVIDIA H100 و700 على RTX 5090). يعتمد على معمارية Gemma 4 وتصميم MoE بـ 26 مليار معامل ينشط 3.8 مليار فقط، ويمكن تشغيله على بطاقات بذاكرة 18 جيجابايت. يدعم توليد 256 رمزًا متوازيًا ويُقَيِّم النص لتصحيح فوري، لكنه تجريبي وجودته أقل من Gemma 4 للإنتاج.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781126568155.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>يقدّم OpenProject 17.5 معرفات حزم العمل القائمة على المشروع ومخازن المتأخرات بأكثر مرونة</title>
+      <link>https://alternativeto.net/news/2026/6/openproject-17-5-offers-project-based-work-package-identifiers-and-more-flexible-backlogs/</link>
+      <pubDate>Thu, 11 Jun 2026 09:00:00 GMT</pubDate>
+      <description>أطلق OpenProject النسخة 17.5 مع ميزة تعريفات حزم العمل حسب المشروع، فتتيح الآن استخدام معرفات دلالية مثل X‑01 تُظهر المشروع المرتبط مباشرة وتحسن إدارة عدة مشاريع وتسهّل نقل الجيرا. كما أضيفت خيارات تخصيص أوسع للـ backlog حيث يمكن استبعاد أنواع حزم معينة، وأعيد تصميم عرض السبرينت وبطاقات الحزم لمزيد من الوضوح. بالإضافة إلى تحسين الإشارات الطبيعية والحالات المتكررة لتقوية جدولة الاجتماعات.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781125626838.png" type="image/jpeg"/>
     </item>
     <item>
       <title>بلوسكي يحصل على مجتمعات مستوحاة من ريديت مبنية للنقاشات المرتكزة على الموضوع</title>
