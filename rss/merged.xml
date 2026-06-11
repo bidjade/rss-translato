@@ -5,7 +5,7 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Thu, 11 Jun 2026 14:35:05 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2026 18:12:51 GMT</lastBuildDate>
     <item>
       <title>يقدم OpenCV 5 محرك شبكة عصبونية عميقة جديد، ودعم أقوى لـ ONNX، ونواة أسرع</title>
       <link>https://alternativeto.net/news/2026/6/opencv-5-brings-new-deep-neural-network-engine-stronger-onnx-support-and-faster-core/</link>
@@ -21,6 +21,86 @@
       <description>أطلقت جوجل نموذج Gemini 3.5 Live Translate للترجمة الصوتية الفورية، يدعم أكثر من سبعين لغة ويولد كلامًا مترجمًا بطلاقة يحافظ على نبرة وسرعة المتحدث الأصلي. يعمل مستمرًا مع تأخير بضع ثوانٍ فقط، ويتعامل مع الضوضاء دون إعداد يدوي، ما يتيح الترجمة في المكالمات والاجتماعات والصفوف والبث المباشر. يتوفر عبر Gemini Live API وGoogle AI Studio، ومعاينة خاصة للمؤسسات عبر Google Meet، وكذلك في تطبيق Google Translate على أندرويد وiOS، وتُضيف تقنية SynthID علامة مائية غير مرئية لكل صوت.</description>
       <source>news_-_alternativetonet</source>
       <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781099689102.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>إصدار Stremio الكامل يُطلق على AltStore لأجهزة Apple في أوروبا واليابان</title>
+      <link>https://alternativeto.net/news/2026/6/stremio-full-version-launches-on-altstore-for-apple-devices-in-europe-and-japan/</link>
+      <pubDate>Thu, 11 Jun 2026 16:48:52 GMT</pubDate>
+      <description>أُطلقت النسخة الكاملة لتطبيق Stremio الآن لأجهزة Apple في أوروبا واليابان عبر منصة AltStore PAL، مع دعم بث ملفات التورنت واليوزرنت. تتضمن التحديثات ملفات تعريف المستخدمين، خاصية تخطي المقدمة والختام، مدير تنزيل للتيارات HTTP، تنظيم الكتالوج وتصفية المحتوى. وتُخطط الشركة لتوسيع الخدمة إلى البرازيل بعد التغييرات الأخيرة في السماح بالتحميل الجانبي.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781196532423.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>كانفا تُقدِّم طبقات سحرية لتحرير الصور التي تم إنشاؤها بواسطة ChatGPT</title>
+      <link>https://alternativeto.net/news/2026/6/canva-introduces-magic-layers-for-editing-chatgpt-generated-images/</link>
+      <pubDate>Thu, 11 Jun 2026 16:47:01 GMT</pubDate>
+      <description>أطلقت كانفا ميزة جديدة تُدعى &quot;الطبقات السحرية&quot; تمكن المستخدمين من تحويل الصور التي يولدها ChatGPT إلى تصاميم كاملة قابلة للتعديل داخل كانفا. تتيح هذه الأداة إجراء جميع عمليات التحرير مباشرةً في نافذة الدردشة، مما يلغي الحاجة للتنقل بين المنصات المختلفة ويوفر تجربة تصميم أكثر سلاسة وكفاءة. وبذلك يحصل المصممون والمهتمون بإنتاج محتوى بصري على سرعة وسهولة أكبر دون الحاجة لفتح برامج أخرى.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781196421192.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>متصفح هيليوم يضيف اختصارات مخصصة، تحديثات ويندوز التلقائية، خصوصية محسنة</title>
+      <link>https://alternativeto.net/news/2026/6/helium-browser-adds-custom-shortcuts-windows-auto-updates-enhanced-privacy/</link>
+      <pubDate>Thu, 11 Jun 2026 16:41:10 GMT</pubDate>
+      <description>أضاف متصفح هليوم الآن اختصارات لوحة مفاتيح قابلة للتخصيص على جميع الأنظمة وتحديثًا تلقائيًا لمستخدمي ويندوز. كما عزز الحماية ضد تتبع البصمة الرقمية، وجعل وضع الإطار غير المرئي مع الشريط الجانبي العائم مفعلاً افتراضيًا. يشمل الإصدار ميزات موسعة لإدارة علامات التبويب، وإشعارات وشريط معلومات معاد تصميمهما، وتحسينات إضافية في قابلية الاستخدام.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781196070302.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Ghost يقدّم الفلاتر الديناميكية وعروض الأعضاء المحدثة تلقائيًا</title>
+      <link>https://alternativeto.net/news/2026/6/ghost-introduces-dynamic-filters-and-auto-updated-member-views/</link>
+      <pubDate>Thu, 11 Jun 2026 16:36:41 GMT</pubDate>
+      <description>أطلقت منصة Ghost فلاتر ديناميكية لعرض الأعضاء، تشمل مشغل 'في الفترة الأخيرة' الذي يسمح للمسؤولين بتصفية الأعضاء باستخدام تواريخ نسبية، وتحديث تلقائي لعرض الأعضاء المحفوظ يعكس أحدث البيانات دائمًا. كما أضيف مشغل 'في الفترة القادمة' لتصفية أحداث الفوترة القادمة مثل التجديدات. الميزة متوفرة الآن لمستخدمي Ghost(Pro) وستتوفر للمستضيفين الذاتيين بعد التحديث في الإصدارات القادمة.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781195801047.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>متصفح Zen 1.21b يضيف توجيه الفضاء وتحديثات إلى Firefox 151.0.4</title>
+      <link>https://alternativeto.net/news/2026/6/zen-browser-1-21b-adds-space-routing-and-updates-to-firefox-151-0-4/</link>
+      <pubDate>Thu, 11 Jun 2026 16:34:06 GMT</pubDate>
+      <description>يطرح Zen Browser الإصدار 1.21b ميزة Space Routing التي تسمح للمستخدمين بتوجيه الروابط إلى مساحات محددة لتسهيل تنظيم سير العمل وتعزيز التحكم فيه، ويستند الآن إلى نواة Firefox 151.0.4 لضمان أعلى مستويات التوافق والأمان. كما يتضمن التحديث إصلاحات متعددة تشمل تحسين إدارة حاويات الألسنة، تصحيح عيوب لون السمة، تعزيز وصول الأيقونات، إضافة تحسينات في الأداء واستقرارية المتصفح.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781195646645.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>أطلقت ديزر للتو كاشف موسيقى مجاني بالذكاء الاصطناعي لجميع منصات البث الرئيسية</title>
+      <link>https://alternativeto.net/news/2026/6/deezer-just-launched-a-free-ai-music-detector-for-all-major-streaming-platforms/</link>
+      <pubDate>Thu, 11 Jun 2026 16:30:00 GMT</pubDate>
+      <description>أطلقت ديزر أداة مجانية على الإنترنت لاكتشاف الموسيقى المُنشأة بالذكاء الاصطناعي تدعم 27 لغة وأكثر من 20 منصة تدفق مثل سبوتيفاي وأبل ميوزيك وتيدال ويوتيوب ميوزيك. تُفحص القوائم لتحديد الأغاني المُنتجة بنماذج سونو وأوديو مع إمكانية توسيع الكشف لأدوات أخرى. يتطلب الاستخدام ربط الحساب وعرض النتائج القابلة للمشاركة. جاء الإطلاق بعد دراسة أظهرت دعم 80٪ للوسم الواضح و73٪ لتسمية صريحة، ما يعزز شفافية القوائم.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781181262735.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>متجر GitHub أصبح الآن متجر Komi في التحديث 1.9.1</title>
+      <link>https://alternativeto.net/news/2026/6/github-store-is-now-komi-store-1-9-1-launches-with-new-name-and-in-app-repo-browsing/</link>
+      <pubDate>Thu, 11 Jun 2026 16:25:25 GMT</pubDate>
+      <description>أعيد تسمية GitHub Store إلى Komi Store وانضمت إلى منظمة Kurikomi لتجنب مشاكل العلامة التجارية، وتم نقل جميع بيانات المستخدمين بما فيها المكتبات والإعدادات تلقائيًا. كما أُصدر تحديث يضيف تصفحًا داخل التطبيق لقضايا ومستودعات السحب مع دعم الفلاتر والنقاش، إلى جانب صفحة أمان مخصصة وتحسينات عديدة على مختلف المنصات. وشملت الإصلاحات تحسين استقرار التطبيق، مع الإشارة إلى المقال على موقع AlternativeTo لمزيد من المعلومات.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781195176464.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>WordPress.com يدعم الآن التهيئة المباشرة في Stripe Projects CLI</title>
+      <link>https://alternativeto.net/news/2026/6/wordpress-com-now-supports-direct-provisioning-in-stripe-projects-cli/</link>
+      <pubDate>Thu, 11 Jun 2026 16:05:01 GMT</pubDate>
+      <description>أضافت WordPress.com كموفر في Stripe Projects، ما يتيح للمطورين إنشاء مواقع جديدة وتسجيل نطاقات واختيار الخطط مباشرةً من سطر الأوامر. تُدار عملية الإعداد والفوترة برمجياً باستخدام تفاصيل الدفع الموجودة في Stripe، ويمكن إنشاء الحسابات أو ربطها تلقائيًا. يبسّط هذا التكامل سير العمل للمطورين الذين يفضلون إنجاز جميع المهام في الطرفية بسهولة وبكفاءة.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781193901991.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>إصدار Alpine Linux 3.24.0 مع تحديثات هامة للحزم وتحسينات في المثبت</title>
+      <link>https://alternativeto.net/news/2026/6/alpine-linux-3-24-0-released-with-key-package-updates-and-installer-improvements/</link>
+      <pubDate>Thu, 11 Jun 2026 15:58:49 GMT</pubDate>
+      <description>أصدرت Alpine Linux النسخة 3.24.0 مع تحديثات هامة تشمل GRUB وLLVM وRust وبيئات GNOME وKDE Plasma وQt وغيرها من الحزم الأساسية. يدعم المُثبت الآن محمل إقلاع Limine، IPv6 مدمج، وتكوين محسّن لوحدة التحكم التسلسلية. تم ترقية setuptools إلى 82.0.0 وإزالة pkg_resources، ما قد يتطلب ترحيل المشاريع. أضيف سطح مكتب COSMIC إلى المستودع المجتمعي واستمرار إهمال إصدارات GTK وQt القديمة.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781193529222.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Files 4.1.3 يضيف أحجام المجلدات عند الطلب، حفظ الاختيارات عبر التخطيطات، وإزالة الوسوم</title>
+      <link>https://alternativeto.net/news/2026/6/files-4-1-3-adds-on-demand-folder-sizes-selection-saving-across-layouts-and-tag-clearing/</link>
+      <pubDate>Thu, 11 Jun 2026 13:30:00 GMT</pubDate>
+      <description>أطلق فريق Files نسخة 4.1.3 التي تضيف حساب حجم المجلد حسب الطلب؛ عند إيقاف خيار “حساب أحجام المجلدات” يظهر زر “عرض الحجم” لكل مجلد. كما تُحافظ النسخة على اختيار الملفات عند تبديل الواجهات، وتتيح مسح جميع العلامات بضغط واحد، وتزامن أيقونة OneDrive مع التطبيق المثبت، وتضم سبعة إصلاحات للثبات. يخطط الفريق لإطلاق شريط جانبي بشجرة المجلدات لاختبار مبكر.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781127450171.png" type="image/jpeg"/>
     </item>
     <item>
       <title>جوجل تُعلن عن DiffusionGemma، وتوفر استنتاجًا أسرع حتى 4 أضعاف على وحدات معالجة رسومية مخصصة</title>
