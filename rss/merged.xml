@@ -5,7 +5,7 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Thu, 11 Jun 2026 23:20:40 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 03:46:12 GMT</lastBuildDate>
     <item>
       <title>يقدم OpenCV 5 محرك شبكة عصبونية عميقة جديد، ودعم أقوى لـ ONNX، ونواة أسرع</title>
       <link>https://alternativeto.net/news/2026/6/opencv-5-brings-new-deep-neural-network-engine-stronger-onnx-support-and-faster-core/</link>
@@ -21,6 +21,14 @@
       <description>أطلقت جوجل نموذج Gemini 3.5 Live Translate للترجمة الصوتية الفورية، يدعم أكثر من سبعين لغة ويولد كلامًا مترجمًا بطلاقة يحافظ على نبرة وسرعة المتحدث الأصلي. يعمل مستمرًا مع تأخير بضع ثوانٍ فقط، ويتعامل مع الضوضاء دون إعداد يدوي، ما يتيح الترجمة في المكالمات والاجتماعات والصفوف والبث المباشر. يتوفر عبر Gemini Live API وGoogle AI Studio، ومعاينة خاصة للمؤسسات عبر Google Meet، وكذلك في تطبيق Google Translate على أندرويد وiOS، وتُضيف تقنية SynthID علامة مائية غير مرئية لكل صوت.</description>
       <source>news_-_alternativetonet</source>
       <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781099689102.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Chrome يتحرك لحظر ملحقات MV2 بالكامل، مما يقتل فعليًا حيل uBlock Origin</title>
+      <link>https://alternativeto.net/news/2026/6/chrome-moves-to-fully-block-mv2-extensions-effectively-killing-ublock-origin-workarounds/</link>
+      <pubDate>Thu, 11 Jun 2026 21:20:04 GMT</pubDate>
+      <description>أعلنت جوجل أن متصفح كروم يدخل الآن المرحلة النهائية لإزالة دعم ملحقات Manifest V2، ما يؤدي إلى إلغاء حلول uBlock Origin التي كانت تشغل النسخة القديمة. تم حذف علم kExtensionManifestV2Disabled وتوقف أي توافق لاحق، وستتوقف تعديلات السجلات بعد Chromium 151. كما يبدأ إيدج في تعطيل uBlock Origin، بينما يبقي أوبرا وبرف دعم MV2 مؤقتاً ويتحولان إلى MV3. يظل فَيَرْفُكس يدعم كلا النسختين، ما يجعله بديلاً آمناً إلى جانب LibreWolf وWaterfox وZen وOrion.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781223612099.png" type="image/jpeg"/>
     </item>
     <item>
       <title>إصدار Stremio الكامل يُطلق على AltStore لأجهزة Apple في أوروبا واليابان</title>
