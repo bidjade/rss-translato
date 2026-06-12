@@ -5,7 +5,7 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Fri, 12 Jun 2026 03:46:12 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 08:24:23 GMT</lastBuildDate>
     <item>
       <title>يقدم OpenCV 5 محرك شبكة عصبونية عميقة جديد، ودعم أقوى لـ ONNX، ونواة أسرع</title>
       <link>https://alternativeto.net/news/2026/6/opencv-5-brings-new-deep-neural-network-engine-stronger-onnx-support-and-faster-core/</link>
@@ -141,6 +141,14 @@
       <description>أصدر PowerToys النسخة 0.100؛ أُعيد بناء دليل الاختصارات ليظهر لوحة جانبية يحدد التطبيق النشط ويعرض اختصاراته. يحصل Command Palette على معارض الإضافات وتثبيت وإزالة الامتدادات، ويدعم الـ Dock شاشات متعددة. يضيف Performance Monitor ويدجت للبطارية، وتُحسّن Power Display سرعة البدء ودعم الوضع المتوافق. ZoomIt يضيف طبقة كاميرا ويب، وتم ترقية البرنامج إلى .NET 10 مع تقليل حجم المُثبت 15 % وتحسين موثوقية التحديثات ونسخ احتياطي للإعدادات.</description>
       <source>news_-_alternativetonet</source>
       <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781140490668.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>تيليجرام يعود إلى Apple Watch وWear OS مع تطبيقين أصليين جديدين للساعة الذكية</title>
+      <link>https://alternativeto.net/news/2026/6/telegram-returns-to-apple-watch-and-wear-os-with-two-new-native-smartwatch-apps/</link>
+      <pubDate>Fri, 12 Jun 2026 05:48:15 GMT</pubDate>
+      <description>أعاد تطبيق تيليجرام المفاجئ ظهوره على الساعات الذكية بإصداره تطبيقين أصليين لكل من Apple Watch و Wear OS، معيدًا الدعم إلى watchOS ومطلقًا أول نسخة رسمية لأجهزة Wear OS مثل بيكسل واتش. يتيح التطبيق إرسال واستقبال الرسائل، مشاهدة الصور والفيديوهات، تسجيل الصوت، وإدارة المحادثات بميزات مختلفة حسب النظام، مع توفير تسجيل الدخول عبر مسح QR وكلمة مرور سحابية.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781244184276.png" type="image/jpeg"/>
     </item>
   </channel>
 </rss>
