@@ -5,7 +5,7 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Fri, 12 Jun 2026 08:24:23 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jun 2026 12:18:39 GMT</lastBuildDate>
     <item>
       <title>يقدم OpenCV 5 محرك شبكة عصبونية عميقة جديد، ودعم أقوى لـ ONNX، ونواة أسرع</title>
       <link>https://alternativeto.net/news/2026/6/opencv-5-brings-new-deep-neural-network-engine-stronger-onnx-support-and-faster-core/</link>
@@ -141,6 +141,22 @@
       <description>أصدر PowerToys النسخة 0.100؛ أُعيد بناء دليل الاختصارات ليظهر لوحة جانبية يحدد التطبيق النشط ويعرض اختصاراته. يحصل Command Palette على معارض الإضافات وتثبيت وإزالة الامتدادات، ويدعم الـ Dock شاشات متعددة. يضيف Performance Monitor ويدجت للبطارية، وتُحسّن Power Display سرعة البدء ودعم الوضع المتوافق. ZoomIt يضيف طبقة كاميرا ويب، وتم ترقية البرنامج إلى .NET 10 مع تقليل حجم المُثبت 15 % وتحسين موثوقية التحديثات ونسخ احتياطي للإعدادات.</description>
       <source>news_-_alternativetonet</source>
       <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781140490668.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>WordPress Studio متاح الآن لمستخدمي لينكس لتطوير مواقع ويب محلية سلسة</title>
+      <link>https://alternativeto.net/news/2026/6/wordpress-studio-is-now-available-for-linux-users-for-seamless-local-website-development/</link>
+      <pubDate>Fri, 12 Jun 2026 12:00:00 GMT</pubDate>
+      <description>أعلنت Automattic عن توسيع منصة WordPress Studio لتشمل نظام Linux، بدءًا من Ubuntu، لتصبح نسخة ذات واجهة رسومية على لينكس بعد إتاحتها على Windows وmacOS. تتيح الأداة إنشاء مواقع WordPress محلية فورًا دون الحاجة لـ Apache أو Docker، وتدعم نطاقات مخصصة وHTTPS، ورابط معاينة بنقرة واحدة للتعاون. كما تسمح بالمزامنة مع WordPress.com لسحب المواقع وإعادة نشر التغييرات، وتكشف عن محررات مثل VS Code وPhpStorm وSublime تلقائيًا، وتضم مساعدًا مدمجًا للبرمجة والتصحيح.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781204149002.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>يوتيوب يعيد إحياء المراسلة المباشرة لتتمكن أخيرًا من مشاركة الفيديوهات دون مغادرة التطبيق</title>
+      <link>https://alternativeto.net/news/2026/6/youtube-revives-direct-messaging-so-you-can-finally-share-videos-without-leaving-the-app/</link>
+      <pubDate>Fri, 12 Jun 2026 09:00:00 GMT</pubDate>
+      <description>أطلقت يوتيوب ميزة مشاركة الفيديو والرسائل داخل التطبيق للمستخدمين فوق 18 عاماً في الولايات المتحدة ومناطق أخرى. يرسل المستخدمون دعوة عبر واتساب أو رسائل أو سيجنال أو SMS، وبعد القبول يصبح الطرفان جهات اتصال يوتيوب. يمكنهم تبادل النصوص، الرد الفوري على الفيديوهات، سحب الرسائل، حذف المحادثة، وحظر أو إبلاغ. يقتصر المحتوى على مقاطع يوتيوب، البث الحي، والشورتس دون صور أو ملفات. تعيد يوتيوب المراسلة التي أُزيلت عام 2019 مع توسيع القدرة.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781202455282.png" type="image/jpeg"/>
     </item>
     <item>
       <title>تيليجرام يعود إلى Apple Watch وWear OS مع تطبيقين أصليين جديدين للساعة الذكية</title>
