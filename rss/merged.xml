@@ -5,55 +5,7 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Fri, 12 Jun 2026 12:18:39 GMT</lastBuildDate>
-    <item>
-      <title>يقدم OpenCV 5 محرك شبكة عصبونية عميقة جديد، ودعم أقوى لـ ONNX، ونواة أسرع</title>
-      <link>https://alternativeto.net/news/2026/6/opencv-5-brings-new-deep-neural-network-engine-stronger-onnx-support-and-faster-core/</link>
-      <pubDate>Wed, 10 Jun 2026 18:00:00 GMT</pubDate>
-      <description>أعلنت مكتبة OpenCV عن إصدار النسخة الخامسة، التي تُضيف محرك شبكة عصبية عميقة جديد، دعمًا محسّنًا لـONNX، تحسينات في تسريع العتاد وتكامل أقوى مع بايثون، إضافة أنماط بيانات جديدة وقدرات رؤية ثلاثية الأبعاد موسعة، وتوثيق أكثر وضوحًا وبنية أنظف. تحظى المكتبة بأكثر من 88 000 نجمة على GitHub وملايين التحميلات اليومية، وتستهدف أداءً أسرع وحجمًا أصغر ودعمًا متعدد اللغات.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781100870520.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>تُتيح خدمة الترجمة الحية Gemini 3.5 من جوجل الكلام متعدد اللغات في الوقت الفعلي بأكثر من 70 لغة</title>
-      <link>https://alternativeto.net/news/2026/6/google-s-gemini-3-5-live-translate-enables-real-time-multilingual-speech-in-70-languages/</link>
-      <pubDate>Wed, 10 Jun 2026 16:30:00 GMT</pubDate>
-      <description>أطلقت جوجل نموذج Gemini 3.5 Live Translate للترجمة الصوتية الفورية، يدعم أكثر من سبعين لغة ويولد كلامًا مترجمًا بطلاقة يحافظ على نبرة وسرعة المتحدث الأصلي. يعمل مستمرًا مع تأخير بضع ثوانٍ فقط، ويتعامل مع الضوضاء دون إعداد يدوي، ما يتيح الترجمة في المكالمات والاجتماعات والصفوف والبث المباشر. يتوفر عبر Gemini Live API وGoogle AI Studio، ومعاينة خاصة للمؤسسات عبر Google Meet، وكذلك في تطبيق Google Translate على أندرويد وiOS، وتُضيف تقنية SynthID علامة مائية غير مرئية لكل صوت.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781099689102.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Chrome يتحرك لحظر ملحقات MV2 بالكامل، مما يقتل فعليًا حيل uBlock Origin</title>
-      <link>https://alternativeto.net/news/2026/6/chrome-moves-to-fully-block-mv2-extensions-effectively-killing-ublock-origin-workarounds/</link>
-      <pubDate>Thu, 11 Jun 2026 21:20:04 GMT</pubDate>
-      <description>أعلنت جوجل أن متصفح كروم يدخل الآن المرحلة النهائية لإزالة دعم ملحقات Manifest V2، ما يؤدي إلى إلغاء حلول uBlock Origin التي كانت تشغل النسخة القديمة. تم حذف علم kExtensionManifestV2Disabled وتوقف أي توافق لاحق، وستتوقف تعديلات السجلات بعد Chromium 151. كما يبدأ إيدج في تعطيل uBlock Origin، بينما يبقي أوبرا وبرف دعم MV2 مؤقتاً ويتحولان إلى MV3. يظل فَيَرْفُكس يدعم كلا النسختين، ما يجعله بديلاً آمناً إلى جانب LibreWolf وWaterfox وZen وOrion.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781223612099.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>إصدار Stremio الكامل يُطلق على AltStore لأجهزة Apple في أوروبا واليابان</title>
-      <link>https://alternativeto.net/news/2026/6/stremio-full-version-launches-on-altstore-for-apple-devices-in-europe-and-japan/</link>
-      <pubDate>Thu, 11 Jun 2026 16:48:52 GMT</pubDate>
-      <description>أُطلقت النسخة الكاملة لتطبيق Stremio الآن لأجهزة Apple في أوروبا واليابان عبر منصة AltStore PAL، مع دعم بث ملفات التورنت واليوزرنت. تتضمن التحديثات ملفات تعريف المستخدمين، خاصية تخطي المقدمة والختام، مدير تنزيل للتيارات HTTP، تنظيم الكتالوج وتصفية المحتوى. وتُخطط الشركة لتوسيع الخدمة إلى البرازيل بعد التغييرات الأخيرة في السماح بالتحميل الجانبي.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781196532423.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>كانفا تُقدِّم طبقات سحرية لتحرير الصور التي تم إنشاؤها بواسطة ChatGPT</title>
-      <link>https://alternativeto.net/news/2026/6/canva-introduces-magic-layers-for-editing-chatgpt-generated-images/</link>
-      <pubDate>Thu, 11 Jun 2026 16:47:01 GMT</pubDate>
-      <description>أطلقت كانفا ميزة جديدة تُدعى &quot;الطبقات السحرية&quot; تمكن المستخدمين من تحويل الصور التي يولدها ChatGPT إلى تصاميم كاملة قابلة للتعديل داخل كانفا. تتيح هذه الأداة إجراء جميع عمليات التحرير مباشرةً في نافذة الدردشة، مما يلغي الحاجة للتنقل بين المنصات المختلفة ويوفر تجربة تصميم أكثر سلاسة وكفاءة. وبذلك يحصل المصممون والمهتمون بإنتاج محتوى بصري على سرعة وسهولة أكبر دون الحاجة لفتح برامج أخرى.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781196421192.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>متصفح هيليوم يضيف اختصارات مخصصة، تحديثات ويندوز التلقائية، خصوصية محسنة</title>
-      <link>https://alternativeto.net/news/2026/6/helium-browser-adds-custom-shortcuts-windows-auto-updates-enhanced-privacy/</link>
-      <pubDate>Thu, 11 Jun 2026 16:41:10 GMT</pubDate>
-      <description>أضاف متصفح هليوم الآن اختصارات لوحة مفاتيح قابلة للتخصيص على جميع الأنظمة وتحديثًا تلقائيًا لمستخدمي ويندوز. كما عزز الحماية ضد تتبع البصمة الرقمية، وجعل وضع الإطار غير المرئي مع الشريط الجانبي العائم مفعلاً افتراضيًا. يشمل الإصدار ميزات موسعة لإدارة علامات التبويب، وإشعارات وشريط معلومات معاد تصميمهما، وتحسينات إضافية في قابلية الاستخدام.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781196070302.png" type="image/jpeg"/>
-    </item>
+    <lastBuildDate>Fri, 12 Jun 2026 16:17:29 GMT</lastBuildDate>
     <item>
       <title>Ghost يقدّم الفلاتر الديناميكية وعروض الأعضاء المحدثة تلقائيًا</title>
       <link>https://alternativeto.net/news/2026/6/ghost-introduces-dynamic-filters-and-auto-updated-member-views/</link>
@@ -141,6 +93,54 @@
       <description>أصدر PowerToys النسخة 0.100؛ أُعيد بناء دليل الاختصارات ليظهر لوحة جانبية يحدد التطبيق النشط ويعرض اختصاراته. يحصل Command Palette على معارض الإضافات وتثبيت وإزالة الامتدادات، ويدعم الـ Dock شاشات متعددة. يضيف Performance Monitor ويدجت للبطارية، وتُحسّن Power Display سرعة البدء ودعم الوضع المتوافق. ZoomIt يضيف طبقة كاميرا ويب، وتم ترقية البرنامج إلى .NET 10 مع تقليل حجم المُثبت 15 % وتحسين موثوقية التحديثات ونسخ احتياطي للإعدادات.</description>
       <source>news_-_alternativetonet</source>
       <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781140490668.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>إطلاق Audirvāna Origin 3.0 بتصميم Allegro الجديد وتحديثات واجهة المستخدم</title>
+      <link>https://alternativeto.net/news/2026/6/audirv-na-origin-3-0-launches-with-new-allegro-design-and-ui-updates/</link>
+      <pubDate>Fri, 12 Jun 2026 14:26:56 GMT</pubDate>
+      <description>أطلقت Audirvāna نسخة Origin 3.0 مع تصميم Allegro الذي يضمن تناسقًا أكبر بين الحواسيب والتابلت والهواتف الذكية. يتضمن التحديث تنقلًا أوضح، وضوابط سياقية، تحسينًا في قابلية القراءة، وإعادة تصميم لوحة الإعدادات المتقدمة. كما يدعم الآن مجموعة معالجة الإشارة الاختيارية. والتحديث يهدف إلى تحسين تجربة الاستماع عبر توفير خيارات تخصيص صوتية للمستخدمين المتقدمين. يمكن قراءة المقال الكامل على موقع AlternativeTo.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781274416561.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>برِيف لأندرويد يضيف دعم محرك بحث مخصص في تحديث الإصدار 1.91</title>
+      <link>https://alternativeto.net/news/2026/6/brave-for-android-adds-custom-search-engine-support-in-v1-91-update/</link>
+      <pubDate>Fri, 12 Jun 2026 14:24:09 GMT</pubDate>
+      <description>أصبح بإمكان مستخدمي متصفح Brave على نظام Android الآن إضافة محركات بحث مخصصة أو مواقع قابلة للبحث مباشرة من إعدادات التطبيق، ما يعزز مرونة البحث. تُظهر المحركات المُضافة كخيارات بحث سريع عند كتابة العناوين في شريط العنوان. يُتاح هذا التحسين في إصدار v1.91 الذي بدأ التوزيع منذ الأسبوع الماضي. ويمكن الاطلاع على التفاصيل عبر موقع AlternativeTo.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781274249166.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>MEGA تُطلق أداة ترحيل مشفّرة من Google Drive للانتقالات الآمنة</title>
+      <link>https://alternativeto.net/news/2026/6/mega-launches-encrypted-google-drive-migration-tool-for-secure-transfers/</link>
+      <pubDate>Fri, 12 Jun 2026 14:11:28 GMT</pubDate>
+      <description>أطلقت شركة MEGA أداة هجرة جديدة تسمح للمستخدمين بنقل ملفاتهم مباشرةً من Google Drive إلى MEGA مع تشفير من طرف إلى طرف، مما يضمن الخصوصية الكاملة للبيانات. وتخطط الشركة لتوسيع الخدمة قريباً لتدعم مزودي سحابة إضافيين، لتسهيل عملية النقل بين مختلف المنصات السحابية. يُظهر هذا التطوير التزام MEGA بتحسين تجربة التخزين السحابي وتوفير بدائل مفتوحة للمستخدمين، ويمكن متابعة التفاصيل عبر موقع AlternativeTo.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781273488396.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>تسمح OpenAI للمستخدمين بحفظ عمليات إعادة ضبط حد السرعة لكودكس للاستخدام لاحقًا</title>
+      <link>https://alternativeto.net/news/2026/6/openai-lets-users-save-codex-rate-limit-resets-for-later-use/</link>
+      <pubDate>Fri, 12 Jun 2026 14:05:45 GMT</pubDate>
+      <description>أطلقت شركة OpenAI ميزة جديدة تسمح للمستخدمين بحفظ عمليات إعادة تعيين حدود معدل Codex واستخدامها حسب رغبتهم. يحصل جميع مستخدمي الخطط Go وPlus وPro وBusiness على إعادة تعيين مجانية واحدة. ولمدة أسبوعين قادمين، يمكن لمستخدمي Plus وPro دعوة حتى ثلاثة أصدقاء لتجربة Codex، ويتلقى الطرفان إعادة تعيين إضافية بعد الرسالة الأولى للضيف. يمكن قراءة التفاصيل عبر رابط المقال.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781273145166.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>إليفن لابز تكشف عن الأفاتار للفيديوهات المتحدثة المدفوعة بالذكاء الاصطناعي في إلفن كرياتيف</title>
+      <link>https://alternativeto.net/news/2026/6/elevenlabs-unveils-avatars-for-ai-driven-talking-videos-in-elevencreative/</link>
+      <pubDate>Fri, 12 Jun 2026 14:02:09 GMT</pubDate>
+      <description>أطلقت شركة ElevenLabs ميزة Avatars في منصة ElevenCreative، مما يتيح للمستخدمين إنشاء فيديوهات متحدثة بدمج أصوات الذكاء الاصطناعي مع شخصيات قابلة للتخصيص من البشر أو غيرهم. يمكن حفظ واستخدام هذه الشخصيات عبر المشاريع، إضافةً إلى ميزة توليد دفعات في Flows لتسريع الإنتاج العالي الحجم، مع إمكانية اختيار شخصيات من المكتبة أو تصميمها للعديد من سيناريوهات الفيديو.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781272929428.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>OpenAI تستحوذ على Ona، لتوفير تقنية السحابة الآمنة لـ Codex</title>
+      <link>https://alternativeto.net/news/2026/6/openai-to-acquire-ona-bringing-secure-cloud-technology-to-codex/</link>
+      <pubDate>Fri, 12 Jun 2026 13:55:38 GMT</pubDate>
+      <description>أعلنت شركة OpenAI عن نيتها الاستحواذ على شركة Ona لدمج تقنية التنفيذ السحابي الآمن وإدارة المهام التي تقدمها الشركة في نظام Codex. ستمكن هذه الخطوة وكلاء Codex من العمل باستمرار داخل بيئات سحابية محمية حتى عند قطع المستخدمين اتصالهم، مما يدعم نشرات المؤسسات ويوفر للمنظمات سيطرة أكبر على البنية التحتية والبيانات وحدود الأمان.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781272538437.png" type="image/jpeg"/>
     </item>
     <item>
       <title>WordPress Studio متاح الآن لمستخدمي لينكس لتطوير مواقع ويب محلية سلسة</title>
