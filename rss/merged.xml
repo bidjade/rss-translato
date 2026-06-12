@@ -5,23 +5,7 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Fri, 12 Jun 2026 16:17:29 GMT</lastBuildDate>
-    <item>
-      <title>Ghost يقدّم الفلاتر الديناميكية وعروض الأعضاء المحدثة تلقائيًا</title>
-      <link>https://alternativeto.net/news/2026/6/ghost-introduces-dynamic-filters-and-auto-updated-member-views/</link>
-      <pubDate>Thu, 11 Jun 2026 16:36:41 GMT</pubDate>
-      <description>أطلقت منصة Ghost فلاتر ديناميكية لعرض الأعضاء، تشمل مشغل 'في الفترة الأخيرة' الذي يسمح للمسؤولين بتصفية الأعضاء باستخدام تواريخ نسبية، وتحديث تلقائي لعرض الأعضاء المحفوظ يعكس أحدث البيانات دائمًا. كما أضيف مشغل 'في الفترة القادمة' لتصفية أحداث الفوترة القادمة مثل التجديدات. الميزة متوفرة الآن لمستخدمي Ghost(Pro) وستتوفر للمستضيفين الذاتيين بعد التحديث في الإصدارات القادمة.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781195801047.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>متصفح Zen 1.21b يضيف توجيه الفضاء وتحديثات إلى Firefox 151.0.4</title>
-      <link>https://alternativeto.net/news/2026/6/zen-browser-1-21b-adds-space-routing-and-updates-to-firefox-151-0-4/</link>
-      <pubDate>Thu, 11 Jun 2026 16:34:06 GMT</pubDate>
-      <description>يطرح Zen Browser الإصدار 1.21b ميزة Space Routing التي تسمح للمستخدمين بتوجيه الروابط إلى مساحات محددة لتسهيل تنظيم سير العمل وتعزيز التحكم فيه، ويستند الآن إلى نواة Firefox 151.0.4 لضمان أعلى مستويات التوافق والأمان. كما يتضمن التحديث إصلاحات متعددة تشمل تحسين إدارة حاويات الألسنة، تصحيح عيوب لون السمة، تعزيز وصول الأيقونات، إضافة تحسينات في الأداء واستقرارية المتصفح.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781195646645.png" type="image/jpeg"/>
-    </item>
+    <lastBuildDate>Fri, 12 Jun 2026 19:04:03 GMT</lastBuildDate>
     <item>
       <title>أطلقت ديزر للتو كاشف موسيقى مجاني بالذكاء الاصطناعي لجميع منصات البث الرئيسية</title>
       <link>https://alternativeto.net/news/2026/6/deezer-just-launched-a-free-ai-music-detector-for-all-major-streaming-platforms/</link>
@@ -93,6 +77,22 @@
       <description>أصدر PowerToys النسخة 0.100؛ أُعيد بناء دليل الاختصارات ليظهر لوحة جانبية يحدد التطبيق النشط ويعرض اختصاراته. يحصل Command Palette على معارض الإضافات وتثبيت وإزالة الامتدادات، ويدعم الـ Dock شاشات متعددة. يضيف Performance Monitor ويدجت للبطارية، وتُحسّن Power Display سرعة البدء ودعم الوضع المتوافق. ZoomIt يضيف طبقة كاميرا ويب، وتم ترقية البرنامج إلى .NET 10 مع تقليل حجم المُثبت 15 % وتحسين موثوقية التحديثات ونسخ احتياطي للإعدادات.</description>
       <source>news_-_alternativetonet</source>
       <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781140490668.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>كوينبايس للوكالات يمكنه إدارة التداول، المدفوعات، وتنفيذ سير العمل بالنيابة عنك</title>
+      <link>https://alternativeto.net/news/2026/6/coinbase-for-agents-can-manage-trading-payments-and-execute-workflows-on-your-behalf/</link>
+      <pubDate>Fri, 12 Jun 2026 16:30:00 GMT</pubDate>
+      <description>أطلقت كوين بيس خدمة كوين بيس للوكالات، تسمح بربط وكلاء ذكاء اصطناعي بحسابات المستخدمين لتنفيذ التداولات والمدفوعات ضمن حدود يحددها المستخدم مثل المحافظ المعزولة وإعدادات الأذونات. تُطبق قواعد دقيقة كالحد الأقصى للصفقة والطرف المقابل المصرح به، وتخضع جميع عمليات الوكلاء لمراقبة KYT نفسها. يمكن الوصول عبر سطر الأوامر أو بروتوكول MCP، وتُطرح أيضاً مستشاراً ذكياً مسجلاً لدى SEC وCFTC لتقديم توصيات داخل التطبيق.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781213852805.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Homebrew 6.0 يقدّم آلية أمان ثقة الـ tap، وواجهة JSON API أصغر، وعزل لينكس</title>
+      <link>https://alternativeto.net/news/2026/6/homebrew-6-0-brings-tap-trust-security-mechanism-smaller-json-api-and-linux-sandboxing/</link>
+      <pubDate>Fri, 12 Jun 2026 15:00:00 GMT</pubDate>
+      <description>أصدرت Homebrew النسخة 6.0، أهم تحديث منذ 5.1، حيث يفرض نظام &quot;tap trust&quot; ثقة صريحة للمصادر الخارجية قبل تنفيذ كود Ruby غير المعزول، ما يحد من المخاطر. كما تعتمد الواجهة الداخلية JSON API افتراضياً لتسريع التحديثات وتقليل الطلبات الشبكية. على لينكس يُفعَّل الحماية Bubblewrap افتراضياً، مع عزل مراحل البناء والاختبار والتثبيت. تتضمن التحسينات أداءً أفضل، إعدادات افتراضية محسنة، توسيع ميزات brew bundle، ودعم أولي لنظام macOS 27 &quot;Golden Gate&quot;.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781212724520.png" type="image/jpeg"/>
     </item>
     <item>
       <title>إطلاق Audirvāna Origin 3.0 بتصميم Allegro الجديد وتحديثات واجهة المستخدم</title>
