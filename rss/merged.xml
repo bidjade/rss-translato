@@ -5,31 +5,7 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Sat, 13 Jun 2026 12:23:53 GMT</lastBuildDate>
-    <item>
-      <title>أطلقت ديزر للتو كاشف موسيقى مجاني بالذكاء الاصطناعي لجميع منصات البث الرئيسية</title>
-      <link>https://alternativeto.net/news/2026/6/deezer-just-launched-a-free-ai-music-detector-for-all-major-streaming-platforms/</link>
-      <pubDate>Thu, 11 Jun 2026 16:30:00 GMT</pubDate>
-      <description>أطلقت ديزر أداة مجانية على الإنترنت لاكتشاف الموسيقى المُنشأة بالذكاء الاصطناعي تدعم 27 لغة وأكثر من 20 منصة تدفق مثل سبوتيفاي وأبل ميوزيك وتيدال ويوتيوب ميوزيك. تُفحص القوائم لتحديد الأغاني المُنتجة بنماذج سونو وأوديو مع إمكانية توسيع الكشف لأدوات أخرى. يتطلب الاستخدام ربط الحساب وعرض النتائج القابلة للمشاركة. جاء الإطلاق بعد دراسة أظهرت دعم 80٪ للوسم الواضح و73٪ لتسمية صريحة، ما يعزز شفافية القوائم.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781181262735.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>متجر GitHub أصبح الآن متجر Komi في التحديث 1.9.1</title>
-      <link>https://alternativeto.net/news/2026/6/github-store-is-now-komi-store-1-9-1-launches-with-new-name-and-in-app-repo-browsing/</link>
-      <pubDate>Thu, 11 Jun 2026 16:25:25 GMT</pubDate>
-      <description>أعيد تسمية GitHub Store إلى Komi Store وانضمت إلى منظمة Kurikomi لتجنب مشاكل العلامة التجارية، وتم نقل جميع بيانات المستخدمين بما فيها المكتبات والإعدادات تلقائيًا. كما أُصدر تحديث يضيف تصفحًا داخل التطبيق لقضايا ومستودعات السحب مع دعم الفلاتر والنقاش، إلى جانب صفحة أمان مخصصة وتحسينات عديدة على مختلف المنصات. وشملت الإصلاحات تحسين استقرار التطبيق، مع الإشارة إلى المقال على موقع AlternativeTo لمزيد من المعلومات.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781195176464.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>WordPress.com يدعم الآن التهيئة المباشرة في Stripe Projects CLI</title>
-      <link>https://alternativeto.net/news/2026/6/wordpress-com-now-supports-direct-provisioning-in-stripe-projects-cli/</link>
-      <pubDate>Thu, 11 Jun 2026 16:05:01 GMT</pubDate>
-      <description>أضافت WordPress.com كموفر في Stripe Projects، ما يتيح للمطورين إنشاء مواقع جديدة وتسجيل نطاقات واختيار الخطط مباشرةً من سطر الأوامر. تُدار عملية الإعداد والفوترة برمجياً باستخدام تفاصيل الدفع الموجودة في Stripe، ويمكن إنشاء الحسابات أو ربطها تلقائيًا. يبسّط هذا التكامل سير العمل للمطورين الذين يفضلون إنجاز جميع المهام في الطرفية بسهولة وبكفاءة.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781193901991.png" type="image/jpeg"/>
-    </item>
+    <lastBuildDate>Sat, 13 Jun 2026 14:59:43 GMT</lastBuildDate>
     <item>
       <title>إصدار Alpine Linux 3.24.0 مع تحديثات هامة للحزم وتحسينات في المثبت</title>
       <link>https://alternativeto.net/news/2026/6/alpine-linux-3-24-0-released-with-key-package-updates-and-installer-improvements/</link>
@@ -77,6 +53,30 @@
       <description>أصدر PowerToys النسخة 0.100؛ أُعيد بناء دليل الاختصارات ليظهر لوحة جانبية يحدد التطبيق النشط ويعرض اختصاراته. يحصل Command Palette على معارض الإضافات وتثبيت وإزالة الامتدادات، ويدعم الـ Dock شاشات متعددة. يضيف Performance Monitor ويدجت للبطارية، وتُحسّن Power Display سرعة البدء ودعم الوضع المتوافق. ZoomIt يضيف طبقة كاميرا ويب، وتم ترقية البرنامج إلى .NET 10 مع تقليل حجم المُثبت 15 % وتحسين موثوقية التحديثات ونسخ احتياطي للإعدادات.</description>
       <source>news_-_alternativetonet</source>
       <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781140490668.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Anthropic تُعطّل جميع وصول نماذج Fable 5 و Mythos 5 بعد أن حظر ترامب الوصول للأجانب</title>
+      <link>https://alternativeto.net/news/2026/6/anthropic-disables-all-fable-5-and-mythos-5-model-access-after-trump-blocks-foreign-access/</link>
+      <pubDate>Sat, 13 Jun 2026 13:00:27 GMT</pubDate>
+      <description>أعلنت شركة Anthropic إيقاف جميع الوصول إلى نماذج Fable 5 وMythos 5 بعد أن فرضت وزارة التجارة الأمريكية قيود تصدير لأسباب أمنية في 12 يونيو، مما منع توزيعها على أي جهة أجنبية. وشملت الإجراءات سحب الوصول لجميع العملاء، بينما ظل باقي نماذج الذكاء الاصطناعي ومحادث‑روبوت Claude غير متأثر. وتفيد الشركة أن القرار مرتبط بطريقة اختراق غير عامة شاركها مصدر غير مذكور.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781357018726.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>تضيف ميتا مساعدًا بالذكاء الاصطناعي وإصدارًا جديدًا لسطح المكتب إلى تطبيق إديتس لتحرير الفيديو</title>
+      <link>https://alternativeto.net/news/2026/6/meta-is-adding-an-ai-assistant-and-a-new-desktop-version-to-its-edits-video-editing-app/</link>
+      <pubDate>Sat, 13 Jun 2026 12:30:31 GMT</pubDate>
+      <description>قامت شركة ميتا بالكشف عن تحديثات جديدة لتطبيق Edits لتحرير الفيديو، تشمل مساعدًا ذكيًا يعتمد على بيانات إنستغرام لتحليل الأداء واقتراح محتوى وصوتيات رائجة، وإصدارًا لسطح المكتب يتيح تحريرًا على شاشات أكبر وتزامنًا بين الأجهزة. كما أضيفت تبويب تجريبي لأدوات جديدة، وتحليلات جمهور أوسع، وإمكانية اختبار نسخ متعددة قبل النشر.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781354449273.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>ماستودون 4.6 RC يضيف المجموعات، نقاط نهاية API كاملة، وتحديثات ActivityPub</title>
+      <link>https://alternativeto.net/news/2026/6/mastodon-4-6-rc-adds-collections-full-api-endpoints-and-activitypub-upgrades/</link>
+      <pubDate>Sat, 13 Jun 2026 12:23:40 GMT</pubDate>
+      <description>أصدر Mastodon المرشح الأول للإصدار 4.6، مضيفًا ميزة المجموعات التي تمكّن من إنشاء قوائم عامة مكوّنة من حسابات موصى بها بأسماء، أوصاف ومواضيع لتسهيل اكتشاف الحسابات. يتضمن التحديث نقاط API لإدارة المجموعات وتعديل الملف الشخصي بحقول خام وتنسيق وإعدادات وسائط، ويُمثّل هذه الخصائص في ActivityPub. كما يُحسّن توقيع HTTP، يضيف إشعارات احتياطية، ويكشف حدود الحسابات عبر API.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781353582220.png" type="image/jpeg"/>
     </item>
     <item>
       <title>كوينبايس للوكالات يمكنه إدارة التداول، المدفوعات، وتنفيذ سير العمل بالنيابة عنك</title>
