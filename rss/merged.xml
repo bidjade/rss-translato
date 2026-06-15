@@ -5,39 +5,7 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Mon, 15 Jun 2026 06:21:53 GMT</lastBuildDate>
-    <item>
-      <title>إصدار Alpine Linux 3.24.0 مع تحديثات هامة للحزم وتحسينات في المثبت</title>
-      <link>https://alternativeto.net/news/2026/6/alpine-linux-3-24-0-released-with-key-package-updates-and-installer-improvements/</link>
-      <pubDate>Thu, 11 Jun 2026 15:58:49 GMT</pubDate>
-      <description>أصدرت Alpine Linux النسخة 3.24.0 مع تحديثات هامة تشمل GRUB وLLVM وRust وبيئات GNOME وKDE Plasma وQt وغيرها من الحزم الأساسية. يدعم المُثبت الآن محمل إقلاع Limine، IPv6 مدمج، وتكوين محسّن لوحدة التحكم التسلسلية. تم ترقية setuptools إلى 82.0.0 وإزالة pkg_resources، ما قد يتطلب ترحيل المشاريع. أضيف سطح مكتب COSMIC إلى المستودع المجتمعي واستمرار إهمال إصدارات GTK وQt القديمة.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781193529222.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Files 4.1.3 يضيف أحجام المجلدات عند الطلب، حفظ الاختيارات عبر التخطيطات، وإزالة الوسوم</title>
-      <link>https://alternativeto.net/news/2026/6/files-4-1-3-adds-on-demand-folder-sizes-selection-saving-across-layouts-and-tag-clearing/</link>
-      <pubDate>Thu, 11 Jun 2026 13:30:00 GMT</pubDate>
-      <description>أطلق فريق Files نسخة 4.1.3 التي تضيف حساب حجم المجلد حسب الطلب؛ عند إيقاف خيار “حساب أحجام المجلدات” يظهر زر “عرض الحجم” لكل مجلد. كما تُحافظ النسخة على اختيار الملفات عند تبديل الواجهات، وتتيح مسح جميع العلامات بضغط واحد، وتزامن أيقونة OneDrive مع التطبيق المثبت، وتضم سبعة إصلاحات للثبات. يخطط الفريق لإطلاق شريط جانبي بشجرة المجلدات لاختبار مبكر.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781127450171.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>جوجل تُعلن عن DiffusionGemma، وتوفر استنتاجًا أسرع حتى 4 أضعاف على وحدات معالجة رسومية مخصصة</title>
-      <link>https://alternativeto.net/news/2026/6/google-unveils-diffusiongemma-delivering-up-to-4x-faster-inference-on-dedicated-gpus/</link>
-      <pubDate>Thu, 11 Jun 2026 12:00:00 GMT</pubDate>
-      <description>أطلقت جوجل نموذج DiffusionGemma التجريبي الذي يستخدم النشر النصي لتسريع توليد النصوص، مع توليد كتل كاملة بدلاً من الرموز المتتابعة، فيصبح أسرع بأربع مرات على وحدات GPU المتخصصة (1 000 رمز/ثانية على NVIDIA H100 و700 على RTX 5090). يعتمد على معمارية Gemma 4 وتصميم MoE بـ 26 مليار معامل ينشط 3.8 مليار فقط، ويمكن تشغيله على بطاقات بذاكرة 18 جيجابايت. يدعم توليد 256 رمزًا متوازيًا ويُقَيِّم النص لتصحيح فوري، لكنه تجريبي وجودته أقل من Gemma 4 للإنتاج.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781126568155.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>يقدّم OpenProject 17.5 معرفات حزم العمل القائمة على المشروع ومخازن المتأخرات بأكثر مرونة</title>
-      <link>https://alternativeto.net/news/2026/6/openproject-17-5-offers-project-based-work-package-identifiers-and-more-flexible-backlogs/</link>
-      <pubDate>Thu, 11 Jun 2026 09:00:00 GMT</pubDate>
-      <description>أطلق OpenProject النسخة 17.5 مع ميزة تعريفات حزم العمل حسب المشروع، فتتيح الآن استخدام معرفات دلالية مثل X‑01 تُظهر المشروع المرتبط مباشرة وتحسن إدارة عدة مشاريع وتسهّل نقل الجيرا. كما أضيفت خيارات تخصيص أوسع للـ backlog حيث يمكن استبعاد أنواع حزم معينة، وأعيد تصميم عرض السبرينت وبطاقات الحزم لمزيد من الوضوح. بالإضافة إلى تحسين الإشارات الطبيعية والحالات المتكررة لتقوية جدولة الاجتماعات.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781125626838.png" type="image/jpeg"/>
-    </item>
+    <lastBuildDate>Mon, 15 Jun 2026 13:13:11 GMT</lastBuildDate>
     <item>
       <title>بلوسكي يحصل على مجتمعات مستوحاة من ريديت مبنية للنقاشات المرتكزة على الموضوع</title>
       <link>https://alternativeto.net/news/2026/6/bluesky-is-getting-reddit-inspired-communities-built-for-topic-focused-discussions/</link>
@@ -77,6 +45,38 @@
       <description>أصدر Mastodon المرشح الأول للإصدار 4.6، مضيفًا ميزة المجموعات التي تمكّن من إنشاء قوائم عامة مكوّنة من حسابات موصى بها بأسماء، أوصاف ومواضيع لتسهيل اكتشاف الحسابات. يتضمن التحديث نقاط API لإدارة المجموعات وتعديل الملف الشخصي بحقول خام وتنسيق وإعدادات وسائط، ويُمثّل هذه الخصائص في ActivityPub. كما يُحسّن توقيع HTTP، يضيف إشعارات احتياطية، ويكشف حدود الحسابات عبر API.</description>
       <source>news_-_alternativetonet</source>
       <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781353582220.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>آبل تقول إنها ستزيل التطبيقات القديمة أو ذات الجهد القليل في إرشادات متجر التطبيقات المعدَّلة</title>
+      <link>https://alternativeto.net/news/2026/6/apple-says-it-will-remove-outdated-or-low-effort-apps-in-revised-app-store-guidelines/</link>
+      <pubDate>Mon, 15 Jun 2026 12:00:00 GMT</pubDate>
+      <description>قامت أبل بتحديث إرشادات مراجعة متجر التطبيقات لتسمح بإزالة التطبيقات غير المحدثة أو غير المحسنة في فئات مثل المواعدة، المصابيح، المؤثرات الصوتية، الخلفيات، المؤقتات البسيطة وتطبيقات التنجيم. كما تُمنع التطبيقات المتطابقة مع الأخرى وتُحذف التطبيقات ذات الجودة المنخفضة مثل ألعاب الشرب أو تطبيقات الرياح، مع خطر طرد المطورين المتكررين من البرنامج.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781452934580.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>مورنـا تُصدر /e/OS 4.0 مع ترحيل Gmail، ومُشغِّل مُحدَّث، وبرنامج Sign &amp; Meet</title>
+      <link>https://alternativeto.net/news/2026/6/murena-releases-e-os-4-0-with-gmail-migration-updated-launcher-and-sign-and-meet-software/</link>
+      <pubDate>Mon, 15 Jun 2026 09:00:00 GMT</pubDate>
+      <description>أطلقت شركة مورينا نظام /e/OS 4.0 المفتوح المصدر الخالي من خدمات جوجل، مدعومًا بواجهة Blisslauncher الجديدة التي تتيح اختيار ألوان زاهية أو خلفيات شخصية وتحديث أيقونتين. كما حسّن مساعد الانتقال ليستورد جهات الاتصال، التقويم، ملفات Drive وبينات Gmail إلى بيئة Murena Workspace. أطلقت مورينا أيضًا أداة توقيع Murena Sign المتوافقة مع eIDAS، وخدمة Murena Meet للمؤتمرات المشفرة مع مشاركة الشاشة والمزامنة، وأعلنت عن هواتف GS6 وGS6 Pro بأسعار معقولة.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781452012781.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Mole for Mac 1.7 يُطلق التحكم في مروحة Apple Silicon وتنبيهات الخصوصية</title>
+      <link>https://alternativeto.net/news/2026/6/mole-for-mac-1-7-debuts-apple-silicon-fan-control-and-privacy-alerts/</link>
+      <pubDate>Mon, 15 Jun 2026 08:06:51 GMT</pubDate>
+      <description>أطلقت نسخة Mole لنظام macOS 1.7 تحسينات تشمل التحكم في مروحة Apple Silicon وإشعارات خصوصية الكاميرا والميكروفون، وضع البرمجة الذكي الذي يبقي النظام مستيقظًا، ودعم macOS 27. كما أضيف قفل إدخال لمسح الشاشة بأمان، تحسين VoiceOver، خريطة شجرية أسرع، تحديثات مدمجة، ورسومات Blue Marble جديدة، وتعزز الأداء العام للبرنامج بفضل تحسينات سرعة المعالجة.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781510811358.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>إصدار Wine 11.11 مع SymCrypt، نوافذ طبقية في برامج تشغيل Wayland و 25 إصلاحًا للعيوب</title>
+      <link>https://alternativeto.net/news/2026/6/wine-11-11-released-with-symcrypt-layered-windows-in-the-wayland-drivers-and-25-bug-fixes/</link>
+      <pubDate>Mon, 15 Jun 2026 07:30:00 GMT</pubDate>
+      <description>أطلقت نسخة Wine 11.11 عدة تغييرات ملحوظة لمستخدمي تطبيقات وألعاب ويندوز على لينكس، ماك أو إس وبي إس دي. تم استبدال دمج TomCrypt بمكتبة SymCrypt المدمجة، وتُدار معلومات نوافذ USER32 الآن عبر الذاكرة المشتركة. يضيف الدعم للنوافذ الطبقية في سائق Wayland تحسينات رسومية، كما يحسّن توافق VBScript ويصلح 25 علة في برامج مثل uTorrent 3.x، Foxit Reader 8.x، Battle.net، Space Empires V، Wreckfest، Total War: Shogun 2، Marvel’s Spider‑Man Remastered وغيره.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781362614939.png" type="image/jpeg"/>
     </item>
     <item>
       <title>كوينبايس للوكالات يمكنه إدارة التداول، المدفوعات، وتنفيذ سير العمل بالنيابة عنك</title>
