@@ -5,23 +5,7 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Mon, 15 Jun 2026 13:13:11 GMT</lastBuildDate>
-    <item>
-      <title>بلوسكي يحصل على مجتمعات مستوحاة من ريديت مبنية للنقاشات المرتكزة على الموضوع</title>
-      <link>https://alternativeto.net/news/2026/6/bluesky-is-getting-reddit-inspired-communities-built-for-topic-focused-discussions/</link>
-      <pubDate>Thu, 11 Jun 2026 04:47:44 GMT</pubDate>
-      <description>ستطلق Bluesky ميزة “المجتمعات” هذا العام لتوفر للمستخدمين مساحات مخصصة للنقاش المتعمق حول مواضيع محددة. تبنى على بروتوكول AT اللامركزي، وتسمح بإنشاء مجموعات، الانضمام إليها، نشر المحتوى، وتلقي التحديثات عبر رابط يُعمل كمعرّف URL لصفحة المجتمع. تدعم ثلاثة مستويات خصوصية—عمومي، بالدعوة فقط، وخاص—وتتيح تخصيص تجربة الروابط خارج الواجهة الأساسية، مع إمكانية الوصول إليها عبر الويب وتكاملها مع تطبيقات AT الأخرى.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781154187140.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>PowerToys 0.100 (ليس 1.0) يطلق مع دليل الاختصارات المعاد تصميمه ومعرض الإضافات</title>
-      <link>https://alternativeto.net/news/2026/6/powertoys-0-100-not-1-0-launches-with-redesigned-shortcut-guide-and-an-extension-gallery/</link>
-      <pubDate>Thu, 11 Jun 2026 00:59:55 GMT</pubDate>
-      <description>أصدر PowerToys النسخة 0.100؛ أُعيد بناء دليل الاختصارات ليظهر لوحة جانبية يحدد التطبيق النشط ويعرض اختصاراته. يحصل Command Palette على معارض الإضافات وتثبيت وإزالة الامتدادات، ويدعم الـ Dock شاشات متعددة. يضيف Performance Monitor ويدجت للبطارية، وتُحسّن Power Display سرعة البدء ودعم الوضع المتوافق. ZoomIt يضيف طبقة كاميرا ويب، وتم ترقية البرنامج إلى .NET 10 مع تقليل حجم المُثبت 15 % وتحسين موثوقية التحديثات ونسخ احتياطي للإعدادات.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781140490668.png" type="image/jpeg"/>
-    </item>
+    <lastBuildDate>Mon, 15 Jun 2026 18:25:06 GMT</lastBuildDate>
     <item>
       <title>Anthropic تُعطّل جميع وصول نماذج Fable 5 و Mythos 5 بعد أن حظر ترامب الوصول للأجانب</title>
       <link>https://alternativeto.net/news/2026/6/anthropic-disables-all-fable-5-and-mythos-5-model-access-after-trump-blocks-foreign-access/</link>
@@ -45,6 +29,22 @@
       <description>أصدر Mastodon المرشح الأول للإصدار 4.6، مضيفًا ميزة المجموعات التي تمكّن من إنشاء قوائم عامة مكوّنة من حسابات موصى بها بأسماء، أوصاف ومواضيع لتسهيل اكتشاف الحسابات. يتضمن التحديث نقاط API لإدارة المجموعات وتعديل الملف الشخصي بحقول خام وتنسيق وإعدادات وسائط، ويُمثّل هذه الخصائص في ActivityPub. كما يُحسّن توقيع HTTP، يضيف إشعارات احتياطية، ويكشف حدود الحسابات عبر API.</description>
       <source>news_-_alternativetonet</source>
       <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781353582220.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>يضيف AppGrid 1.9 وضعًا مضغوطًا، بحثًا أكثر ذكاءً، تحديثات واجهة المستخدم، إكمالًا تلقائيًا مدمجًا، والمزيد</title>
+      <link>https://alternativeto.net/news/2026/6/appgrid-1-9-adds-compact-mode-smarter-search-ui-updates-inline-autocompletion-and-more/</link>
+      <pubDate>Mon, 15 Jun 2026 15:00:00 GMT</pubDate>
+      <description>أُصدرت AppGrid 1.9 لتطبيق KDE Plasma 6، وتضيف وضعًا مدمجًا يفتح شريط البحث مباشرةً باختصار Alt + Space. تشمل التحسينات إكمالًا ذاتيًا أثناء الكتابة وترتيبًا أدق للتطبيقات حسب ملحقات KRunner. عُدِّل شريط الفئات وعرض الشبكة إلى خلايا مربعة 5×4 مع تمرير فوري. يمكن الآن تحديث أو إزالة تطبيقات النظام وSnap من القائمة عبر KDE Discover. دمج واجهة QML في مكوّن C++ واحد يسرّع بدء البرنامج ويحسّن موثوقيته، مع إصلاحات قليلة.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781468414542.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Zettlr 4.6 يضيف بحثًا أسرع، وجداول محسّنة، ومُشغّل مخصص، وإصلاحات الانحدار</title>
+      <link>https://alternativeto.net/news/2026/6/zettlr-4-6-brings-faster-search-improved-tables-custom-trigger-and-regression-fixes/</link>
+      <pubDate>Mon, 15 Jun 2026 13:30:00 GMT</pubDate>
+      <description>أطلقت Zettlr نسخة 4.6 تحسّن الاستقرار وسير العمل لمستخدمي ملاحظات Markdown. تُصلح الأخطاء الناتجة عن تحويل محرّك CSS إلى متغيّراته، وتسرّع البحث النصي بنسبة 50‑100٪ مع نتائج أكثر صلة. يمكن تعديل حرف تشغيل إكمال الشفرات للغة الفرنسية، وتُضيف اختصارات لوحة المفاتيح تحرير الجداول وإزالة سطر جديد بسرعة. يدعم تمييز Elixir، ويغلق مفتاح Escape لوحة البحث، وتُعطل شفافية النوافذ على macOS. كما تم تحديث Electron إلى 42.3.3 وPandoc إلى 3.10.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781454450955.png" type="image/jpeg"/>
     </item>
     <item>
       <title>آبل تقول إنها ستزيل التطبيقات القديمة أو ذات الجهد القليل في إرشادات متجر التطبيقات المعدَّلة</title>
