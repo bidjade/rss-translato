@@ -5,38 +5,38 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Fri, 19 Jun 2026 15:12:17 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2026 17:56:00 GMT</lastBuildDate>
     <item>
-      <title>آبل تقول إنها ستزيل التطبيقات القديمة أو ذات الجهد القليل في إرشادات متجر التطبيقات المعدَّلة</title>
-      <link>https://alternativeto.net/news/2026/6/apple-says-it-will-remove-outdated-or-low-effort-apps-in-revised-app-store-guidelines/</link>
-      <pubDate>Mon, 15 Jun 2026 12:00:00 GMT</pubDate>
-      <description>قامت أبل بتحديث إرشادات مراجعة متجر التطبيقات لتسمح بإزالة التطبيقات غير المحدثة أو غير المحسنة في فئات مثل المواعدة، المصابيح، المؤثرات الصوتية، الخلفيات، المؤقتات البسيطة وتطبيقات التنجيم. كما تُمنع التطبيقات المتطابقة مع الأخرى وتُحذف التطبيقات ذات الجودة المنخفضة مثل ألعاب الشرب أو تطبيقات الرياح، مع خطر طرد المطورين المتكررين من البرنامج.</description>
+      <title>Google Vids يضيف تحويل الفيديو للشرائح، وأفاتار الذكاء الاصطناعي، ودعم متعدد اللغات</title>
+      <link>https://alternativeto.net/news/2026/6/google-vids-adds-slides-video-conversion-ai-avatars-and-multi-language-support/</link>
+      <pubDate>Fri, 19 Jun 2026 16:03:36 GMT</pubDate>
+      <description>أطلقت Google Vids خاصية تحويل عروض Google Slides إلى فيديوهات متكاملة مع لوحة سرد تلقائية ونصوص يُولدها الذكاء الاصطناعي. تدعم المنصة صورًا رمزية ذكية وتسجيلات صوتية بـ 24 لغة تشمل الهندية والعربية والهولندية، وتتيح توجيه حركات وتفاعلات الصور الرمزية عبر كتابة الأوامر. بالإضافة إلى ذلك، لا توجد حدود زمنية لطول الفيديو المُنتج.</description>
       <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781452934580.png" type="image/jpeg"/>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781885016626.png" type="image/jpeg"/>
     </item>
     <item>
-      <title>مورنـا تُصدر /e/OS 4.0 مع ترحيل Gmail، ومُشغِّل مُحدَّث، وبرنامج Sign &amp; Meet</title>
-      <link>https://alternativeto.net/news/2026/6/murena-releases-e-os-4-0-with-gmail-migration-updated-launcher-and-sign-and-meet-software/</link>
-      <pubDate>Mon, 15 Jun 2026 09:00:00 GMT</pubDate>
-      <description>أطلقت شركة مورينا نظام /e/OS 4.0 المفتوح المصدر الخالي من خدمات جوجل، مدعومًا بواجهة Blisslauncher الجديدة التي تتيح اختيار ألوان زاهية أو خلفيات شخصية وتحديث أيقونتين. كما حسّن مساعد الانتقال ليستورد جهات الاتصال، التقويم، ملفات Drive وبينات Gmail إلى بيئة Murena Workspace. أطلقت مورينا أيضًا أداة توقيع Murena Sign المتوافقة مع eIDAS، وخدمة Murena Meet للمؤتمرات المشفرة مع مشاركة الشاشة والمزامنة، وأعلنت عن هواتف GS6 وGS6 Pro بأسعار معقولة.</description>
+      <title>كودكس يضيف التسجيل وإعادة التشغيل لسير العمل القابل لإعادة الاستخدام على macOS</title>
+      <link>https://alternativeto.net/news/2026/6/codex-adds-record-and-replay-for-reusable-workflows-on-macos/</link>
+      <pubDate>Fri, 19 Jun 2026 15:54:54 GMT</pubDate>
+      <description>أطلقت شركة Codex ميزة Record &amp; Replay لنظام macOS تسمح للمستخدمين بتسجيل سير عمل وتحويله إلى مهارة قابلة لإعادة الاستخدام والفحص. يبدأ التوزيع في أسواق مختارة مع استثناء منطقة الاقتصاد الأوروبي والمملكة المتحدة وسويسرا. تشمل التحديثات الأخيرة إجراءات جماعية لسجل تشغيل الأتمتة، روابط إدارة SSH جديدة، وتحسينات ملحوظة في الأداء.</description>
       <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781452012781.png" type="image/jpeg"/>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781884494546.png" type="image/jpeg"/>
     </item>
     <item>
-      <title>Mole for Mac 1.7 يُطلق التحكم في مروحة Apple Silicon وتنبيهات الخصوصية</title>
-      <link>https://alternativeto.net/news/2026/6/mole-for-mac-1-7-debuts-apple-silicon-fan-control-and-privacy-alerts/</link>
-      <pubDate>Mon, 15 Jun 2026 08:06:51 GMT</pubDate>
-      <description>أطلقت نسخة Mole لنظام macOS 1.7 تحسينات تشمل التحكم في مروحة Apple Silicon وإشعارات خصوصية الكاميرا والميكروفون، وضع البرمجة الذكي الذي يبقي النظام مستيقظًا، ودعم macOS 27. كما أضيف قفل إدخال لمسح الشاشة بأمان، تحسين VoiceOver، خريطة شجرية أسرع، تحديثات مدمجة، ورسومات Blue Marble جديدة، وتعزز الأداء العام للبرنامج بفضل تحسينات سرعة المعالجة.</description>
+      <title>رايكاست يطلق ميزتي الدردشة بالذكاء الاصطناعي والاستبدال المضمن لنظامي ويندوز وماك</title>
+      <link>https://alternativeto.net/news/2026/6/raycast-launches-ai-chat-and-inline-replace-features-for-windows-and-mac/</link>
+      <pubDate>Fri, 19 Jun 2026 15:49:13 GMT</pubDate>
+      <description>أطلق برنامج Raycast لنظام Windows ميزة الدردشة الذكية AI Chat التي تتيح الوصول إلى أحدث النماذج، وتبديل النماذج أثناء المحادثة، ودعم ملحقات الذكاء الاصطناعي وخوادم MCP. كما يمكن للمستخدمين تنظيم الملحقات في مجلدات وتفعيل الأرشفة التلقائية، بالإضافة إلى خاصية Inline Replace التي تسمح بتنفيذ الأوامر داخل Raycast أو استبدال النص المحدد بالمخرجات، وهي متاحة على أنظمة ماك وWindows.</description>
       <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781510811358.png" type="image/jpeg"/>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781884153023.png" type="image/jpeg"/>
     </item>
     <item>
-      <title>إصدار Wine 11.11 مع SymCrypt، نوافذ طبقية في برامج تشغيل Wayland و 25 إصلاحًا للعيوب</title>
-      <link>https://alternativeto.net/news/2026/6/wine-11-11-released-with-symcrypt-layered-windows-in-the-wayland-drivers-and-25-bug-fixes/</link>
-      <pubDate>Mon, 15 Jun 2026 07:30:00 GMT</pubDate>
-      <description>أطلقت نسخة Wine 11.11 عدة تغييرات ملحوظة لمستخدمي تطبيقات وألعاب ويندوز على لينكس، ماك أو إس وبي إس دي. تم استبدال دمج TomCrypt بمكتبة SymCrypt المدمجة، وتُدار معلومات نوافذ USER32 الآن عبر الذاكرة المشتركة. يضيف الدعم للنوافذ الطبقية في سائق Wayland تحسينات رسومية، كما يحسّن توافق VBScript ويصلح 25 علة في برامج مثل uTorrent 3.x، Foxit Reader 8.x، Battle.net، Space Empires V، Wreckfest، Total War: Shogun 2، Marvel’s Spider‑Man Remastered وغيره.</description>
+      <title>كانفا الآن يتكامل مع سلاك للتصميم والتعاون داخل التطبيق</title>
+      <link>https://alternativeto.net/news/2026/6/canva-now-integrates-with-slack-for-in-app-design-and-collaboration/</link>
+      <pubDate>Fri, 19 Jun 2026 15:43:32 GMT</pubDate>
+      <description>أعلنت شركة Canva عن دمجها مع منصة Slack، حيث يمكن للمستخدمين الآن الوصول إلى Canva عبر Slackbot مباشرة داخل أي محادثة. يتيح التكامل إنشاء التصاميم، البحث في مكتبة Canva، وتطبيق مجموعات العلامة التجارية دون الحاجة لتغيير علامات التبويب، ما يبسط عملية التعاون ويجعل جميع خطوات التصميم تُنجز في خيط واحد.</description>
       <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781362614939.png" type="image/jpeg"/>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781883812750.png" type="image/jpeg"/>
     </item>
     <item>
       <title>يضيف Unite Pro 1.5 دعم مفاتيح الوسائط ويصلح تشغيل الفيديو بملء الشاشة</title>
