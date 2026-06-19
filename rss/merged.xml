@@ -5,15 +5,7 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Fri, 19 Jun 2026 06:17:48 GMT</lastBuildDate>
-    <item>
-      <title>ماستودون 4.6 RC يضيف المجموعات، نقاط نهاية API كاملة، وتحديثات ActivityPub</title>
-      <link>https://alternativeto.net/news/2026/6/mastodon-4-6-rc-adds-collections-full-api-endpoints-and-activitypub-upgrades/</link>
-      <pubDate>Sat, 13 Jun 2026 12:23:40 GMT</pubDate>
-      <description>أصدر Mastodon المرشح الأول للإصدار 4.6، مضيفًا ميزة المجموعات التي تمكّن من إنشاء قوائم عامة مكوّنة من حسابات موصى بها بأسماء، أوصاف ومواضيع لتسهيل اكتشاف الحسابات. يتضمن التحديث نقاط API لإدارة المجموعات وتعديل الملف الشخصي بحقول خام وتنسيق وإعدادات وسائط، ويُمثّل هذه الخصائص في ActivityPub. كما يُحسّن توقيع HTTP، يضيف إشعارات احتياطية، ويكشف حدود الحسابات عبر API.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781353582220.png" type="image/jpeg"/>
-    </item>
+    <lastBuildDate>Fri, 19 Jun 2026 11:21:28 GMT</lastBuildDate>
     <item>
       <title>يضيف AppGrid 1.9 وضعًا مضغوطًا، بحثًا أكثر ذكاءً، تحديثات واجهة المستخدم، إكمالًا تلقائيًا مدمجًا، والمزيد</title>
       <link>https://alternativeto.net/news/2026/6/appgrid-1-9-adds-compact-mode-smarter-search-ui-updates-inline-autocompletion-and-more/</link>
@@ -61,6 +53,14 @@
       <description>أطلقت نسخة Wine 11.11 عدة تغييرات ملحوظة لمستخدمي تطبيقات وألعاب ويندوز على لينكس، ماك أو إس وبي إس دي. تم استبدال دمج TomCrypt بمكتبة SymCrypt المدمجة، وتُدار معلومات نوافذ USER32 الآن عبر الذاكرة المشتركة. يضيف الدعم للنوافذ الطبقية في سائق Wayland تحسينات رسومية، كما يحسّن توافق VBScript ويصلح 25 علة في برامج مثل uTorrent 3.x، Foxit Reader 8.x، Battle.net، Space Empires V، Wreckfest، Total War: Shogun 2، Marvel’s Spider‑Man Remastered وغيره.</description>
       <source>news_-_alternativetonet</source>
       <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781362614939.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Midjourney ينتقل من توليد الصور بالذكاء الاصطناعي إلى بناء جهاز مسح بالموجات فوق الصوتية للجسم بالكامل وسبا</title>
+      <link>https://alternativeto.net/news/2026/6/midjourney-goes-from-ai-image-generation-to-building-a-full-body-ultrasound-scanner-and-spa/</link>
+      <pubDate>Fri, 19 Jun 2026 06:05:12 GMT</pubDate>
+      <description>أعلنت ميدجورني عن أول جهاز مادي لها؛ ماسح بالموجات فوق الصوتية يلتقط صورة ثلاثية الأبعاد للجسم بالكامل في نحو 60 ثانية باستخدام حلقة من آلاف المرسلّات. يركز على تحليل العضلات والدهون والعظام، ويُقارن بجودة الرنين المغناطيسي دون إشعاع. تخطط لفتح سبا في سان فرانسيسكو بحلول 2027 يضم عشرة مماثلات ومرافق أخرى لتتبع صحي متكرر مع حماية الخصوصية.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781850968972.png" type="image/jpeg"/>
     </item>
     <item>
       <title>كاسبرسكي تحذر من أن Wallpaper Engine استُخدم لنشر برمجيات خبيثة على ملايين المستخدمين</title>
