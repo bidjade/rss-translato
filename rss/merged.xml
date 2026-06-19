@@ -5,23 +5,7 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Fri, 19 Jun 2026 11:21:28 GMT</lastBuildDate>
-    <item>
-      <title>يضيف AppGrid 1.9 وضعًا مضغوطًا، بحثًا أكثر ذكاءً، تحديثات واجهة المستخدم، إكمالًا تلقائيًا مدمجًا، والمزيد</title>
-      <link>https://alternativeto.net/news/2026/6/appgrid-1-9-adds-compact-mode-smarter-search-ui-updates-inline-autocompletion-and-more/</link>
-      <pubDate>Mon, 15 Jun 2026 15:00:00 GMT</pubDate>
-      <description>أُصدرت AppGrid 1.9 لتطبيق KDE Plasma 6، وتضيف وضعًا مدمجًا يفتح شريط البحث مباشرةً باختصار Alt + Space. تشمل التحسينات إكمالًا ذاتيًا أثناء الكتابة وترتيبًا أدق للتطبيقات حسب ملحقات KRunner. عُدِّل شريط الفئات وعرض الشبكة إلى خلايا مربعة 5×4 مع تمرير فوري. يمكن الآن تحديث أو إزالة تطبيقات النظام وSnap من القائمة عبر KDE Discover. دمج واجهة QML في مكوّن C++ واحد يسرّع بدء البرنامج ويحسّن موثوقيته، مع إصلاحات قليلة.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781468414542.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Zettlr 4.6 يضيف بحثًا أسرع، وجداول محسّنة، ومُشغّل مخصص، وإصلاحات الانحدار</title>
-      <link>https://alternativeto.net/news/2026/6/zettlr-4-6-brings-faster-search-improved-tables-custom-trigger-and-regression-fixes/</link>
-      <pubDate>Mon, 15 Jun 2026 13:30:00 GMT</pubDate>
-      <description>أطلقت Zettlr نسخة 4.6 تحسّن الاستقرار وسير العمل لمستخدمي ملاحظات Markdown. تُصلح الأخطاء الناتجة عن تحويل محرّك CSS إلى متغيّراته، وتسرّع البحث النصي بنسبة 50‑100٪ مع نتائج أكثر صلة. يمكن تعديل حرف تشغيل إكمال الشفرات للغة الفرنسية، وتُضيف اختصارات لوحة المفاتيح تحرير الجداول وإزالة سطر جديد بسرعة. يدعم تمييز Elixir، ويغلق مفتاح Escape لوحة البحث، وتُعطل شفافية النوافذ على macOS. كما تم تحديث Electron إلى 42.3.3 وPandoc إلى 3.10.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781454450955.png" type="image/jpeg"/>
-    </item>
+    <lastBuildDate>Fri, 19 Jun 2026 15:12:17 GMT</lastBuildDate>
     <item>
       <title>آبل تقول إنها ستزيل التطبيقات القديمة أو ذات الجهد القليل في إرشادات متجر التطبيقات المعدَّلة</title>
       <link>https://alternativeto.net/news/2026/6/apple-says-it-will-remove-outdated-or-low-effort-apps-in-revised-app-store-guidelines/</link>
@@ -53,6 +37,22 @@
       <description>أطلقت نسخة Wine 11.11 عدة تغييرات ملحوظة لمستخدمي تطبيقات وألعاب ويندوز على لينكس، ماك أو إس وبي إس دي. تم استبدال دمج TomCrypt بمكتبة SymCrypt المدمجة، وتُدار معلومات نوافذ USER32 الآن عبر الذاكرة المشتركة. يضيف الدعم للنوافذ الطبقية في سائق Wayland تحسينات رسومية، كما يحسّن توافق VBScript ويصلح 25 علة في برامج مثل uTorrent 3.x، Foxit Reader 8.x، Battle.net، Space Empires V، Wreckfest، Total War: Shogun 2، Marvel’s Spider‑Man Remastered وغيره.</description>
       <source>news_-_alternativetonet</source>
       <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781362614939.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>يضيف Unite Pro 1.5 دعم مفاتيح الوسائط ويصلح تشغيل الفيديو بملء الشاشة</title>
+      <link>https://alternativeto.net/news/2026/6/unite-pro-1-5-brings-media-key-support-and-fixes-fullscreen-video-playback/</link>
+      <pubDate>Fri, 19 Jun 2026 14:12:35 GMT</pubDate>
+      <description>يُطرح تحديث Unite Pro 1.5 مع دعم موسّع لمفاتيح الوسائط، ما يتيح التحكم بالميديا على مواقع أكثر حتى أثناء الخلفية. يُصلاح أيضًا مشاكل تشغيل الفيديو بنظام ملء الشاشة لقوائم تشغيل يوتيوب وNetflix داخل تطبيقات Unite. يُضيف تحسينات لروابط التطبيقات الأصلية وتنبيهات التطبيقات الخارجية الآمنة، إلى جانب صيانة WebView، تحسين معالجة وكيل المتصفح، واختصارات تحرير النص.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781878355298.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>أدوبي توسّع قدرات Firefly لتشمل Photoshop وIllustrator وتطبيقات أخرى من Creative Cloud</title>
+      <link>https://alternativeto.net/news/2026/6/adobe-expands-firefly-capabilities-to-photoshop-illustrator-and-other-creative-cloud-apps/</link>
+      <pubDate>Fri, 19 Jun 2026 09:00:00 GMT</pubDate>
+      <description>أعلنت أدوبي عن توسيع كبير للوكيل الإبداعي الذي يدمج الآن بين Firefly وCreative Cloud، مقدماً تجربة موحدة تربط الفكرة بالنموذج والإنتاج داخل تطبيقات مثل Photoshop وPremiere وIllustrator وInDesign وFrame.io. يستطيع المساعد الذكي تنفيذ تدفقات عمل متعددة الخطوات بناءً على أوصاف المستخدم، ويتصل بمنصات AI مثل ChatGPT وClaude وCopilot وGemini وSlack، ما يسهل إنشاء دفعات العلامة التجارية، مقاطع الفيديو القصيرة، القصة المصورة، وتحرير Quick Cut.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781797202786.png" type="image/jpeg"/>
     </item>
     <item>
       <title>Midjourney ينتقل من توليد الصور بالذكاء الاصطناعي إلى بناء جهاز مسح بالموجات فوق الصوتية للجسم بالكامل وسبا</title>
