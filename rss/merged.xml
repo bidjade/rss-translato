@@ -5,23 +5,7 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Fri, 19 Jun 2026 00:25:17 GMT</lastBuildDate>
-    <item>
-      <title>Anthropic تُعطّل جميع وصول نماذج Fable 5 و Mythos 5 بعد أن حظر ترامب الوصول للأجانب</title>
-      <link>https://alternativeto.net/news/2026/6/anthropic-disables-all-fable-5-and-mythos-5-model-access-after-trump-blocks-foreign-access/</link>
-      <pubDate>Sat, 13 Jun 2026 13:00:27 GMT</pubDate>
-      <description>أعلنت شركة Anthropic إيقاف جميع الوصول إلى نماذج Fable 5 وMythos 5 بعد أن فرضت وزارة التجارة الأمريكية قيود تصدير لأسباب أمنية في 12 يونيو، مما منع توزيعها على أي جهة أجنبية. وشملت الإجراءات سحب الوصول لجميع العملاء، بينما ظل باقي نماذج الذكاء الاصطناعي ومحادث‑روبوت Claude غير متأثر. وتفيد الشركة أن القرار مرتبط بطريقة اختراق غير عامة شاركها مصدر غير مذكور.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781357018726.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>تضيف ميتا مساعدًا بالذكاء الاصطناعي وإصدارًا جديدًا لسطح المكتب إلى تطبيق إديتس لتحرير الفيديو</title>
-      <link>https://alternativeto.net/news/2026/6/meta-is-adding-an-ai-assistant-and-a-new-desktop-version-to-its-edits-video-editing-app/</link>
-      <pubDate>Sat, 13 Jun 2026 12:30:31 GMT</pubDate>
-      <description>قامت شركة ميتا بالكشف عن تحديثات جديدة لتطبيق Edits لتحرير الفيديو، تشمل مساعدًا ذكيًا يعتمد على بيانات إنستغرام لتحليل الأداء واقتراح محتوى وصوتيات رائجة، وإصدارًا لسطح المكتب يتيح تحريرًا على شاشات أكبر وتزامنًا بين الأجهزة. كما أضيفت تبويب تجريبي لأدوات جديدة، وتحليلات جمهور أوسع، وإمكانية اختبار نسخ متعددة قبل النشر.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781354449273.png" type="image/jpeg"/>
-    </item>
+    <lastBuildDate>Fri, 19 Jun 2026 06:17:48 GMT</lastBuildDate>
     <item>
       <title>ماستودون 4.6 RC يضيف المجموعات، نقاط نهاية API كاملة، وتحديثات ActivityPub</title>
       <link>https://alternativeto.net/news/2026/6/mastodon-4-6-rc-adds-collections-full-api-endpoints-and-activitypub-upgrades/</link>
@@ -77,6 +61,22 @@
       <description>أطلقت نسخة Wine 11.11 عدة تغييرات ملحوظة لمستخدمي تطبيقات وألعاب ويندوز على لينكس، ماك أو إس وبي إس دي. تم استبدال دمج TomCrypt بمكتبة SymCrypt المدمجة، وتُدار معلومات نوافذ USER32 الآن عبر الذاكرة المشتركة. يضيف الدعم للنوافذ الطبقية في سائق Wayland تحسينات رسومية، كما يحسّن توافق VBScript ويصلح 25 علة في برامج مثل uTorrent 3.x، Foxit Reader 8.x، Battle.net، Space Empires V، Wreckfest، Total War: Shogun 2، Marvel’s Spider‑Man Remastered وغيره.</description>
       <source>news_-_alternativetonet</source>
       <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781362614939.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>كاسبرسكي تحذر من أن Wallpaper Engine استُخدم لنشر برمجيات خبيثة على ملايين المستخدمين</title>
+      <link>https://alternativeto.net/news/2026/6/kaspersky-warns-wallpaper-engine-was-used-to-spread-malware-across-millions-of-users/</link>
+      <pubDate>Fri, 19 Jun 2026 04:43:57 GMT</pubDate>
+      <description>حدد باحثو كاسبرسكي حملة برمجية خبيثة تستغل محتوى ورشة Steam لتطبيق Wallpaper Engine الشهير، حيث يُستغل ميزة “application wallpaper” لتوزيع حزم تحتوي على ملفات EXE وDLL وسكريبتات مخفية مع ملفات خلفيات شرعية. شملت الحمولات الخلفية DarkKomet، Lumma وVidar، محمل RenEngine، مُناظرات عملة مشفرة وفدية. الصين مسؤولة عن 89 % من محاولات التحميل، وتمت إزالة الخلفيات الخبيثة لكن الحزم الجديدة تستمر في الظهور، لذا ينصح بالحذر.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781846437012.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>بينتريست يطلق روبوت الدردشة “Ask Pinterest” وأدوات ذكاء اصطناعي جديدة للمعلنين</title>
+      <link>https://alternativeto.net/news/2026/6/pinterest-unveils-ask-pinterest-ai-app-and-launches-new-ai-tools-for-advertisers/</link>
+      <pubDate>Fri, 19 Jun 2026 00:53:19 GMT</pubDate>
+      <description>أطلقت شركة Pinterest تطبيقًا تجريبيًا يُدعى Ask Pinterest يعتمد على الذكاء الاصطناعي لتسهيل التسوق واكتشاف المنتجات عبر محادثة طبيعية، ويستفيد من Taste Graph وبيانات البينات واللوحات لتخصيص الاقتراحات وحفظ السياق بين الجلسات. التطبيق متاح حاليًا بنسخة ويب محدودة على الهاتف والكمبيوتر، كما أطلقت الشركة أدوات إعلانية جديدة تشمل مساعدًا ذكائيًا في Ads Manager ونموذج Performance+ لتحديد الإبداع الإعلاني وبروتوكول Model Context لإدارة الحملات عبر أدوات طرف ثالث.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781843644678.png" type="image/jpeg"/>
     </item>
     <item>
       <title>كوينبايس للوكالات يمكنه إدارة التداول، المدفوعات، وتنفيذ سير العمل بالنيابة عنك</title>
