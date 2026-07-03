@@ -5,23 +5,7 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Fri, 03 Jul 2026 06:31:30 GMT</lastBuildDate>
-    <item>
-      <title>كانفا الآن يتكامل مع سلاك للتصميم والتعاون داخل التطبيق</title>
-      <link>https://alternativeto.net/news/2026/6/canva-now-integrates-with-slack-for-in-app-design-and-collaboration/</link>
-      <pubDate>Fri, 19 Jun 2026 15:43:32 GMT</pubDate>
-      <description>أعلنت شركة Canva عن دمجها مع منصة Slack، حيث يمكن للمستخدمين الآن الوصول إلى Canva عبر Slackbot مباشرة داخل أي محادثة. يتيح التكامل إنشاء التصاميم، البحث في مكتبة Canva، وتطبيق مجموعات العلامة التجارية دون الحاجة لتغيير علامات التبويب، ما يبسط عملية التعاون ويجعل جميع خطوات التصميم تُنجز في خيط واحد.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781883812750.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>يضيف Unite Pro 1.5 دعم مفاتيح الوسائط ويصلح تشغيل الفيديو بملء الشاشة</title>
-      <link>https://alternativeto.net/news/2026/6/unite-pro-1-5-brings-media-key-support-and-fixes-fullscreen-video-playback/</link>
-      <pubDate>Fri, 19 Jun 2026 14:12:35 GMT</pubDate>
-      <description>يُطرح تحديث Unite Pro 1.5 مع دعم موسّع لمفاتيح الوسائط، ما يتيح التحكم بالميديا على مواقع أكثر حتى أثناء الخلفية. يُصلاح أيضًا مشاكل تشغيل الفيديو بنظام ملء الشاشة لقوائم تشغيل يوتيوب وNetflix داخل تطبيقات Unite. يُضيف تحسينات لروابط التطبيقات الأصلية وتنبيهات التطبيقات الخارجية الآمنة، إلى جانب صيانة WebView، تحسين معالجة وكيل المتصفح، واختصارات تحرير النص.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781878355298.png" type="image/jpeg"/>
-    </item>
+    <lastBuildDate>Fri, 03 Jul 2026 09:56:58 GMT</lastBuildDate>
     <item>
       <title>أدوبي توسّع قدرات Firefly لتشمل Photoshop وIllustrator وتطبيقات أخرى من Creative Cloud</title>
       <link>https://alternativeto.net/news/2026/6/adobe-expands-firefly-capabilities-to-photoshop-illustrator-and-other-creative-cloud-apps/</link>
@@ -141,6 +125,22 @@
       <description>أعاد تطبيق تيليجرام المفاجئ ظهوره على الساعات الذكية بإصداره تطبيقين أصليين لكل من Apple Watch و Wear OS، معيدًا الدعم إلى watchOS ومطلقًا أول نسخة رسمية لأجهزة Wear OS مثل بيكسل واتش. يتيح التطبيق إرسال واستقبال الرسائل، مشاهدة الصور والفيديوهات، تسجيل الصوت، وإدارة المحادثات بميزات مختلفة حسب النظام، مع توفير تسجيل الدخول عبر مسح QR وكلمة مرور سحابية.</description>
       <source>news_-_alternativetonet</source>
       <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781244184276.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>بودمان 6.0 يقدم شبكة محدثة، تحسينات على Podman Machine، وتطور Quadlet</title>
+      <link>https://alternativeto.net/news/2026/7/podman-6-0-brings-modernized-networking-enhanced-podman-machine-and-quadlet-evolution/</link>
+      <pubDate>Fri, 03 Jul 2026 09:00:00 GMT</pubDate>
+      <description>أطلقت Podman 6.0 كإصدار رئيسي يطوّر إدارة الحاويات والشبكات، مستبدلةً slirp4netns وiptables بـ Netavark وPasta وnftables، ومقدمةً تحويل Pesto الجذري غير الموجه لحفظ عناوين IP المصدر. تم تبسيط تدفق عمل Podman Machine متعدد الموفرين مع أمر os‑update لتحديث الأنظمة الافتراضية. كما حسّن Quadlet بدعم REST API وتوسيع خيارات .volume، وطُورت معالجة ملفات التكوين لدعم بيئات متعددة المستخدمين، مع تحسين توافق Docker API ومخرجات الأوامر.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1783016554625.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>جوجل تضيف Spark إلى تطبيق Gemini ماك، وتُجلب أتمتة وكيل الذكاء الاصطناعي المحلي للملفات</title>
+      <link>https://alternativeto.net/news/2026/7/google-is-adding-spark-to-the-gemini-mac-app-bringing-local-ai-agent-automations-to-files/</link>
+      <pubDate>Fri, 03 Jul 2026 06:17:57 GMT</pubDate>
+      <description>أطلقت جوجل Gemini Spark، الوكيل الذكي الشخصي المتاح 24/7 لإنجاز المهام، كتحديث لتطبيق Gemini على نظام macOS. يتيح ربط مجلدات محلية لتصنيف ملفات PDF، استخراج بيانات الفواتير وإنشاء جداول Google Workspace، مع إمكانية جدولة العمليات. يضيف تكاملات مع Google Tasks وKeep وCanva وDropbox وغيرها، ويتوفر الآن في نسخة تجريبية للمشتركين في Google AI Ultra بالولايات المتحدة.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1783060522015.png" type="image/jpeg"/>
     </item>
     <item>
       <title>إكس بوكس تعمل على ميزة تحويل الأقراص إلى نسخة رقمية لتحويل الألعاب المادية إلى نسخ رقمية</title>
