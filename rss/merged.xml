@@ -5,15 +5,7 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Fri, 03 Jul 2026 19:18:55 GMT</lastBuildDate>
-    <item>
-      <title>إليفن لابز تكشف عن الأفاتار للفيديوهات المتحدثة المدفوعة بالذكاء الاصطناعي في إلفن كرياتيف</title>
-      <link>https://alternativeto.net/news/2026/6/elevenlabs-unveils-avatars-for-ai-driven-talking-videos-in-elevencreative/</link>
-      <pubDate>Fri, 12 Jun 2026 14:02:09 GMT</pubDate>
-      <description>أطلقت شركة ElevenLabs ميزة Avatars في منصة ElevenCreative، مما يتيح للمستخدمين إنشاء فيديوهات متحدثة بدمج أصوات الذكاء الاصطناعي مع شخصيات قابلة للتخصيص من البشر أو غيرهم. يمكن حفظ واستخدام هذه الشخصيات عبر المشاريع، إضافةً إلى ميزة توليد دفعات في Flows لتسريع الإنتاج العالي الحجم، مع إمكانية اختيار شخصيات من المكتبة أو تصميمها للعديد من سيناريوهات الفيديو.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781272929428.png" type="image/jpeg"/>
-    </item>
+    <lastBuildDate>Fri, 03 Jul 2026 21:03:39 GMT</lastBuildDate>
     <item>
       <title>OpenAI تستحوذ على Ona، لتوفير تقنية السحابة الآمنة لـ Codex</title>
       <link>https://alternativeto.net/news/2026/6/openai-to-acquire-ona-bringing-secure-cloud-technology-to-codex/</link>
@@ -45,6 +37,14 @@
       <description>أعاد تطبيق تيليجرام المفاجئ ظهوره على الساعات الذكية بإصداره تطبيقين أصليين لكل من Apple Watch و Wear OS، معيدًا الدعم إلى watchOS ومطلقًا أول نسخة رسمية لأجهزة Wear OS مثل بيكسل واتش. يتيح التطبيق إرسال واستقبال الرسائل، مشاهدة الصور والفيديوهات، تسجيل الصوت، وإدارة المحادثات بميزات مختلفة حسب النظام، مع توفير تسجيل الدخول عبر مسح QR وكلمة مرور سحابية.</description>
       <source>news_-_alternativetonet</source>
       <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781244184276.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>إيميتش 3.0 يضيف تعديلًا غير مدمرًا و OCR على الجوال، وسير العمل، وتحسين النسخ الاحتياطية</title>
+      <link>https://alternativeto.net/news/2026/7/immich-3-0-adds-non-destructive-editing-and-ocr-on-mobile-workflows-and-improved-backups/</link>
+      <pubDate>Fri, 03 Jul 2026 18:00:00 GMT</pubDate>
+      <description>أطلق Immich 3.0 تحديثًا رئيسيًا يُضيف تحريرًا غير تدميري للصور على الهواتف، ويطابق ميزة الويب من الإصدار 2.5، بالإضافة إلى النسخة التجريبية الأولى من Workflows التي تتيح أتمتة الإجراءات بسحب وإفلات. كما حسّن النسخ الخلفية للنسخ الاحتياطي على Android وعمليات المزامنة على iOS، وأضيفت صفحات «أضيف مؤخرًا»، تقارير سلامة، عرض شرائح محمول، تحميل ألبومات مباشر، اختيار حجم الصورة، مشغل فيديو ويب جديد، OCR على الهاتف، ومعالجة فيديو فورية.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1783032302561.png" type="image/jpeg"/>
     </item>
     <item>
       <title>جوجل تُضيف Ask Gemini والملخصات الذكية إلى تطبيقات Drive على الهواتف المحمولة</title>
