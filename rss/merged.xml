@@ -5,31 +5,7 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Fri, 03 Jul 2026 02:47:46 GMT</lastBuildDate>
-    <item>
-      <title>Google Vids يضيف تحويل الفيديو للشرائح، وأفاتار الذكاء الاصطناعي، ودعم متعدد اللغات</title>
-      <link>https://alternativeto.net/news/2026/6/google-vids-adds-slides-video-conversion-ai-avatars-and-multi-language-support/</link>
-      <pubDate>Fri, 19 Jun 2026 16:03:36 GMT</pubDate>
-      <description>أطلقت Google Vids خاصية تحويل عروض Google Slides إلى فيديوهات متكاملة مع لوحة سرد تلقائية ونصوص يُولدها الذكاء الاصطناعي. تدعم المنصة صورًا رمزية ذكية وتسجيلات صوتية بـ 24 لغة تشمل الهندية والعربية والهولندية، وتتيح توجيه حركات وتفاعلات الصور الرمزية عبر كتابة الأوامر. بالإضافة إلى ذلك، لا توجد حدود زمنية لطول الفيديو المُنتج.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781885016626.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>كودكس يضيف التسجيل وإعادة التشغيل لسير العمل القابل لإعادة الاستخدام على macOS</title>
-      <link>https://alternativeto.net/news/2026/6/codex-adds-record-and-replay-for-reusable-workflows-on-macos/</link>
-      <pubDate>Fri, 19 Jun 2026 15:54:54 GMT</pubDate>
-      <description>أطلقت شركة Codex ميزة Record &amp; Replay لنظام macOS تسمح للمستخدمين بتسجيل سير عمل وتحويله إلى مهارة قابلة لإعادة الاستخدام والفحص. يبدأ التوزيع في أسواق مختارة مع استثناء منطقة الاقتصاد الأوروبي والمملكة المتحدة وسويسرا. تشمل التحديثات الأخيرة إجراءات جماعية لسجل تشغيل الأتمتة، روابط إدارة SSH جديدة، وتحسينات ملحوظة في الأداء.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781884494546.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>رايكاست يطلق ميزتي الدردشة بالذكاء الاصطناعي والاستبدال المضمن لنظامي ويندوز وماك</title>
-      <link>https://alternativeto.net/news/2026/6/raycast-launches-ai-chat-and-inline-replace-features-for-windows-and-mac/</link>
-      <pubDate>Fri, 19 Jun 2026 15:49:13 GMT</pubDate>
-      <description>أطلق برنامج Raycast لنظام Windows ميزة الدردشة الذكية AI Chat التي تتيح الوصول إلى أحدث النماذج، وتبديل النماذج أثناء المحادثة، ودعم ملحقات الذكاء الاصطناعي وخوادم MCP. كما يمكن للمستخدمين تنظيم الملحقات في مجلدات وتفعيل الأرشفة التلقائية، بالإضافة إلى خاصية Inline Replace التي تسمح بتنفيذ الأوامر داخل Raycast أو استبدال النص المحدد بالمخرجات، وهي متاحة على أنظمة ماك وWindows.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781884153023.png" type="image/jpeg"/>
-    </item>
+    <lastBuildDate>Fri, 03 Jul 2026 06:31:30 GMT</lastBuildDate>
     <item>
       <title>كانفا الآن يتكامل مع سلاك للتصميم والتعاون داخل التطبيق</title>
       <link>https://alternativeto.net/news/2026/6/canva-now-integrates-with-slack-for-in-app-design-and-collaboration/</link>
@@ -165,6 +141,30 @@
       <description>أعاد تطبيق تيليجرام المفاجئ ظهوره على الساعات الذكية بإصداره تطبيقين أصليين لكل من Apple Watch و Wear OS، معيدًا الدعم إلى watchOS ومطلقًا أول نسخة رسمية لأجهزة Wear OS مثل بيكسل واتش. يتيح التطبيق إرسال واستقبال الرسائل، مشاهدة الصور والفيديوهات، تسجيل الصوت، وإدارة المحادثات بميزات مختلفة حسب النظام، مع توفير تسجيل الدخول عبر مسح QR وكلمة مرور سحابية.</description>
       <source>news_-_alternativetonet</source>
       <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781244184276.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>إكس بوكس تعمل على ميزة تحويل الأقراص إلى نسخة رقمية لتحويل الألعاب المادية إلى نسخ رقمية</title>
+      <link>https://alternativeto.net/news/2026/7/xbox-is-working-on-a-disc-to-digital-feature-to-convert-physical-games-to-digital-copies/</link>
+      <pubDate>Fri, 03 Jul 2026 05:52:58 GMT</pubDate>
+      <description>بعد الانتقادات التي وجهت لسوني لإلغاء إنتاج الأقراص لألعاب بلاي ستيشن بحلول 2028، أوردت تقارير استعداد مايكروسوفت لتفعيل ميزة Disc2Digital في تطبيق Xbox. تسمح بتحويل أقراص Xbox Series X|S و Xbox One إلى تراخيص رقمية مرتبطة بالقرص، تنتقل مع أي صاحب جديد. تستثني ألعاب Xbox 360 و الأصلي، وتتيح البث عبر Game Pass وXbox Play Anywhere، ما يشير إلى احتمال إلغاء الأقراص نهائياً مع الجيل القادم Project Helix.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1783059417534.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>إكس تُطلق لايف ستوديو، أداة بث مباشر جديدة لتنافس يوتيوب وتويتش</title>
+      <link>https://alternativeto.net/news/2026/7/x-launches-live-studio-a-new-live-streaming-tool-to-rival-youtube-and-twitch/</link>
+      <pubDate>Fri, 03 Jul 2026 05:43:54 GMT</pubDate>
+      <description>أطلقت X أداة Live Studio للبث المباشر، لتحل محل Media Studio Producer وتنافس يوتيوب وتويتش. يتيح المركز الجديد للمنشئين ربط مشفرات RTMP، الكاميرات والبرامج، البث الفوري أو المجدول، اختبار خاص، إدارة الجمهور والدردشة، وحصر الدردشة للمشتركين مع إحصاءات فورية. يتوفر عبر Creator Studio باشتراك بريميوم يبدأ 3 دولارات شهريًا، ويقتصر على بعض الولايات الأمريكية والمدن العالمية. خصصت X مليون دولار لدعم البث المباشر.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1783057928109.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>تطبيق TV Time يغلق خدمته في 15 يوليو 2026، إليك بعض البدائل الرائعة</title>
+      <link>https://alternativeto.net/news/2026/7/tv-time-is-shutting-down-its-service-on-july-15-2026-here-are-some-great-replacements/</link>
+      <pubDate>Fri, 03 Jul 2026 04:30:00 GMT</pubDate>
+      <description>أعلن تطبيق TV Time، الذي يتابع البرامج والمسلسلات منذ أكثر من 15 عاماً، إغلاقه بعد 15 يوليو 2026 بسبب عدم استدامته كبرنامج مجاني وقلة الاهتمام بنموذج مدفوع. يمنح المستخدمون إمكانية تصدير بياناتهم عبر الإعدادات أو أدوات استيراد Simkl أو إضافات مثل TV Time Liberator. من البدائل المتوفرة Showly وSeriesGuide وSimkl وBetaSeries وSerializd.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1782998481122.png" type="image/jpeg"/>
     </item>
   </channel>
 </rss>
