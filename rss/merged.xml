@@ -5,15 +5,7 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Fri, 03 Jul 2026 15:11:29 GMT</lastBuildDate>
-    <item>
-      <title>تسمح OpenAI للمستخدمين بحفظ عمليات إعادة ضبط حد السرعة لكودكس للاستخدام لاحقًا</title>
-      <link>https://alternativeto.net/news/2026/6/openai-lets-users-save-codex-rate-limit-resets-for-later-use/</link>
-      <pubDate>Fri, 12 Jun 2026 14:05:45 GMT</pubDate>
-      <description>أطلقت شركة OpenAI ميزة جديدة تسمح للمستخدمين بحفظ عمليات إعادة تعيين حدود معدل Codex واستخدامها حسب رغبتهم. يحصل جميع مستخدمي الخطط Go وPlus وPro وBusiness على إعادة تعيين مجانية واحدة. ولمدة أسبوعين قادمين، يمكن لمستخدمي Plus وPro دعوة حتى ثلاثة أصدقاء لتجربة Codex، ويتلقى الطرفان إعادة تعيين إضافية بعد الرسالة الأولى للضيف. يمكن قراءة التفاصيل عبر رابط المقال.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781273145166.png" type="image/jpeg"/>
-    </item>
+    <lastBuildDate>Fri, 03 Jul 2026 17:23:54 GMT</lastBuildDate>
     <item>
       <title>إليفن لابز تكشف عن الأفاتار للفيديوهات المتحدثة المدفوعة بالذكاء الاصطناعي في إلفن كرياتيف</title>
       <link>https://alternativeto.net/news/2026/6/elevenlabs-unveils-avatars-for-ai-driven-talking-videos-in-elevencreative/</link>
@@ -53,6 +45,14 @@
       <description>أعاد تطبيق تيليجرام المفاجئ ظهوره على الساعات الذكية بإصداره تطبيقين أصليين لكل من Apple Watch و Wear OS، معيدًا الدعم إلى watchOS ومطلقًا أول نسخة رسمية لأجهزة Wear OS مثل بيكسل واتش. يتيح التطبيق إرسال واستقبال الرسائل، مشاهدة الصور والفيديوهات، تسجيل الصوت، وإدارة المحادثات بميزات مختلفة حسب النظام، مع توفير تسجيل الدخول عبر مسح QR وكلمة مرور سحابية.</description>
       <source>news_-_alternativetonet</source>
       <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781244184276.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>جوجل تُضيف Ask Gemini والملخصات الذكية إلى تطبيقات Drive على الهواتف المحمولة</title>
+      <link>https://alternativeto.net/news/2026/7/google-brings-ask-gemini-and-ai-overviews-to-drive-mobile-apps/</link>
+      <pubDate>Fri, 03 Jul 2026 15:13:11 GMT</pubDate>
+      <description>أطلقت جوجل ميزتي Ask Gemini وAI Overviews لتطبيقات Google Drive على نظامي Android وiOS، تمكّن المستخدمين من الحصول على ملخصات مستندات تُنشئها الذكاء الاصطناعي والإجابة على أسئلتهم ضمن البحث. تشمل التحديث مساحة عمل مخصصة للمحادثات متعددة الملفات وسجل دردشة دائم لتسهيل البحث أثناء التنقل. تخصّص الميزات لحسابات Workspace المختارة وAI Pro وتدعم 29 لغة ضمن طرح تدريجي.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1783091591016.png" type="image/jpeg"/>
     </item>
     <item>
       <title>مقتنيات كود كلود الآن متاحة لمستخدمي خطط برو وماكس</title>
