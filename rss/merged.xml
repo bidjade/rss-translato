@@ -5,79 +5,7 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Fri, 03 Jul 2026 12:10:01 GMT</lastBuildDate>
-    <item>
-      <title>أدوبي توسّع قدرات Firefly لتشمل Photoshop وIllustrator وتطبيقات أخرى من Creative Cloud</title>
-      <link>https://alternativeto.net/news/2026/6/adobe-expands-firefly-capabilities-to-photoshop-illustrator-and-other-creative-cloud-apps/</link>
-      <pubDate>Fri, 19 Jun 2026 09:00:00 GMT</pubDate>
-      <description>أعلنت أدوبي عن توسيع كبير للوكيل الإبداعي الذي يدمج الآن بين Firefly وCreative Cloud، مقدماً تجربة موحدة تربط الفكرة بالنموذج والإنتاج داخل تطبيقات مثل Photoshop وPremiere وIllustrator وInDesign وFrame.io. يستطيع المساعد الذكي تنفيذ تدفقات عمل متعددة الخطوات بناءً على أوصاف المستخدم، ويتصل بمنصات AI مثل ChatGPT وClaude وCopilot وGemini وSlack، ما يسهل إنشاء دفعات العلامة التجارية، مقاطع الفيديو القصيرة، القصة المصورة، وتحرير Quick Cut.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781797202786.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Midjourney ينتقل من توليد الصور بالذكاء الاصطناعي إلى بناء جهاز مسح بالموجات فوق الصوتية للجسم بالكامل وسبا</title>
-      <link>https://alternativeto.net/news/2026/6/midjourney-goes-from-ai-image-generation-to-building-a-full-body-ultrasound-scanner-and-spa/</link>
-      <pubDate>Fri, 19 Jun 2026 06:05:12 GMT</pubDate>
-      <description>أعلنت ميدجورني عن أول جهاز مادي لها؛ ماسح بالموجات فوق الصوتية يلتقط صورة ثلاثية الأبعاد للجسم بالكامل في نحو 60 ثانية باستخدام حلقة من آلاف المرسلّات. يركز على تحليل العضلات والدهون والعظام، ويُقارن بجودة الرنين المغناطيسي دون إشعاع. تخطط لفتح سبا في سان فرانسيسكو بحلول 2027 يضم عشرة مماثلات ومرافق أخرى لتتبع صحي متكرر مع حماية الخصوصية.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781850968972.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>كاسبرسكي تحذر من أن Wallpaper Engine استُخدم لنشر برمجيات خبيثة على ملايين المستخدمين</title>
-      <link>https://alternativeto.net/news/2026/6/kaspersky-warns-wallpaper-engine-was-used-to-spread-malware-across-millions-of-users/</link>
-      <pubDate>Fri, 19 Jun 2026 04:43:57 GMT</pubDate>
-      <description>حدد باحثو كاسبرسكي حملة برمجية خبيثة تستغل محتوى ورشة Steam لتطبيق Wallpaper Engine الشهير، حيث يُستغل ميزة “application wallpaper” لتوزيع حزم تحتوي على ملفات EXE وDLL وسكريبتات مخفية مع ملفات خلفيات شرعية. شملت الحمولات الخلفية DarkKomet، Lumma وVidar، محمل RenEngine، مُناظرات عملة مشفرة وفدية. الصين مسؤولة عن 89 % من محاولات التحميل، وتمت إزالة الخلفيات الخبيثة لكن الحزم الجديدة تستمر في الظهور، لذا ينصح بالحذر.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781846437012.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>بينتريست يطلق روبوت الدردشة “Ask Pinterest” وأدوات ذكاء اصطناعي جديدة للمعلنين</title>
-      <link>https://alternativeto.net/news/2026/6/pinterest-unveils-ask-pinterest-ai-app-and-launches-new-ai-tools-for-advertisers/</link>
-      <pubDate>Fri, 19 Jun 2026 00:53:19 GMT</pubDate>
-      <description>أطلقت شركة Pinterest تطبيقًا تجريبيًا يُدعى Ask Pinterest يعتمد على الذكاء الاصطناعي لتسهيل التسوق واكتشاف المنتجات عبر محادثة طبيعية، ويستفيد من Taste Graph وبيانات البينات واللوحات لتخصيص الاقتراحات وحفظ السياق بين الجلسات. التطبيق متاح حاليًا بنسخة ويب محدودة على الهاتف والكمبيوتر، كما أطلقت الشركة أدوات إعلانية جديدة تشمل مساعدًا ذكائيًا في Ads Manager ونموذج Performance+ لتحديد الإبداع الإعلاني وبروتوكول Model Context لإدارة الحملات عبر أدوات طرف ثالث.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781843644678.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>كوينبايس للوكالات يمكنه إدارة التداول، المدفوعات، وتنفيذ سير العمل بالنيابة عنك</title>
-      <link>https://alternativeto.net/news/2026/6/coinbase-for-agents-can-manage-trading-payments-and-execute-workflows-on-your-behalf/</link>
-      <pubDate>Fri, 12 Jun 2026 16:30:00 GMT</pubDate>
-      <description>أطلقت كوين بيس خدمة كوين بيس للوكالات، تسمح بربط وكلاء ذكاء اصطناعي بحسابات المستخدمين لتنفيذ التداولات والمدفوعات ضمن حدود يحددها المستخدم مثل المحافظ المعزولة وإعدادات الأذونات. تُطبق قواعد دقيقة كالحد الأقصى للصفقة والطرف المقابل المصرح به، وتخضع جميع عمليات الوكلاء لمراقبة KYT نفسها. يمكن الوصول عبر سطر الأوامر أو بروتوكول MCP، وتُطرح أيضاً مستشاراً ذكياً مسجلاً لدى SEC وCFTC لتقديم توصيات داخل التطبيق.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781213852805.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Homebrew 6.0 يقدّم آلية أمان ثقة الـ tap، وواجهة JSON API أصغر، وعزل لينكس</title>
-      <link>https://alternativeto.net/news/2026/6/homebrew-6-0-brings-tap-trust-security-mechanism-smaller-json-api-and-linux-sandboxing/</link>
-      <pubDate>Fri, 12 Jun 2026 15:00:00 GMT</pubDate>
-      <description>أصدرت Homebrew النسخة 6.0، أهم تحديث منذ 5.1، حيث يفرض نظام &quot;tap trust&quot; ثقة صريحة للمصادر الخارجية قبل تنفيذ كود Ruby غير المعزول، ما يحد من المخاطر. كما تعتمد الواجهة الداخلية JSON API افتراضياً لتسريع التحديثات وتقليل الطلبات الشبكية. على لينكس يُفعَّل الحماية Bubblewrap افتراضياً، مع عزل مراحل البناء والاختبار والتثبيت. تتضمن التحسينات أداءً أفضل، إعدادات افتراضية محسنة، توسيع ميزات brew bundle، ودعم أولي لنظام macOS 27 &quot;Golden Gate&quot;.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781212724520.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>إطلاق Audirvāna Origin 3.0 بتصميم Allegro الجديد وتحديثات واجهة المستخدم</title>
-      <link>https://alternativeto.net/news/2026/6/audirv-na-origin-3-0-launches-with-new-allegro-design-and-ui-updates/</link>
-      <pubDate>Fri, 12 Jun 2026 14:26:56 GMT</pubDate>
-      <description>أطلقت Audirvāna نسخة Origin 3.0 مع تصميم Allegro الذي يضمن تناسقًا أكبر بين الحواسيب والتابلت والهواتف الذكية. يتضمن التحديث تنقلًا أوضح، وضوابط سياقية، تحسينًا في قابلية القراءة، وإعادة تصميم لوحة الإعدادات المتقدمة. كما يدعم الآن مجموعة معالجة الإشارة الاختيارية. والتحديث يهدف إلى تحسين تجربة الاستماع عبر توفير خيارات تخصيص صوتية للمستخدمين المتقدمين. يمكن قراءة المقال الكامل على موقع AlternativeTo.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781274416561.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>برِيف لأندرويد يضيف دعم محرك بحث مخصص في تحديث الإصدار 1.91</title>
-      <link>https://alternativeto.net/news/2026/6/brave-for-android-adds-custom-search-engine-support-in-v1-91-update/</link>
-      <pubDate>Fri, 12 Jun 2026 14:24:09 GMT</pubDate>
-      <description>أصبح بإمكان مستخدمي متصفح Brave على نظام Android الآن إضافة محركات بحث مخصصة أو مواقع قابلة للبحث مباشرة من إعدادات التطبيق، ما يعزز مرونة البحث. تُظهر المحركات المُضافة كخيارات بحث سريع عند كتابة العناوين في شريط العنوان. يُتاح هذا التحسين في إصدار v1.91 الذي بدأ التوزيع منذ الأسبوع الماضي. ويمكن الاطلاع على التفاصيل عبر موقع AlternativeTo.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781274249166.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>MEGA تُطلق أداة ترحيل مشفّرة من Google Drive للانتقالات الآمنة</title>
-      <link>https://alternativeto.net/news/2026/6/mega-launches-encrypted-google-drive-migration-tool-for-secure-transfers/</link>
-      <pubDate>Fri, 12 Jun 2026 14:11:28 GMT</pubDate>
-      <description>أطلقت شركة MEGA أداة هجرة جديدة تسمح للمستخدمين بنقل ملفاتهم مباشرةً من Google Drive إلى MEGA مع تشفير من طرف إلى طرف، مما يضمن الخصوصية الكاملة للبيانات. وتخطط الشركة لتوسيع الخدمة قريباً لتدعم مزودي سحابة إضافيين، لتسهيل عملية النقل بين مختلف المنصات السحابية. يُظهر هذا التطوير التزام MEGA بتحسين تجربة التخزين السحابي وتوفير بدائل مفتوحة للمستخدمين، ويمكن متابعة التفاصيل عبر موقع AlternativeTo.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781273488396.png" type="image/jpeg"/>
-    </item>
+    <lastBuildDate>Fri, 03 Jul 2026 15:11:29 GMT</lastBuildDate>
     <item>
       <title>تسمح OpenAI للمستخدمين بحفظ عمليات إعادة ضبط حد السرعة لكودكس للاستخدام لاحقًا</title>
       <link>https://alternativeto.net/news/2026/6/openai-lets-users-save-codex-rate-limit-resets-for-later-use/</link>
@@ -125,6 +53,78 @@
       <description>أعاد تطبيق تيليجرام المفاجئ ظهوره على الساعات الذكية بإصداره تطبيقين أصليين لكل من Apple Watch و Wear OS، معيدًا الدعم إلى watchOS ومطلقًا أول نسخة رسمية لأجهزة Wear OS مثل بيكسل واتش. يتيح التطبيق إرسال واستقبال الرسائل، مشاهدة الصور والفيديوهات، تسجيل الصوت، وإدارة المحادثات بميزات مختلفة حسب النظام، مع توفير تسجيل الدخول عبر مسح QR وكلمة مرور سحابية.</description>
       <source>news_-_alternativetonet</source>
       <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781244184276.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>مقتنيات كود كلود الآن متاحة لمستخدمي خطط برو وماكس</title>
+      <link>https://alternativeto.net/news/2026/7/claude-code-artifacts-now-available-for-pro-and-max-plan-users/</link>
+      <pubDate>Fri, 03 Jul 2026 15:07:08 GMT</pubDate>
+      <description>أصبح بإمكان مشتركي خطط Pro و Max الاستفادة من أدوات Claude Code التي تُنتج ما يُسمّى بـ&quot;الآثار&quot; (Artifacts) لتوليد صفحات تفاعلية قابلة للمشاركة مباشرةً من جلسات البرمجة. يمكن للمستخدم طلب أحد الآثار، فتقوم Claude بإنشائه ونشره فوريًا على موقع claude.ai مع تحديثات لحظية أثناء تطوّر الكود. جميع الصفحات تبقى خاصة ومُدمجة داخل حساب المستخدم ولا تُظهرها لأي طرف آخر.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1783091228687.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Brave الآن يدعم الحاويات الفعّالة مثل Firefox لعزل علامات التبويب وفصل الحسابات</title>
+      <link>https://alternativeto.net/news/2026/7/brave-now-has-working-containers-like-firefox-for-tab-isolation-and-account-separation/</link>
+      <pubDate>Fri, 03 Jul 2026 15:00:00 GMT</pubDate>
+      <description>أطلقت نسخة 1.92 من متصفح بريف ميزة الحاويات التي تسمح بعزل الألسنة بملفات تعريف مستقلة من الكوكيز والتخزين، ما يمنع مشاركة الجلسات حتى على نفس الموقع. هذه الخاصية لأول مرة في متصفح قائم على كروميوم، وتفيد المستخدمين الذين يحتاجون تسجيل دخول متعدد أو اختبار تطبيقات بمستويات مختلفة، مع استمرار بريف بحماية الخصوصية عبر تقسيم التخزين وتنشر الميزة تدريجياً على الأنظمة.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1783020303890.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>تمكّن إضافة LottieFiles من تصدير Lottie مباشرةً من Figma</title>
+      <link>https://alternativeto.net/news/2026/7/lottiefiles-plugin-enables-direct-lottie-exports-from-figma/</link>
+      <pubDate>Fri, 03 Jul 2026 14:53:02 GMT</pubDate>
+      <description>أطلقت شركة LottieFiles إضافة جديدة لمنصة Figma Motion تتيح للمستخدمين اكتشاف ملفات Lottie وتحريكها وتصديرها مباشرة داخل البرنامج دون الحاجة لمغادرة الواجهة. تحل الإضافة نقص الدعم المباشر لتصدير Lottie في Figma Motion، ويمكن استخدامها حتى دون خبرة سابقة في التصميم الحركي، وتتوفر مجانًا للمصممين. كما يمكن للمصمم تنزيل الملفات بصيغ JSON أو دمجها في تطبيقات الويب والهواتف بسهولة.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1783090382929.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Zed v1.9 يضيف أدوات اختيار قابلة لتغيير الحجم مع معاينة مباشرة ووضعية بحث جديدة</title>
+      <link>https://alternativeto.net/news/2026/7/zed-v1-9-adds-resizable-pickers-with-live-preview-and-new-search-modal/</link>
+      <pubDate>Fri, 03 Jul 2026 14:45:17 GMT</pubDate>
+      <description>قدَّمت نسخة Zed v1.9 مُحددات قابلة لتغيير الحجم مع عرض مباشر للنتائج في عمليات البحث عن الملفات والنصوص، بالإضافة إلى نموذج بحث جديد يوضح النتائج لحظة بلحظة استجابةً لطلب مستخدم شائع. كما حسّن لوحة الوكيل البحث داخل السلسلة والبحث في الملفات، وسهّل الاتصال بخوادم MCP عن بُعد. وتضمن تحسينات لوحة Git تحديث عناصر الرأس، تبديل الإلزامية، خيارات عرض جديدة، وتحسين البحث عن الكوميترات.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1783089917734.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>سفاري يُعلن عن خادم MCP للتصحيح الآلي للمتصفح</title>
+      <link>https://alternativeto.net/news/2026/7/safari-introduces-mcp-server-for-automated-browser-debugging/</link>
+      <pubDate>Fri, 03 Jul 2026 14:38:48 GMT</pubDate>
+      <description>أعلن Safari Technology Preview الإصدار 247 عن إضافة خادم Safari MCP (Model Context Protocol) الذي يتيح للمطورين والوكالات الاتصال المباشر بمتصفح Safari. يتيح هذا الخادم الوصول إلى DOM، طلبات الشبكة، مخرجات وحدة التحكم، لقطات الشاشة، وغيرها لتسهيل التصحيح وتطبيق سير العمل الأوتوماتيكي مع WebKit. تدعم الأدوات أتمتة التنقل، تنفيذ JavaScript، تفاعل الصفحات واختبار التصميم المتجاوب.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1783089528685.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>رايكاست v0.67 يقدّم بحث المحتوى للملفات</title>
+      <link>https://alternativeto.net/news/2026/7/raycast-v0-67-introduces-content-search-for-files/</link>
+      <pubDate>Fri, 03 Jul 2026 14:28:35 GMT</pubDate>
+      <description>أطلقت Raycast الإصدار 0.67 مع ميزة البحث داخل المحتوى، حيث تمكن خاصية البحث عن الملفات والبحث الجذري من العثور على المستندات عبر النص داخلها. يمكن تفعيل هذا الخيار من الإعدادات تحت &quot;بحث الملفات&quot;. كما يضم التحديث محرك فهرسة جديد لتسريع الأداء، وإعدادات إضافية، ومعالجة أخطاء في البحث، الحافظة، الإضافات ودعم macOS.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1783088915406.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>نموذج Kimi K2.7 Code المفتوح الوزن الآن قابل للاختيار في GitHub Copilot</title>
+      <link>https://alternativeto.net/news/2026/7/kimi-k2-7-code-open-weight-model-now-selectable-in-github-copilot/</link>
+      <pubDate>Fri, 03 Jul 2026 14:21:34 GMT</pubDate>
+      <description>أُتاح نموذج Kimi K2.7 Code المفتوح الوزن الآن كخيار قابل للتحديد في GitHub Copilot، وهو أول نموذج مفتوح يقدم للمستخدمين حرية الاختيار وتكلفة برمجة أقل. تشمل الإطلاقات الحالية خطط Copilot Pro وPro+ وMax، مع توقع توسيع الدعم لخطط ومنصات أخرى خلال الأسابيع القليلة القادمة. يمكن الاطلاع على المزيد عبر موقع AlternativeTo الذي يوضح خصائص Kimi Code ومقارناته بالبدائل المتاحة.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1783088494669.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>إطلاق xplorer² 6.3 مع دمج بحث Everything وإنشاء العناصر بالقوالب والمزيد</title>
+      <link>https://alternativeto.net/news/2026/7/xplorer-6-3-launches-with-everything-search-integration-templated-item-creation-and-more/</link>
+      <pubDate>Fri, 03 Jul 2026 13:30:00 GMT</pubDate>
+      <description>أصدر مطور xplorer² النسخة 6.3 لنظام Windows مع تحسينات في العمل. يدمج البرنامج أداة البحث Everything (الإصدار التجريبي 1.5a) ليتيح البحث داخل xplorer² وعرض النتائج في حاوية scrap. يضيف خيار إنشاء ملفات ومجلدات بقوالب في قائمة Actions New… باستخدام رموز $ لتضمين التاريخ واختيار ترميز UTF‑8 أو Unicode. تُنقل إعدادات البرنامج إلى قائمة Tools Options لتقليل الاعتماد على المحررات الخارجية وتُضاف عمود برمجي قابل للتخصيص يدعم تنسيق النص وحفظ حالة الأحرف لتسهيل التسميات.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1783019119034.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>تُقدِّم أوبرا ميزة Paste Protect لتأمين الحافظة من حقن الشيفرات الضارة</title>
+      <link>https://alternativeto.net/news/2026/7/opera-introduces-paste-protect-to-secure-your-clipboard-against-malicious-code-injections/</link>
+      <pubDate>Fri, 03 Jul 2026 12:00:00 GMT</pubDate>
+      <description>أطلقت أوبرا ميزة Paste Protect المدمجة لحماية المستخدمين من هجمات حقن الشيفرات الضارة مثل ClickFix. تقوم الميزة بحجب أي شفرة ضارة تُنسخ إلى الحافظة وتظهر تنبيهًا عند محاولة الموقع تعديل المحتوى. تعتمد على حماية Hijack التي طرحتها أوبرا عام 2021 وتوسّعها لتشمل حقن الكود. مفعلة تلقائيًا مع إمكانية إيقافها من الإعدادات، وتتوفر الآن لمستخدمي Opera One في وضع Early Bird مع توقع توسعها لاحقًا.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1783017864028.png" type="image/jpeg"/>
     </item>
     <item>
       <title>بودمان 6.0 يقدم شبكة محدثة، تحسينات على Podman Machine، وتطور Quadlet</title>
