@@ -5,30 +5,30 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Fri, 10 Jul 2026 11:50:14 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 14:22:32 GMT</lastBuildDate>
     <item>
-      <title>WordPress Studio متاح الآن لمستخدمي لينكس لتطوير مواقع ويب محلية سلسة</title>
-      <link>https://alternativeto.net/news/2026/6/wordpress-studio-is-now-available-for-linux-users-for-seamless-local-website-development/</link>
-      <pubDate>Fri, 12 Jun 2026 12:00:00 GMT</pubDate>
-      <description>أعلنت Automattic عن توسيع منصة WordPress Studio لتشمل نظام Linux، بدءًا من Ubuntu، لتصبح نسخة ذات واجهة رسومية على لينكس بعد إتاحتها على Windows وmacOS. تتيح الأداة إنشاء مواقع WordPress محلية فورًا دون الحاجة لـ Apache أو Docker، وتدعم نطاقات مخصصة وHTTPS، ورابط معاينة بنقرة واحدة للتعاون. كما تسمح بالمزامنة مع WordPress.com لسحب المواقع وإعادة نشر التغييرات، وتكشف عن محررات مثل VS Code وPhpStorm وSublime تلقائيًا، وتضم مساعدًا مدمجًا للبرمجة والتصحيح.</description>
+      <title>Muse Spark 1.1 يعزز تنسيق المهام الوكيلية وتطوير البرمجيات بسياق مليون رمز</title>
+      <link>https://alternativeto.net/news/2026/7/muse-spark-1-1-boosts-agentic-task-orchestration-and-coding-with-1m-token-context/</link>
+      <pubDate>Fri, 10 Jul 2026 14:19:27 GMT</pubDate>
+      <description>أطلقت شركة ميتا AI النسخة 1.1 من Muse Spark، وهي ترقية كبرى تُعزّز قدرات الوكيل الذكي مثل التخطيط المتقدم وتنسيق متعدد الوكلاء. يحسّن النموذج أداء الترميز على قواعد شيفرة معقدة، ويقدم نافذة سياق تصل إلى مليون رمز لتعامل مع مهام مطولة. يُتاح الآن للمطورين عبر المعاينة العامة في واجهة Meta Model API، ويمكنهم تجربة النموذج عبر الواجهة البرمجية، كما تم توثيق التفاصيل في مقالة على موقع AlternativeTo.</description>
       <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781204149002.png" type="image/jpeg"/>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1783693167398.png" type="image/jpeg"/>
     </item>
     <item>
-      <title>يوتيوب يعيد إحياء المراسلة المباشرة لتتمكن أخيرًا من مشاركة الفيديوهات دون مغادرة التطبيق</title>
-      <link>https://alternativeto.net/news/2026/6/youtube-revives-direct-messaging-so-you-can-finally-share-videos-without-leaving-the-app/</link>
-      <pubDate>Fri, 12 Jun 2026 09:00:00 GMT</pubDate>
-      <description>أطلقت يوتيوب ميزة مشاركة الفيديو والرسائل داخل التطبيق للمستخدمين فوق 18 عاماً في الولايات المتحدة ومناطق أخرى. يرسل المستخدمون دعوة عبر واتساب أو رسائل أو سيجنال أو SMS، وبعد القبول يصبح الطرفان جهات اتصال يوتيوب. يمكنهم تبادل النصوص، الرد الفوري على الفيديوهات، سحب الرسائل، حذف المحادثة، وحظر أو إبلاغ. يقتصر المحتوى على مقاطع يوتيوب، البث الحي، والشورتس دون صور أو ملفات. تعيد يوتيوب المراسلة التي أُزيلت عام 2019 مع توسيع القدرة.</description>
+      <title>روست 1.97 يجلب تشويه الرموز مفعّلاً افتراضيًا ودعم Cargo لرفض التحذيرات</title>
+      <link>https://alternativeto.net/news/2026/7/rust-1-97-brings-symbol-mangling-enabled-by-default-and-cargo-support-for-denying-warnings/</link>
+      <pubDate>Fri, 10 Jul 2026 13:30:00 GMT</pubDate>
+      <description>أصدر فريق Rust النسخة 1.97 التي تقدم مخطط تشفير رموز جديد مخصص للغة كإعداد افتراضي، محافظًا على مسار الوحدة وبِنية الصندوق بدلاً من نظام Itanium القديم الذي كان يُخفي معاملات القوالب. كما يتيح Cargo التحكم في التحذيرات (صمتها أو عرضها أو رفضها) دون إبطال ذاكرة التخزين المؤقت، ويتولى rustc تحويل رسائل الربط إلى تحذيرات مع تصفية الإيجابيات الكاذبة، مع استقرار عدة واجهات برمجة وتحديثات أخرى.</description>
       <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781202455282.png" type="image/jpeg"/>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1783619079808.png" type="image/jpeg"/>
     </item>
     <item>
-      <title>تيليجرام يعود إلى Apple Watch وWear OS مع تطبيقين أصليين جديدين للساعة الذكية</title>
-      <link>https://alternativeto.net/news/2026/6/telegram-returns-to-apple-watch-and-wear-os-with-two-new-native-smartwatch-apps/</link>
-      <pubDate>Fri, 12 Jun 2026 05:48:15 GMT</pubDate>
-      <description>أعاد تطبيق تيليجرام المفاجئ ظهوره على الساعات الذكية بإصداره تطبيقين أصليين لكل من Apple Watch و Wear OS، معيدًا الدعم إلى watchOS ومطلقًا أول نسخة رسمية لأجهزة Wear OS مثل بيكسل واتش. يتيح التطبيق إرسال واستقبال الرسائل، مشاهدة الصور والفيديوهات، تسجيل الصوت، وإدارة المحادثات بميزات مختلفة حسب النظام، مع توفير تسجيل الدخول عبر مسح QR وكلمة مرور سحابية.</description>
+      <title>تطبيق Google Earth Pro لسطح المكتب لن يكون متاحًا للتنزيلات الجديدة بدءًا من 25 يونيو 2027</title>
+      <link>https://alternativeto.net/news/2026/7/google-earth-pro-desktop-app-won-t-be-available-for-new-downloads-starting-june-25-2027/</link>
+      <pubDate>Fri, 10 Jul 2026 12:00:00 GMT</pubDate>
+      <description>أعلنت جوجل أن تطبيق Google Earth Pro لسطح المكتب سيتوقف عن توفيره للتحميل الجديد اعتبارًا من 25 يونيو 2027، مع بقاء المستخدمين الحاليين قادرين على الاستمرار في الاستخدام. ستركز الشركة الآن على النسخ على الويب والهواتف (أندرويد و iOS)، حيث أضيفت إلى النسخة الويب أهم ميزات التطبيق مثل صور الشارع التاريخية، أدوات قياس متقدمة، كتالوج بيانات بيئية، مشاركة وتحرير المشاريع، وقدرات الذكاء الاصطناعي.</description>
       <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781244184276.png" type="image/jpeg"/>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1783617655466.png" type="image/jpeg"/>
     </item>
     <item>
       <title>FL Studio 2026 يقدِّم FLEX المعاد بناؤه، تخزين المشاريع على FL Cloud، وإضافة Transmitter الجديدة</title>
