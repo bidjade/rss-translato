@@ -5,15 +5,7 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Fri, 10 Jul 2026 08:20:48 GMT</lastBuildDate>
-    <item>
-      <title>OpenAI تستحوذ على Ona، لتوفير تقنية السحابة الآمنة لـ Codex</title>
-      <link>https://alternativeto.net/news/2026/6/openai-to-acquire-ona-bringing-secure-cloud-technology-to-codex/</link>
-      <pubDate>Fri, 12 Jun 2026 13:55:38 GMT</pubDate>
-      <description>أعلنت شركة OpenAI عن نيتها الاستحواذ على شركة Ona لدمج تقنية التنفيذ السحابي الآمن وإدارة المهام التي تقدمها الشركة في نظام Codex. ستمكن هذه الخطوة وكلاء Codex من العمل باستمرار داخل بيئات سحابية محمية حتى عند قطع المستخدمين اتصالهم، مما يدعم نشرات المؤسسات ويوفر للمنظمات سيطرة أكبر على البنية التحتية والبيانات وحدود الأمان.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781272538437.png" type="image/jpeg"/>
-    </item>
+    <lastBuildDate>Fri, 10 Jul 2026 11:50:14 GMT</lastBuildDate>
     <item>
       <title>WordPress Studio متاح الآن لمستخدمي لينكس لتطوير مواقع ويب محلية سلسة</title>
       <link>https://alternativeto.net/news/2026/6/wordpress-studio-is-now-available-for-linux-users-for-seamless-local-website-development/</link>
@@ -37,6 +29,14 @@
       <description>أعاد تطبيق تيليجرام المفاجئ ظهوره على الساعات الذكية بإصداره تطبيقين أصليين لكل من Apple Watch و Wear OS، معيدًا الدعم إلى watchOS ومطلقًا أول نسخة رسمية لأجهزة Wear OS مثل بيكسل واتش. يتيح التطبيق إرسال واستقبال الرسائل، مشاهدة الصور والفيديوهات، تسجيل الصوت، وإدارة المحادثات بميزات مختلفة حسب النظام، مع توفير تسجيل الدخول عبر مسح QR وكلمة مرور سحابية.</description>
       <source>news_-_alternativetonet</source>
       <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1781244184276.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>FL Studio 2026 يقدِّم FLEX المعاد بناؤه، تخزين المشاريع على FL Cloud، وإضافة Transmitter الجديدة</title>
+      <link>https://alternativeto.net/news/2026/7/fl-studio-2026-brings-rebuilt-flex-fl-cloud-project-storage-and-new-transmitter-plugin/</link>
+      <pubDate>Fri, 10 Jul 2026 09:00:00 GMT</pubDate>
+      <description>أطلق FL Studio 2026 نسخة متوافقة مع ماك وويندوز والهواتف، متضمنة إعادة بناء كاملة لإضافة FLEX بواجهة أسرع ومتصفح جديد، ومكتبة مصنع موسعة. يضيف حفظ المشروع إلى FL Cloud بـ 500 ميغابايت مجانية وتخزين مشفر، مع خيار ترقية حتى تيرابايت. كما يأتي المكون Transmitter لتقسيم الإشارة، ومساعد الذكاء الاصطناعي Gopher لتنظيم المسارات وإنشاء سكريبتات بيلوز وأثر بصري.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1783616520756.png" type="image/jpeg"/>
     </item>
     <item>
       <title>إيميتش 3.0 يضيف تعديلًا غير مدمرًا و OCR على الجوال، وسير العمل، وتحسين النسخ الاحتياطية</title>
