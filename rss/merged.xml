@@ -5,30 +5,30 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Fri, 07 Aug 2026 14:14:49 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2026 15:55:31 GMT</lastBuildDate>
     <item>
-      <title>روست 1.97 يجلب تشويه الرموز مفعّلاً افتراضيًا ودعم Cargo لرفض التحذيرات</title>
-      <link>https://alternativeto.net/news/2026/7/rust-1-97-brings-symbol-mangling-enabled-by-default-and-cargo-support-for-denying-warnings/</link>
-      <pubDate>Fri, 10 Jul 2026 13:30:00 GMT</pubDate>
-      <description>أصدر فريق Rust النسخة 1.97 التي تقدم مخطط تشفير رموز جديد مخصص للغة كإعداد افتراضي، محافظًا على مسار الوحدة وبِنية الصندوق بدلاً من نظام Itanium القديم الذي كان يُخفي معاملات القوالب. كما يتيح Cargo التحكم في التحذيرات (صمتها أو عرضها أو رفضها) دون إبطال ذاكرة التخزين المؤقت، ويتولى rustc تحويل رسائل الربط إلى تحذيرات مع تصفية الإيجابيات الكاذبة، مع استقرار عدة واجهات برمجة وتحديثات أخرى.</description>
+      <title>إصدار أمان WordPress 7.0.3 يُصحّح عدة ثغرات</title>
+      <link>https://alternativeto.net/news/2026/8/wordpress-7-0-3-security-release-patches-multiple-vulnerabilities/</link>
+      <pubDate>Fri, 07 Aug 2026 14:47:46 GMT</pubDate>
+      <description>أصدر ووردبريس النسخة 7.0.3 مع مجموعة من تصحيحات الأمان التي تعالج ثغرات متعددة مثل XSS، رفع الامتيازات، كشف المعلومات، حقن CSS، تعداد روابط المقالات، تجاوز تأكيد البريد، وثغرة طلبات الخادم (SSRF). يُنصح المستخدمون بتحديث تثبيتاتهم فوراً، وستُعاد هذه التصحيحات إلى جميع الإصدارات المدعومة بدءاً من 4.7. لضمان حماية المواقع ومنع الاستغلال.</description>
       <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1783619079808.png" type="image/jpeg"/>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1786114066966.png" type="image/jpeg"/>
     </item>
     <item>
-      <title>تطبيق Google Earth Pro لسطح المكتب لن يكون متاحًا للتنزيلات الجديدة بدءًا من 25 يونيو 2027</title>
-      <link>https://alternativeto.net/news/2026/7/google-earth-pro-desktop-app-won-t-be-available-for-new-downloads-starting-june-25-2027/</link>
-      <pubDate>Fri, 10 Jul 2026 12:00:00 GMT</pubDate>
-      <description>أعلنت جوجل أن تطبيق Google Earth Pro لسطح المكتب سيتوقف عن توفيره للتحميل الجديد اعتبارًا من 25 يونيو 2027، مع بقاء المستخدمين الحاليين قادرين على الاستمرار في الاستخدام. ستركز الشركة الآن على النسخ على الويب والهواتف (أندرويد و iOS)، حيث أضيفت إلى النسخة الويب أهم ميزات التطبيق مثل صور الشارع التاريخية، أدوات قياس متقدمة، كتالوج بيانات بيئية، مشاركة وتحرير المشاريع، وقدرات الذكاء الاصطناعي.</description>
+      <title>Bartender 6.6.2 يقلل استهلاك الذاكرة والمعالج بفضل تحسينات التخطيط</title>
+      <link>https://alternativeto.net/news/2026/8/bartender-6-6-2-cuts-memory-and-cpu-usage-with-layout-improvements/</link>
+      <pubDate>Fri, 07 Aug 2026 14:39:23 GMT</pubDate>
+      <description>أطلقت نسخة Bartender 6.6.2 تحسينًا ملحوظًا في استهلاك الذاكرة والطاقة، حيث سجلت أقل معدلات الاستخدام للمعالج والبطارية. كما أعادت تصميم صفحة التخطيط لإصلاح الصور المفقودة والرموز المختفية، مما عزز الإستقرار. وفي وضعية التشغيل الحية، تحسّن الأداء بفتح شريط القوائم بسرعة أكبر وتقليل عدد العمليات المطلوبة. كما أن التحديث يقلل الحاجة إلى عمليات نشطة إضافية ويعطي تجربة أكثر سلاسة للمستخدمين.</description>
       <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1783617655466.png" type="image/jpeg"/>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1786112470155.png" type="image/jpeg"/>
     </item>
     <item>
-      <title>FL Studio 2026 يقدِّم FLEX المعاد بناؤه، تخزين المشاريع على FL Cloud، وإضافة Transmitter الجديدة</title>
-      <link>https://alternativeto.net/news/2026/7/fl-studio-2026-brings-rebuilt-flex-fl-cloud-project-storage-and-new-transmitter-plugin/</link>
-      <pubDate>Fri, 10 Jul 2026 09:00:00 GMT</pubDate>
-      <description>أطلق FL Studio 2026 نسخة متوافقة مع ماك وويندوز والهواتف، متضمنة إعادة بناء كاملة لإضافة FLEX بواجهة أسرع ومتصفح جديد، ومكتبة مصنع موسعة. يضيف حفظ المشروع إلى FL Cloud بـ 500 ميغابايت مجانية وتخزين مشفر، مع خيار ترقية حتى تيرابايت. كما يأتي المكون Transmitter لتقسيم الإشارة، ومساعد الذكاء الاصطناعي Gopher لتنظيم المسارات وإنشاء سكريبتات بيلوز وأثر بصري.</description>
+      <title>بطاقة حساب آبل متاحة الآن في أربع دول إضافية</title>
+      <link>https://alternativeto.net/news/2026/8/apple-account-card-now-available-in-four-more-countries/</link>
+      <pubDate>Fri, 07 Aug 2026 14:17:11 GMT</pubDate>
+      <description>أطلقت شركة آبل بطاقة Apple Account Card ضمن تطبيق Wallet للمستخدمين في إستونيا ولاتفيا وليتوانيا ومالطا. تُظهر البطاقة رصيد حساب آبل وتتيح إجراء عمليات الشراء في متاجر آبل وعلى الإنترنت وكذلك الاستفادة من خدمات آبل. يمكن ربطها ببطاقات الائتمان والخصم لتسهيل تمويل المشتريات. يأتي هذا التوسع بعد طرح البطاقة تدريجياً منذ عام 2022.</description>
       <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1783616520756.png" type="image/jpeg"/>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1786112231211.png" type="image/jpeg"/>
     </item>
     <item>
       <title>ديب سيك تحذر المطورين من رفع كبير في أسعار واجهة برمجة التطبيقات.</title>
