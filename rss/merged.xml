@@ -5,15 +5,7 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Thu, 06 Aug 2026 23:57:21 GMT</lastBuildDate>
-    <item>
-      <title>Muse Spark 1.1 يعزز تنسيق المهام الوكيلية وتطوير البرمجيات بسياق مليون رمز</title>
-      <link>https://alternativeto.net/news/2026/7/muse-spark-1-1-boosts-agentic-task-orchestration-and-coding-with-1m-token-context/</link>
-      <pubDate>Fri, 10 Jul 2026 14:19:27 GMT</pubDate>
-      <description>أطلقت شركة ميتا AI النسخة 1.1 من Muse Spark، وهي ترقية كبرى تُعزّز قدرات الوكيل الذكي مثل التخطيط المتقدم وتنسيق متعدد الوكلاء. يحسّن النموذج أداء الترميز على قواعد شيفرة معقدة، ويقدم نافذة سياق تصل إلى مليون رمز لتعامل مع مهام مطولة. يُتاح الآن للمطورين عبر المعاينة العامة في واجهة Meta Model API، ويمكنهم تجربة النموذج عبر الواجهة البرمجية، كما تم توثيق التفاصيل في مقالة على موقع AlternativeTo.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1783693167398.png" type="image/jpeg"/>
-    </item>
+    <lastBuildDate>Fri, 07 Aug 2026 02:40:30 GMT</lastBuildDate>
     <item>
       <title>روست 1.97 يجلب تشويه الرموز مفعّلاً افتراضيًا ودعم Cargo لرفض التحذيرات</title>
       <link>https://alternativeto.net/news/2026/7/rust-1-97-brings-symbol-mangling-enabled-by-default-and-cargo-support-for-denying-warnings/</link>
@@ -37,6 +29,14 @@
       <description>أطلق FL Studio 2026 نسخة متوافقة مع ماك وويندوز والهواتف، متضمنة إعادة بناء كاملة لإضافة FLEX بواجهة أسرع ومتصفح جديد، ومكتبة مصنع موسعة. يضيف حفظ المشروع إلى FL Cloud بـ 500 ميغابايت مجانية وتخزين مشفر، مع خيار ترقية حتى تيرابايت. كما يأتي المكون Transmitter لتقسيم الإشارة، ومساعد الذكاء الاصطناعي Gopher لتنظيم المسارات وإنشاء سكريبتات بيلوز وأثر بصري.</description>
       <source>news_-_alternativetonet</source>
       <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1783616520756.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>ديب سيك تحذر المطورين من رفع كبير في أسعار واجهة برمجة التطبيقات.</title>
+      <link>https://alternativeto.net/news/2026/8/deepseek-warns-developers-of-a-substantial-hike-to-its-api-prices/</link>
+      <pubDate>Fri, 07 Aug 2026 00:17:04 GMT</pubDate>
+      <description>أعلنت DeepSeek عن نية رفع أسعار واجهة البرمجة التطبيقية بشكل كبير، دون الكشف عن الأسعار الجديدة أو موعد سريانها، وطالبت المطورين بمراجعة خطط الاستخدام. ستظل الأسعار الحالية سارية حتى إعلان التفاصيل. جاء ذلك بعد اختبار نموذج V4‑Flash‑0731 (284 مليار معامل) الذي يكلف 0.14 دولار للمليون إدخال و0.28 للمخرج، Claude Fable 5 بتكلفة 3.15 دولار للمهمة. الزيادة قد تقلّص ميزة DeepSeek في تقديم نماذج بأسعار منخفضة أمام منافسين مثل Anthropic وOpenAI.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1786062512226.png" type="image/jpeg"/>
     </item>
     <item>
       <title>إيميتش 3.0 يضيف تعديلًا غير مدمرًا و OCR على الجوال، وسير العمل، وتحسين النسخ الاحتياطية</title>
