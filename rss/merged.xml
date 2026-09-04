@@ -5,14 +5,14 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Fri, 04 Sep 2026 07:45:53 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 04 Sep 2026 12:29:41 GMT</lastBuildDate>
     <item>
-      <title>ديب سيك تحذر المطورين من رفع كبير في أسعار واجهة برمجة التطبيقات.</title>
-      <link>https://alternativeto.net/news/2026/8/deepseek-warns-developers-of-a-substantial-hike-to-its-api-prices/</link>
-      <pubDate>Fri, 07 Aug 2026 00:17:04 GMT</pubDate>
-      <description>أعلنت DeepSeek عن نية رفع أسعار واجهة البرمجة التطبيقية بشكل كبير، دون الكشف عن الأسعار الجديدة أو موعد سريانها، وطالبت المطورين بمراجعة خطط الاستخدام. ستظل الأسعار الحالية سارية حتى إعلان التفاصيل. جاء ذلك بعد اختبار نموذج V4‑Flash‑0731 (284 مليار معامل) الذي يكلف 0.14 دولار للمليون إدخال و0.28 للمخرج، Claude Fable 5 بتكلفة 3.15 دولار للمهمة. الزيادة قد تقلّص ميزة DeepSeek في تقديم نماذج بأسعار منخفضة أمام منافسين مثل Anthropic وOpenAI.</description>
+      <title>يُطلق محرر الصوت Audacity 4.0 بواجهة Qt المعاد تصميمها وأدوات تحرير المقاطع الجديدة</title>
+      <link>https://alternativeto.net/news/2026/9/audacity-4-0-audio-editor-launches-with-redesigned-qt-interface-and-new-clip-editing-tools/</link>
+      <pubDate>Fri, 04 Sep 2026 07:30:00 GMT</pubDate>
+      <description>أصدر فريق Audacity النسخة 4.0 التي تعد أكبر تجديد هيكلي منذ تأسيس البرنامج، حيث أعيد بناء الواجهة باستخدام إطار Qt مع دعم عالي الدقة. يقدم النموذج الجديد لتحرير المقاطع اختياراً مباشراً للمقاطع وتجمّعاً لتحريكها، ويستبدل الأدوات التقليدية بسلوك حساس للسياق. تشمل الإصدارات تنسيقات .aup4 مع حفظ غير متاح للنسخ القديمة، وتغيّرات في الميزات مثل مسارات الوقت وMIDI. يبقى الدعم للملحقات VST3، Nyquist، LV2 وAudio Units، ويتوفر للويندوز، macOS (Silicon/Intel) ولينكس.</description>
       <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1786062512226.png" type="image/jpeg"/>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1788451417300.png" type="image/jpeg"/>
     </item>
     <item>
       <title>إبيك تطلق Parties متعددة المنصات مع نقل الدردشة الصوتية</title>
