@@ -5,31 +5,7 @@
     <description>Merged feeds from 1 sources</description>
     <link>https://github.com/your-repo/apps-bot</link>
     <language>arabic</language>
-    <lastBuildDate>Fri, 04 Sep 2026 02:56:16 GMT</lastBuildDate>
-    <item>
-      <title>إصدار أمان WordPress 7.0.3 يُصحّح عدة ثغرات</title>
-      <link>https://alternativeto.net/news/2026/8/wordpress-7-0-3-security-release-patches-multiple-vulnerabilities/</link>
-      <pubDate>Fri, 07 Aug 2026 14:47:46 GMT</pubDate>
-      <description>أصدر ووردبريس النسخة 7.0.3 مع مجموعة من تصحيحات الأمان التي تعالج ثغرات متعددة مثل XSS، رفع الامتيازات، كشف المعلومات، حقن CSS، تعداد روابط المقالات، تجاوز تأكيد البريد، وثغرة طلبات الخادم (SSRF). يُنصح المستخدمون بتحديث تثبيتاتهم فوراً، وستُعاد هذه التصحيحات إلى جميع الإصدارات المدعومة بدءاً من 4.7. لضمان حماية المواقع ومنع الاستغلال.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1786114066966.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Bartender 6.6.2 يقلل استهلاك الذاكرة والمعالج بفضل تحسينات التخطيط</title>
-      <link>https://alternativeto.net/news/2026/8/bartender-6-6-2-cuts-memory-and-cpu-usage-with-layout-improvements/</link>
-      <pubDate>Fri, 07 Aug 2026 14:39:23 GMT</pubDate>
-      <description>أطلقت نسخة Bartender 6.6.2 تحسينًا ملحوظًا في استهلاك الذاكرة والطاقة، حيث سجلت أقل معدلات الاستخدام للمعالج والبطارية. كما أعادت تصميم صفحة التخطيط لإصلاح الصور المفقودة والرموز المختفية، مما عزز الإستقرار. وفي وضعية التشغيل الحية، تحسّن الأداء بفتح شريط القوائم بسرعة أكبر وتقليل عدد العمليات المطلوبة. كما أن التحديث يقلل الحاجة إلى عمليات نشطة إضافية ويعطي تجربة أكثر سلاسة للمستخدمين.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1786112470155.png" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>بطاقة حساب آبل متاحة الآن في أربع دول إضافية</title>
-      <link>https://alternativeto.net/news/2026/8/apple-account-card-now-available-in-four-more-countries/</link>
-      <pubDate>Fri, 07 Aug 2026 14:17:11 GMT</pubDate>
-      <description>أطلقت شركة آبل بطاقة Apple Account Card ضمن تطبيق Wallet للمستخدمين في إستونيا ولاتفيا وليتوانيا ومالطا. تُظهر البطاقة رصيد حساب آبل وتتيح إجراء عمليات الشراء في متاجر آبل وعلى الإنترنت وكذلك الاستفادة من خدمات آبل. يمكن ربطها ببطاقات الائتمان والخصم لتسهيل تمويل المشتريات. يأتي هذا التوسع بعد طرح البطاقة تدريجياً منذ عام 2022.</description>
-      <source>news_-_alternativetonet</source>
-      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1786112231211.png" type="image/jpeg"/>
-    </item>
+    <lastBuildDate>Fri, 04 Sep 2026 07:45:53 GMT</lastBuildDate>
     <item>
       <title>ديب سيك تحذر المطورين من رفع كبير في أسعار واجهة برمجة التطبيقات.</title>
       <link>https://alternativeto.net/news/2026/8/deepseek-warns-developers-of-a-substantial-hike-to-its-api-prices/</link>
@@ -37,6 +13,30 @@
       <description>أعلنت DeepSeek عن نية رفع أسعار واجهة البرمجة التطبيقية بشكل كبير، دون الكشف عن الأسعار الجديدة أو موعد سريانها، وطالبت المطورين بمراجعة خطط الاستخدام. ستظل الأسعار الحالية سارية حتى إعلان التفاصيل. جاء ذلك بعد اختبار نموذج V4‑Flash‑0731 (284 مليار معامل) الذي يكلف 0.14 دولار للمليون إدخال و0.28 للمخرج، Claude Fable 5 بتكلفة 3.15 دولار للمهمة. الزيادة قد تقلّص ميزة DeepSeek في تقديم نماذج بأسعار منخفضة أمام منافسين مثل Anthropic وOpenAI.</description>
       <source>news_-_alternativetonet</source>
       <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1786062512226.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>إبيك تطلق Parties متعددة المنصات مع نقل الدردشة الصوتية</title>
+      <link>https://alternativeto.net/news/2026/9/epic-launches-cross-platform-parties-with-voice-chat-transfer/</link>
+      <pubDate>Fri, 04 Sep 2026 06:17:53 GMT</pubDate>
+      <description>أطلقت إيبك جيمز نظام Epic Parties لتوفير دردشة صوتية وحفلات عبر منصات متعددة، يربط فورتنايت مع مشغل إيبك وتطبيقات الهواتف. يمكن للاعبين على كونسول أو حاسوب أو ماك أو iOS/Android التحدث معاً ونقل الجلسة دون انقطاع. تدعم الدعوات ربط اللوبى تلقائياً، وتسمح بتحويل النص إلى صوت مع خيارات ككتم، حظر وإبلاغ. تخطط إيبك لإضافة صور رمزية في 2026 وتوسيع الخصائص لروكيت ليغ ومطوري الطرف الثالث بحلول 2027.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1788503083307.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Umbrel تعلن عن umbrelOS 2.0 مع Photos وتطبيق iOS الجديد وخادم MCP ودعم أوسع للـ GPU</title>
+      <link>https://alternativeto.net/news/2026/9/umbrel-announces-umbrelos-2-0-with-photos-new-ios-app-mcp-server-and-wider-gpu-support/</link>
+      <pubDate>Fri, 04 Sep 2026 05:59:42 GMT</pubDate>
+      <description>أعلنت أومبريل عن إطلاق umbrelOS 2.0، أكبر تحديث لها، مع نسخة بيتا الآن والإصدار النهائي في 22 سبتمبر. يمكن للمستخدمين الحاليين الترقي إلى 1.7.4 وتفعيل البيتا، والجدد تثبيت بيتا 1. يضم النظام تطبيق Photos وإدارة صور مدمجة ودعم متعدد المستخدمين ومجلدات تطبيقات مخصصة. كما يوفر خادم MCP للذكاء الاصطناعي، ومدير تخزين FailSafe لحماية RAID، ودعم تلقائي لبطاقات GPU من NVIDIA وAMD وIntel مع Thunderbolt، ويعمل على الميني‑بي سي، NAS، Raspberry Pi، وأجهزة الكمبيوتر القديمة.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1788502450220.png" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Raycast v2 تستعيد نماذج الذكاء الاصطناعي الخارجية وتوسّع أدوات النوافذ</title>
+      <link>https://alternativeto.net/news/2026/9/raycast-v2-restores-external-ai-models-and-expands-window-tools/</link>
+      <pubDate>Fri, 04 Sep 2026 05:48:43 GMT</pubDate>
+      <description>أعلنت Raycast عن إصدار النسخة الثانية التي تعيد دعم Bring Your Own Model، حيث يمكن للمستخدمين ربط مزودي نماذج مخصصين متوافقين مع OpenAI، تشغيل نماذج محلية عبر Ollama أو إضافة مفتاح OpenRouter للوصول إلى كتالوج النماذج، مع اشتراك Raycast Pro. كما أضيفت أوامر تعديل حجم ونقل النوافذ بدقة، وإنشاء تخطيطات مخصصة، وتحسينات في Quick AI وRaycast AI مثل دعم النص من اليسار إلى اليمين وترتيب البحث عن الملفات.</description>
+      <source>news_-_alternativetonet</source>
+      <enclosure url="https://img.alternativeto.net/news/1200x630/jpeg/1788501470376.png" type="image/jpeg"/>
     </item>
     <item>
       <title>إيميتش 3.0 يضيف تعديلًا غير مدمرًا و OCR على الجوال، وسير العمل، وتحسين النسخ الاحتياطية</title>
